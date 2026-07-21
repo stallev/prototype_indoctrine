@@ -12,8 +12,22 @@
 | `images/_placeholder.svg` | Эталон нейтрального плейсхолдера (тот же viewBox/палитра, что в коде). |
 | `images/README.md` | Кратко про форматы и рендер иллюстраций. |
 | `specs/svg-illustration-spec.md` | Спецификация генерации **SVG** (палитра, доктрина, промпт, чек-лист). Растр — см. README. |
+| `docs/` | Документация статического HTML-прототипа и контракт файла промптов для SVG. |
 | `public/illustrations/` | Файлы `qNNN.svg` / `.png` / `.jpg` / `.webp` (создаётся при генерации). |
+| `prompts/illustration-prompts.ts` | Массив промптов для генерации SVG (ещё не создан; см. docs). |
 | `README.md` | Этот файл. |
+
+## Статический прототип
+
+**Статус: спека готова, код ещё нет.**
+
+Планируется однофайловый HTML SPA (Material UI-стиль через Tailwind v4 + CSS variables, mobile-first, адаптивное меню). Данные рендерятся из `data/catechism.json` по подходам `utils/catechism.ts`; при отсутствии файла иллюстрации — `images/_placeholder.svg`.
+
+| Документ | Содержание |
+|----------|------------|
+| [`docs/static-prototype-spec.md`](docs/static-prototype-spec.md) | Архитектура, файлы, роутинг, Material/Tailwind, мобильное меню, рендер, placeholder |
+| [`docs/svg-prompts-ts-spec.md`](docs/svg-prompts-ts-spec.md) | Требования к `prompts/illustration-prompts.ts` (114 промптов для SVG) |
+| [`docs/implementation-checklist.md`](docs/implementation-checklist.md) | Пошаговый чек-лист реализации кода и генерации иллюстраций |
 
 ## Источник и права
 
