@@ -1,13 +1,19 @@
-// Инлайн SVG-иллюстраций на этапе сборки. ТОЛЬКО сервер/сборка:
+// Разрешение иллюстраций на этапе сборки. ТОЛЬКО сервер/сборка:
 // импортирует node:fs, поэтому НЕ импортировать из клиентского кода.
 //
-// Схема хранения: путь лежит в question.svg_image (относительно public/),
-// сам SVG читается с диска и встраивается в разметку на билде. Пока файл не
-// сгенерирован (или svg_image === null) — возвращается нейтральный плейсхолдер.
+// Схема: путь в question.illustration (относительно public/).
+//   .svg  → читается с диска и инлайнится в разметку
+//   .png / .jpg / .jpeg / .webp → отдаётся как публичный URL для <img>
+// Пока файла нет или illustration === null — нейтральный SVG-плейсхолдер.
 
 import { existsSync, readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { questions } from './catechism';
+import {
+  illustrationKind,
+  illustrationPublicUrl,
+  questions,
+  type IllustrationKind,
+} from '../utils/catechism';
 
 export interface InlineOptions {
   /** Каталог public проекта. По умолчанию <cwd>/public. */
@@ -16,12 +22,18 @@ export interface InlineOptions {
 
 const defaultBaseDir = () => resolve(process.cwd(), 'public');
 
+export type ResolvedIllustration =
+  | { kind: 'svg'; markup: string }
+  | { kind: 'raster'; src: string; path: string }
+  | { kind: 'placeholder'; markup: string };
+
 /**
  * Лёгкая санитизация перед вставкой SVG в HTML.
  * SVG, встроенный в страницу, исполняет <script> и обработчики событий —
  * это вектор XSS. Иллюстрации генерируются ИИ, т.е. полудоверенный источник,
- * поэтому вырезаем скрипты, обработчики on*, javascript: и внешние ссылки.
+ * поэтому вырезаем скрипты, обработчики on*, javascript: и foreignObject.
  * Это не полноценный санитайзер — для строгой защиты используйте DOMPurify.
+ * Для растра (png/jpg) санитизация не нужна: файл отдаётся как статикой.
  */
 export function sanitizeSvg(svg: string): string {
   return svg
@@ -47,26 +59,51 @@ export function placeholderSvg(): string {
 }
 
 /**
- * Инлайн SVG для вопроса. Возвращает готовую к вставке строку SVG.
- * Если файл отсутствует или svg_image === null — плейсхолдер.
+ * Единая точка разрешения иллюстрации по номеру вопроса.
+ * Рендер: kind === 'svg' | 'placeholder' → dangerouslySetInnerHTML / set:html;
+ *         kind === 'raster' → <img src={src} alt="…" />.
  */
-export function inlineSvg(questionNumber: number, opts: InlineOptions = {}): string {
+export function resolveIllustration(
+  questionNumber: number,
+  opts: InlineOptions = {},
+): ResolvedIllustration {
   const q = questions.find((x) => x.question_number === questionNumber);
-  const rel = q?.svg_image ?? null;
-  if (!rel) return placeholderSvg();
+  const rel = q?.illustration ?? null;
+  if (!rel) return { kind: 'placeholder', markup: placeholderSvg() };
 
   const abs = join(opts.baseDir ?? defaultBaseDir(), rel);
-  if (!existsSync(abs)) return placeholderSvg();
+  if (!existsSync(abs)) return { kind: 'placeholder', markup: placeholderSvg() };
 
-  return sanitizeSvg(readFileSync(abs, 'utf8'));
+  const kind: IllustrationKind | null = illustrationKind(rel);
+  if (kind === 'raster') {
+    return { kind: 'raster', src: illustrationPublicUrl(rel), path: rel };
+  }
+  if (kind === 'svg') {
+    return { kind: 'svg', markup: sanitizeSvg(readFileSync(abs, 'utf8')) };
+  }
+
+  // Неизвестное расширение в JSON не должно пройти Zod; на всякий случай.
+  return { kind: 'placeholder', markup: placeholderSvg() };
 }
 
-/** Проверка полноты набора: какие иллюстрации ещё не сгенерированы. */
+/**
+ * Инлайн только для SVG. Для растра / отсутствия файла — плейсхолдер.
+ * Предпочтительно использовать resolveIllustration и ветвить рендер.
+ */
+export function inlineSvg(questionNumber: number, opts: InlineOptions = {}): string {
+  const resolved = resolveIllustration(questionNumber, opts);
+  if (resolved.kind === 'svg' || resolved.kind === 'placeholder') {
+    return resolved.markup;
+  }
+  return placeholderSvg();
+}
+
+/** Проверка полноты набора: какие иллюстрации ещё не готовы (нет пути или файла). */
 export function missingIllustrations(opts: InlineOptions = {}): number[] {
   const baseDir = opts.baseDir ?? defaultBaseDir();
   return questions
     .filter((q) => {
-      const rel = q.svg_image;
+      const rel = q.illustration;
       return !rel || !existsSync(join(baseDir, rel));
     })
     .map((q) => q.question_number);

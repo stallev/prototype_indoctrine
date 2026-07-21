@@ -6,10 +6,11 @@
 
 ### Хранение и сборка
 
-- **Файл:** валидный SVG на каждый вопрос → `public/illustrations/qNNN.svg` (`q001.svg` … `q114.svg`).
-- **JSON:** в `catechism.json` → `questions[].svg_image` хранится только **путь** относительно `public/` (напр. `"illustrations/q001.svg"`), не разметка SVG. `null` — иллюстрация ещё не сгенерирована.
-- **Инлайн:** на сборке `inlineSvg(n)` из `images/illustrations.node.ts` читает файл с диска и встраивает строку в разметку. Если файла нет или `svg_image === null` — нейтральный плейсхолдер (`viewBox="0 0 1200 900"`, цвет `#BFE3F0`).
-- **Санитизация:** `sanitizeSvg` снимает XSS-векторы (`<script>`, `on*`, `javascript:` и т.п.). Это **не** замена чек-листа §9: палитра, viewBox, запрет `<image>`/`<text>`, бюджет сложности — ответственность агента при генерации.
+- **Файл (SVG, предпочтительно):** `public/illustrations/qNNN.svg` (`q001.svg` … `q114.svg`).
+- **Альтернатива — растр:** `public/illustrations/qNNN.png` \| `.jpg` \| `.jpeg` \| `.webp`. Доктринальные правила §2 / §7 те же; технические правила SVG (§3–§4, палитра, viewBox) к растру не применяются. Рекомендуемый кадр 4:3 (1200×900).
+- **JSON:** в `catechism.json` → `questions[].illustration` — только **путь** относительно `public/` (напр. `"illustrations/q001.svg"` или `"illustrations/q001.png"`), не содержимое файла. `null` — путь ещё не задан.
+- **Рендер:** `resolveIllustration(n)` из `images/illustrations.node.ts` — SVG инлайнится, растр отдаётся как публичный URL для `<img>`. Если файла нет или `illustration === null` — нейтральный SVG-плейсхолдер (`viewBox="0 0 1200 900"`, цвет `#BFE3F0`).
+- **Санитизация:** `sanitizeSvg` снимает XSS-векторы у инлайн-SVG. Это **не** замена чек-листа §9.
 
 ---
 
@@ -96,7 +97,7 @@
 5. `<title>` — короткое описание сцены (для скринридеров), напр. «Мальчик на фоне неба». Опционально `<desc>`.
 6. Валидный, самозакрывающийся, корректно вложенный XML. Кодировка UTF-8.
 7. Цвета — из палитры §3. Допустимо задать их через `<style>`-переменные внутри SVG для будущего ретематизирования.
-8. Сохранить в `public/illustrations/qNNN.svg`; убедиться, что `questions[].svg_image` = `"illustrations/qNNN.svg"`.
+8. Сохранить в `public/illustrations/qNNN.svg`; убедиться, что `questions[].illustration` = `"illustrations/qNNN.svg"`.
 
 ---
 
@@ -191,7 +192,7 @@
 - `{{verse_reference}}` ← `verses[].reference`, `{{verse_text}}` ← `verses[].text` у **первого** связанного стиха через `question_verses` (минимальный `position`). Если у вопроса нет стихов — блок «Стих: …» опустить.
 - `{{scene_brief}}` — короткая подсказка сцены из таблицы §7 или ручная.
 
-Готовый SVG сохранить в `public/illustrations/qNNN.svg` (не в поле JSON).
+Готовый SVG сохранить в `public/illustrations/qNNN.svg` (не в поле JSON). Для растра — тот же каталог и поле `illustration` с соответствующим расширением; этот промпт рассчитан на SVG.
 
 ---
 
@@ -207,6 +208,6 @@
 - [ ] Цвета только из палитры; viewBox `0 0 1200 900`; фон залит.
 - [ ] Валидный самодостаточный SVG без `<script>`/`<image>`/base64/внешних URL.
 - [ ] Есть `<title>`; сложность в пределах бюджета (~150 узлов, ~15 КБ).
-- [ ] Файл лежит в `public/illustrations/qNNN.svg`; `svg_image` в JSON — путь, не разметка.
+- [ ] Файл лежит в `public/illustrations/qNNN.svg`; `illustration` в JSON — путь, не разметка.
 
 ---

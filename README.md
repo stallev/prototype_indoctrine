@@ -2,12 +2,17 @@
 
 Нормализованный набор данных детского катехизиса Кэрин Мак-Кензи «Моя первая книга вопросов и ответов» (114 вопросов, 16 разделов) с библейскими цитатами в **Синодальном переводе**. Подготовлен для рендеринга на веб-странице (Next.js / Astro) с заделом под миграцию в Postgres / Neon.
 
-## Файлы
+## Структура репозитория
 
-| Файл | Роль |
+| Путь | Роль |
 |------|------|
-| `catechism.json` | Данные — единый source of truth. Четыре массива: `topics`, `questions`, `verses`, `question_verses`. |
-| `catechism.ts` | Zod-схема, TypeScript-типы, валидирующий загрузчик и хелперы для рендеринга. Импортирует `catechism.json`. |
+| `data/catechism.json` | Данные — единый source of truth. Четыре массива: `topics`, `questions`, `verses`, `question_verses`. |
+| `utils/catechism.ts` | Zod-схема, TypeScript-типы, валидирующий загрузчик и хелперы (включая пути к иллюстрациям). |
+| `images/illustrations.node.ts` | Разрешение иллюстраций на сборке (`node:fs`) — только сервер, не в клиентский бандл. |
+| `images/_placeholder.svg` | Эталон нейтрального плейсхолдера (тот же viewBox/палитра, что в коде). |
+| `images/README.md` | Кратко про форматы и рендер иллюстраций. |
+| `specs/svg-illustration-spec.md` | Спецификация генерации **SVG** (палитра, доктрина, промпт, чек-лист). Растр — см. README. |
+| `public/illustrations/` | Файлы `qNNN.svg` / `.png` / `.jpg` / `.webp` (создаётся при генерации). |
 | `README.md` | Этот файл. |
 
 ## Источник и права
@@ -40,7 +45,7 @@ topics ──1:N──> questions ──M:N (question_verses)──> verses
 | `question_content` | string | Текст вопроса. |
 | `answer` | string | Текст ответа, как в книге. У вопросов-заповедей и «Отче наш» ответ и есть текст Писания. |
 | `topic_id` | number | Ссылка на `topics.topic_id`. |
-| `svg_image` | string \| null | Путь к SVG-иллюстрации относительно `public/` (напр. `illustrations/q001.svg`). `null` — ещё не сгенерирована. См. раздел «Иллюстрации». |
+| `illustration` | string \| null | Путь к файлу относительно `public/` (`illustrations/q001.svg` \| `.png` \| `.jpg` \| `.jpeg` \| `.webp`). **Не** бинарные/SVG-данные. `null` — путь ещё не задан. См. «Иллюстрации». |
 
 ### `verses` — уникальные библейские стихи (102)
 
@@ -59,21 +64,21 @@ topics ──1:N──> questions ──M:N (question_verses)──> verses
 
 | Поле | Тип | Описание |
 |------|-----|----------|
-| `question_id` | number | Ссылка на `questions.question_number`. |
+| `question_id` | number | Ссылка на `questions.id`. |
 | `verse_id` | number | Ссылка на `verses.id`. |
 | `position` | number | Порядок цитаты внутри вопроса (1, 2, 3…). |
 
 ## Загрузка и валидация
 
-`catechism.ts` импортирует JSON и валидирует его схемой Zod при первом импорте модуля. Помимо проверки типов, `superRefine` проверяет ссылочную целостность: каждый `topic_id`, `question_id` и `verse_id` в связях должен существовать. Для статической сборки это выполняется на этапе билда — стоимость нулевая, но битый JSON после ручной правки уронит билд, а не прод.
+`utils/catechism.ts` импортирует JSON и валидирует его схемой Zod при первом импорте модуля. Помимо проверки типов, `superRefine` проверяет ссылочную целостность: каждый `topic_id`, `question_id` и `verse_id` в связях должен существовать. Для статической сборки это выполняется на этапе билда — стоимость нулевая, но битый JSON после ручной правки уронит билд, а не прод.
 
 Требования к `tsconfig.json` проекта: `resolveJsonModule: true`, `esModuleInterop: true`. Зависимость: `zod`.
 
 ### Экспортируемые данные и типы
 
 ```ts
-import { topics, questions, verses, questionVerses } from './catechism';
-import type { Topic, Question, Verse, QuestionVerse } from './catechism';
+import { topics, questions, verses, questionVerses } from './utils/catechism';
+import type { Topic, Question, Verse, QuestionVerse } from './utils/catechism';
 ```
 
 ### Хелперы
@@ -87,6 +92,14 @@ questionsForTopic(topicId: number): Question[]
 
 // Вопрос + связанные стихи одной структурой (удобно для страницы)
 getQuestionWithVerses(questionNumber: number): QuestionWithVerses | undefined
+
+// Пути к иллюстрациям (безопасно для клиента)
+ILLUSTRATION_DIR                 // 'illustrations'
+illustrationStem(n): string      // 'q001'
+illustrationFileName(n, ext?)    // 'q001.svg' | 'q001.png' …
+illustrationPath(n, ext?)        // 'illustrations/q001.svg'
+illustrationKind(path)           // 'svg' | 'raster' | null
+illustrationPublicUrl(path)      // '/illustrations/q001.png'
 ```
 
 ### Пример рендеринга
@@ -125,34 +138,53 @@ return (
 
 ## Иллюстрации
 
-Схема хранения — **путь в поле, файл на диске, инлайн на сборке** (не инлайн-SVG в JSON, чтобы не раздувать данные).
+Схема: **путь в JSON → файл на диске → рендер по формату** (файл не вшивается в `catechism.json`).
 
-- **Файлы:** `public/illustrations/qNNN.svg` (`q001.svg` … `q114.svg`). Имя детерминировано номером вопроса.
-- **Поле:** `questions[].svg_image` хранит путь относительно `public/`; `null` — пока не сгенерирована.
-- **Требования к SVG** (палитра, viewBox, безопасность, доктрина) — в `svg-illustration-spec.md`.
+| Формат | Расширения | Рендер |
+|--------|------------|--------|
+| Вектор | `.svg` | Инлайн разметки на сборке (`sanitizeSvg`) |
+| Растр | `.png`, `.jpg` / `.jpeg`, `.webp` | `<img src="/illustrations/qNNN.png">` или `next/image` |
+
+| Что | Где |
+|-----|-----|
+| Файл | `public/illustrations/qNNN.<ext>` (`q001` … `q114`) |
+| Путь в данных | `questions[].illustration` = `"illustrations/qNNN.<ext>"` (или `null`) |
+| Правила для SVG | `specs/svg-illustration-spec.md` (палитра, viewBox `0 0 1200 900`, доктрина, чек-лист §9) |
+| Доктрина для растра | те же жёсткие ограничения спеки §2 / §7 (без изображения Божества, модесть, без страха); технические правила SVG не применяются |
+| Краткая памятка | `images/README.md` |
 
 Модули:
 
-- `catechism.ts` — чистые хелперы путей (безопасны для клиента): `SVG_DIR`, `svgFileName(n)`, `svgPath(n)`.
-- `illustrations.node.ts` — **только сервер/сборка** (импортирует `node:fs`, не тянуть в клиентский бандл):
-  - `inlineSvg(n, { baseDir? })` — читает файл и возвращает строку SVG; если файла нет или `svg_image === null` — нейтральный плейсхолдер (страница не падает).
-  - `sanitizeSvg(svg)` — вырезает `<script>`, `on*`-обработчики, `javascript:`, `<foreignObject>` перед вставкой в HTML (защита от XSS; для строгой защиты — DOMPurify).
-  - `missingIllustrations({ baseDir? })` — номера ещё не готовых иллюстраций (трекер прогресса генерации).
+- `utils/catechism.ts` — хелперы путей и формата (безопасны для клиента).
+- `images/illustrations.node.ts` — **только сервер/сборка**:
+  - `resolveIllustration(n)` → `{ kind: 'svg', markup }` \| `{ kind: 'raster', src, path }` \| `{ kind: 'placeholder', markup }`
+  - `inlineSvg(n)` — только SVG/плейсхолдер (для растра вернёт плейсхолдер; лучше `resolveIllustration`)
+  - `sanitizeSvg` — XSS для инлайн-SVG (**не** замена чек-листа спеки)
+  - `missingIllustrations()` — нет пути или файла на диске
 
-Пример на сборке (Astro/Next SSG):
+Пример на сборке:
 
-```ts
-import { inlineSvg } from './illustrations.node';
-const svg = inlineSvg(q.question_number); // готовая строка SVG или плейсхолдер
+```tsx
+import { resolveIllustration } from './images/illustrations.node';
+
+const ill = resolveIllustration(q.question_number);
+
+if (ill.kind === 'raster') {
+  return <img src={ill.src} alt="" width={1200} height={900} />;
+}
+// svg | placeholder
+return <div dangerouslySetInnerHTML={{ __html: ill.markup }} />;
 ```
+
+Чтобы сменить формат у вопроса: положите файл `public/illustrations/q042.png` и в JSON укажите `"illustration": "illustrations/q042.png"`.
 
 ## Миграция в Postgres / Neon
 
 Четыре массива ложатся в четыре таблицы один-в-один:
 
 - `topics (topic_id PK, topic_name)`
-- `questions (id PK, question_number, question_content, answer, topic_id FK, svg_image NULLABLE)`
+- `questions (id PK, question_number, question_content, answer, topic_id FK, illustration NULLABLE)`
 - `verses (id PK, book, chapter, verses, reference, text NULLABLE)`
 - `question_verses (question_id FK, verse_id FK, position, PRIMARY KEY (question_id, verse_id))`
 
-JSON остаётся форматом сидов: скрипт читает файл и делает `INSERT` по массивам. Zod-схема из `catechism.ts` может использоваться тем же скриптом для валидации перед загрузкой.
+JSON остаётся форматом сидов: скрипт читает `data/catechism.json` и делает `INSERT` по массивам. Zod-схема из `utils/catechism.ts` может использоваться тем же скриптом для валидации перед загрузкой.

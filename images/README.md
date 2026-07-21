@@ -1,21 +1,29 @@
 # Иллюстрации катехизиса
 
-SVG-файлы лежат в `public/illustrations/` (не в этой папке). Здесь — код инлайна на сборке и документация.
+Файлы лежат в `public/illustrations/` (не в этой папке). Здесь — код разрешения на сборке.
 
-## Соглашение об именах
+## Форматы
 
-`public/illustrations/qNNN.svg`, где `NNN` — номер вопроса с ведущими нулями: `q001.svg` … `q114.svg`.
-В `catechism.json` → `questions[].svg_image` — только путь относительно `public/` (напр. `illustrations/q001.svg`), не разметка SVG.
+| Формат | Расширение | Рендер |
+|--------|------------|--------|
+| Вектор | `.svg` | Инлайн через `resolveIllustration` → `markup` |
+| Растр | `.png`, `.jpg`, `.jpeg`, `.webp` | `<img src>` через `resolveIllustration` → `src` |
 
-## Требования к файлам
+Имя: `qNNN.<ext>` (`q001` … `q114`). В `catechism.json` → `questions[].illustration` — только путь относительно `public/` (напр. `illustrations/q042.png`).
 
-- Единый `viewBox="0 0 1200 900"`, `preserveAspectRatio="xMidYMid meet"`.
-- Только вектор: без `<script>`, `<image>`, base64, внешних ссылок.
-- Палитра и правила — см. `specs/svg-illustration-spec.md`.
-- `sanitizeSvg` снимает XSS; полный чек-лист качества — в спеке §9.
+## Требования
 
-## Инлайн на сборке
+- Для **SVG** — `specs/svg-illustration-spec.md` (viewBox, палитра, доктрина).
+- Для **растра** — те же доктринальные ограничения спеки §2 / §7; рекомендуемый кадр 4:3 (1200×900).
+- `sanitizeSvg` — только для инлайн-SVG (XSS); не заменяет чек-лист спеки.
 
-Файлы встраиваются функцией `inlineSvg(n)` из `illustrations.node.ts` (читает `public/` + путь из JSON).
-Пока файла нет или `svg_image === null` — нейтральный плейсхолдер (страница не падает).
-`missingIllustrations()` возвращает список ещё не готовых номеров.
+## API
+
+```ts
+import { resolveIllustration } from './illustrations.node';
+
+const ill = resolveIllustration(42);
+// { kind: 'svg', markup } | { kind: 'raster', src, path } | { kind: 'placeholder', markup }
+```
+
+`missingIllustrations()` — номера без пути или без файла на диске.

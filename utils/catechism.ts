@@ -15,9 +15,20 @@
 // а не продублированы внутри каждого вопроса.
 
 import { z } from 'zod';
-import raw from './catechism.json';
+import raw from '../data/catechism.json';
 
 // --- Схемы ---
+
+/** Допустимые расширения иллюстраций (путь относительно public/). */
+export const ILLUSTRATION_EXTENSIONS = ['svg', 'png', 'jpg', 'jpeg', 'webp'] as const;
+export type IllustrationExtension = (typeof ILLUSTRATION_EXTENSIONS)[number];
+
+const illustrationPathSchema = z
+  .string()
+  .regex(
+    /^illustrations\/q\d{3}\.(svg|png|jpe?g|webp)$/i,
+    'Ожидается путь вида illustrations/q001.svg|png|jpg|jpeg|webp',
+  );
 
 export const TopicSchema = z.object({
   topic_id: z.number().int().positive(),
@@ -30,10 +41,9 @@ export const QuestionSchema = z.object({
   question_content: z.string().min(1),
   answer: z.string().min(1),
   topic_id: z.number().int().positive(),
-  // Путь к SVG-иллюстрации относительно каталога public (напр.
-  // "illustrations/q001.svg"). null — иллюстрация ещё не сгенерирована.
-  // Сам SVG инлайнится на этапе сборки (см. illustrations.node.ts).
-  svg_image: z.string().nullable(),
+  // Путь к иллюстрации относительно public/ (svg | png | jpg | jpeg | webp).
+  // null — путь ещё не задан. Рендер: SVG инлайнится, растр — через <img src>.
+  illustration: illustrationPathSchema.nullable(),
 });
 
 export const VerseSchema = z.object({
@@ -127,21 +137,72 @@ export function questionsForTopic(topicId: number): Question[] {
 }
 
 // --- Иллюстрации ---
-// Хранение: путь в поле svg_image, файлы в public/illustrations/, инлайн на
-// сборке. Здесь — только чистые (браузеро-безопасные) хелперы путей.
-// Чтение файлов с диска — в illustrations.node.ts (только сервер/сборка).
+// Хранение: путь в поле illustration, файлы в public/illustrations/.
+// SVG — инлайн на сборке; png/jpg/jpeg/webp — URL для <img>.
+// Чтение с диска — в images/illustrations.node.ts (только сервер/сборка).
 
 /** Каталог иллюстраций относительно public/. */
-export const SVG_DIR = 'illustrations';
+export const ILLUSTRATION_DIR = 'illustrations';
 
-/** Детерминированное имя файла иллюстрации: q001.svg … q114.svg. */
-export function svgFileName(questionNumber: number): string {
-  return `q${String(questionNumber).padStart(3, '0')}.svg`;
+/** @deprecated Используйте ILLUSTRATION_DIR. */
+export const SVG_DIR = ILLUSTRATION_DIR;
+
+export type IllustrationKind = 'svg' | 'raster';
+
+/** Расширение из пути (без точки), в нижнем регистре; иначе null. */
+export function illustrationExt(path: string): IllustrationExtension | null {
+  const m = path.match(/\.([a-z0-9]+)$/i);
+  if (!m) return null;
+  const ext = m[1].toLowerCase();
+  if (ext === 'jpeg') return 'jpg';
+  if ((ILLUSTRATION_EXTENSIONS as readonly string[]).includes(ext)) {
+    return ext as IllustrationExtension;
+  }
+  return null;
 }
 
-/** Ожидаемый путь иллюстрации относительно public/. */
+/** svg → инлайн; png/jpg/webp → растр для <img>. */
+export function illustrationKind(path: string): IllustrationKind | null {
+  const ext = illustrationExt(path);
+  if (!ext) return null;
+  return ext === 'svg' ? 'svg' : 'raster';
+}
+
+/** Стем имени без расширения: q001. */
+export function illustrationStem(questionNumber: number): string {
+  return `q${String(questionNumber).padStart(3, '0')}`;
+}
+
+/** Имя файла с заданным расширением (по умолчанию svg). */
+export function illustrationFileName(
+  questionNumber: number,
+  ext: IllustrationExtension = 'svg',
+): string {
+  const e = ext === 'jpg' ? 'jpg' : ext;
+  return `${illustrationStem(questionNumber)}.${e}`;
+}
+
+/** Путь относительно public/ с заданным расширением (по умолчанию svg). */
+export function illustrationPath(
+  questionNumber: number,
+  ext: IllustrationExtension = 'svg',
+): string {
+  return `${ILLUSTRATION_DIR}/${illustrationFileName(questionNumber, ext)}`;
+}
+
+/** @deprecated Используйте illustrationFileName(n, 'svg'). */
+export function svgFileName(questionNumber: number): string {
+  return illustrationFileName(questionNumber, 'svg');
+}
+
+/** @deprecated Используйте illustrationPath(n, 'svg'). */
 export function svgPath(questionNumber: number): string {
-  return `${SVG_DIR}/${svgFileName(questionNumber)}`;
+  return illustrationPath(questionNumber, 'svg');
+}
+
+/** Публичный URL для <img src> / next/image (ведущий /). */
+export function illustrationPublicUrl(relPath: string): string {
+  return `/${relPath.replace(/^\/+/, '')}`;
 }
 
 /** Полная структура вопроса со связанными стихами (удобно для страницы). */

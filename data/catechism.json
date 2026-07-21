@@ -72,7 +72,7 @@
       "question_content": "Кто тебя сотворил?",
       "answer": "Бог.",
       "topic_id": 1,
-      "svg_image": "illustrations/q001.svg"
+      "illustration": "illustrations/q001.svg"
     },
     {
       "id": 2,
@@ -80,7 +80,7 @@
       "question_content": "Для чего Бог сотворил тебя?",
       "answer": "Чтобы я прославлял Его и наслаждался Им.",
       "topic_id": 1,
-      "svg_image": "illustrations/q002.svg"
+      "illustration": "illustrations/q002.svg"
     },
     {
       "id": 3,
@@ -88,7 +88,7 @@
       "question_content": "Что еще сотворил Бог?",
       "answer": "Бог сотворил все.",
       "topic_id": 1,
-      "svg_image": "illustrations/q003.svg"
+      "illustration": "illustrations/q003.svg"
     },
     {
       "id": 4,
@@ -96,7 +96,7 @@
       "question_content": "Для чего Бог сотворил все?",
       "answer": "Для Своей славы.",
       "topic_id": 1,
-      "svg_image": "illustrations/q004.svg"
+      "illustration": "illustrations/q004.svg"
     },
     {
       "id": 5,
@@ -104,7 +104,7 @@
       "question_content": "Где Бог учит нас прославлять Его и наслаждаться Им?",
       "answer": "В Своем Слове – Библии.",
       "topic_id": 1,
-      "svg_image": "illustrations/q005.svg"
+      "illustration": "illustrations/q005.svg"
     },
     {
       "id": 6,
@@ -112,7 +112,7 @@
       "question_content": "Кто написал Библию?",
       "answer": "Святые люди, которых Святой Дух научил, что нужно написать.",
       "topic_id": 1,
-      "svg_image": "illustrations/q006.svg"
+      "illustration": "illustrations/q006.svg"
     },
     {
       "id": 7,
@@ -120,7 +120,7 @@
       "question_content": "Кто есть Бог?",
       "answer": "Бог – это Дух.",
       "topic_id": 1,
-      "svg_image": "illustrations/q007.svg"
+      "illustration": "illustrations/q007.svg"
     },
     {
       "id": 8,
@@ -128,7 +128,7 @@
       "question_content": "Кто такой дух?",
       "answer": "Это невидимое существо, не имеющее тела, подобного нашему.",
       "topic_id": 1,
-      "svg_image": "illustrations/q008.svg"
+      "illustration": "illustrations/q008.svg"
     },
     {
       "id": 9,
@@ -136,7 +136,7 @@
       "question_content": "Где находится Бог?",
       "answer": "Бог везде.",
       "topic_id": 1,
-      "svg_image": "illustrations/q009.svg"
+      "illustration": "illustrations/q009.svg"
     },
     {
       "id": 10,
@@ -144,7 +144,7 @@
       "question_content": "Было ли у Бога начало?",
       "answer": "Нет. Он существовал всегда.",
       "topic_id": 1,
-      "svg_image": "illustrations/q010.svg"
+      "illustration": "illustrations/q010.svg"
     },
     {
       "id": 11,
@@ -152,7 +152,7 @@
       "question_content": "Будет ли у Бога конец?",
       "answer": "Нет. Он будет существовать всегда.",
       "topic_id": 1,
-      "svg_image": "illustrations/q011.svg"
+      "illustration": "illustrations/q011.svg"
     },
     {
       "id": 12,
@@ -160,7 +160,7 @@
       "question_content": "Изменяется ли Бог?",
       "answer": "Нет. Он никогда не изменяется, Он всегда один и тот же.",
       "topic_id": 1,
-      "svg_image": "illustrations/q012.svg"
+      "illustration": "illustrations/q012.svg"
     },
     {
       "id": 13,
@@ -168,7 +168,7 @@
       "question_content": "Знает ли Бог все?",
       "answer": "Да. От Него ничего нельзя спрятать.",
       "topic_id": 1,
-      "svg_image": "illustrations/q013.svg"
+      "illustration": "illustrations/q013.svg"
     },
     {
       "id": 14,
@@ -176,7 +176,7 @@
       "question_content": "Все ли Бог может?",
       "answer": "Да. Он может все, что захочет.",
       "topic_id": 1,
-      "svg_image": "illustrations/q014.svg"
+      "illustration": "illustrations/q014.svg"
     },
     {
       "id": 15,
@@ -184,7 +184,7 @@
       "question_content": "Можешь ли ты увидеть Бога?",
       "answer": "Нет. Я не могу увидеть Бога, но Он всегда видит меня.",
       "topic_id": 1,
-      "svg_image": "illustrations/q015.svg"
+      "illustration": "illustrations/q015.svg"
     },
     {
       "id": 16,
@@ -192,7 +192,7 @@
       "question_content": "Сколько есть Богов?",
       "answer": "Есть только один Бог.",
       "topic_id": 1,
-      "svg_image": "illustrations/q016.svg"
+      "illustration": "illustrations/q016.svg"
     },
     {
       "id": 17,
@@ -200,7 +200,7 @@
       "question_content": "Сколько личностей существует в Боге?",
       "answer": "Три личности.",
       "topic_id": 1,
-      "svg_image": "illustrations/q017.svg"
+      "illustration": "illustrations/q017.svg"
     },
     {
       "id": 18,
@@ -208,7 +208,7 @@
       "question_content": "Кто эти три личности?",
       "answer": "Отец, Сын и Святой Дух.",
       "topic_id": 1,
-      "svg_image": "illustrations/q018.svg"
+      "illustration": "illustrations/q018.svg"
     },
     {
       "id": 19,
@@ -216,7 +216,7 @@
       "question_content": "Кто сотворил мир?",
       "answer": "Бог.",
       "topic_id": 2,
-      "svg_image": "illustrations/q019.svg"
+      "illustration": "illustrations/q019.svg"
     },
     {
       "id": 20,
@@ -224,7 +224,7 @@
       "question_content": "Из чего Бог сотворил мир?",
       "answer": "Из ничего. До сотворения мира ничего не было.",
       "topic_id": 2,
-      "svg_image": "illustrations/q020.svg"
+      "illustration": "illustrations/q020.svg"
     },
     {
       "id": 21,
@@ -232,7 +232,7 @@
       "question_content": "Как Бог сотворил мир?",
       "answer": "Своим могущественным словом.",
       "topic_id": 2,
-      "svg_image": "illustrations/q021.svg"
+      "illustration": "illustrations/q021.svg"
     },
     {
       "id": 22,
@@ -240,7 +240,7 @@
       "question_content": "Сколько времени ушло на сотворение мира?",
       "answer": "Шесть дней.",
       "topic_id": 2,
-      "svg_image": "illustrations/q022.svg"
+      "illustration": "illustrations/q022.svg"
     },
     {
       "id": 23,
@@ -248,7 +248,7 @@
       "question_content": "Что Бог делал в седьмой день?",
       "answer": "Он отдыхал, и седьмой день недели Он сделал особенным.",
       "topic_id": 2,
-      "svg_image": "illustrations/q023.svg"
+      "illustration": "illustrations/q023.svg"
     },
     {
       "id": 24,
@@ -256,7 +256,7 @@
       "question_content": "Кто был первым сотворенным мужчиной?",
       "answer": "Адам.",
       "topic_id": 2,
-      "svg_image": "illustrations/q024.svg"
+      "illustration": "illustrations/q024.svg"
     },
     {
       "id": 25,
@@ -264,7 +264,7 @@
       "question_content": "Кто был первой сотворенной женщиной?",
       "answer": "Ева.",
       "topic_id": 2,
-      "svg_image": "illustrations/q025.svg"
+      "illustration": "illustrations/q025.svg"
     },
     {
       "id": 26,
@@ -272,7 +272,7 @@
       "question_content": "Из чего Бог сотворил Адама?",
       "answer": "Из праха земного.",
       "topic_id": 2,
-      "svg_image": "illustrations/q026.svg"
+      "illustration": "illustrations/q026.svg"
     },
     {
       "id": 27,
@@ -280,7 +280,7 @@
       "question_content": "Из чего Бог сотворил Еву?",
       "answer": "Из ребра Адама.",
       "topic_id": 2,
-      "svg_image": "illustrations/q027.svg"
+      "illustration": "illustrations/q027.svg"
     },
     {
       "id": 28,
@@ -288,7 +288,7 @@
       "question_content": "Что еще кроме тела Бог дал Адаму и Еве?",
       "answer": "Он дал им души, которые никогда не умрут.",
       "topic_id": 2,
-      "svg_image": "illustrations/q028.svg"
+      "illustration": "illustrations/q028.svg"
     },
     {
       "id": 29,
@@ -296,7 +296,7 @@
       "question_content": "А у тебя есть душа?",
       "answer": "Да. У меня есть душа, которая никогда не умрет.",
       "topic_id": 2,
-      "svg_image": "illustrations/q029.svg"
+      "illustration": "illustrations/q029.svg"
     },
     {
       "id": 30,
@@ -304,7 +304,7 @@
       "question_content": "Откуда ты знаешь, что у тебя есть душа?",
       "answer": "Бог говорит мне об этом в Библии.",
       "topic_id": 2,
-      "svg_image": "illustrations/q030.svg"
+      "illustration": "illustrations/q030.svg"
     },
     {
       "id": 31,
@@ -312,7 +312,7 @@
       "question_content": "Были ли Адам и Ева хорошими, когда Бог сотворил их?",
       "answer": "Да, они были очень хорошими, святыми и счастливыми. Все, что Бог сотворил, было хорошим.",
       "topic_id": 3,
-      "svg_image": "illustrations/q031.svg"
+      "illustration": "illustrations/q031.svg"
     },
     {
       "id": 32,
@@ -320,7 +320,7 @@
       "question_content": "Что такое грех?",
       "answer": "Грех – это любое непослушание Божьему закону.",
       "topic_id": 3,
-      "svg_image": "illustrations/q032.svg"
+      "illustration": "illustrations/q032.svg"
     },
     {
       "id": 33,
@@ -328,7 +328,7 @@
       "question_content": "Что такое непослушание Божьему закону?",
       "answer": "Это значит делать то, чего Бог говорит не делать.",
       "topic_id": 3,
-      "svg_image": "illustrations/q033.svg"
+      "illustration": "illustrations/q033.svg"
     },
     {
       "id": 34,
@@ -336,7 +336,7 @@
       "question_content": "Что такое несоблюдение Божьего закона?",
       "answer": "Это значит не быть таким, как требует Бог, или не делать того, чего требует Бог.",
       "topic_id": 3,
-      "svg_image": "illustrations/q034.svg"
+      "illustration": "illustrations/q034.svg"
     },
     {
       "id": 35,
@@ -344,7 +344,7 @@
       "question_content": "Навсегда ли Адам и Ева остались хорошими?",
       "answer": "Нет. Они согрешили, не послушавшись Бога.",
       "topic_id": 3,
-      "svg_image": "illustrations/q035.svg"
+      "illustration": "illustrations/q035.svg"
     },
     {
       "id": 36,
@@ -352,7 +352,7 @@
       "question_content": "Как согрешили Адам и Ева?",
       "answer": "Они съели плод, который Бог запретил им есть.",
       "topic_id": 3,
-      "svg_image": "illustrations/q036.svg"
+      "illustration": "illustrations/q036.svg"
     },
     {
       "id": 37,
@@ -360,7 +360,7 @@
       "question_content": "Что произошло с Адамом и Евой, когда они согрешили?",
       "answer": "Они были отделены от Бога.",
       "topic_id": 4,
-      "svg_image": "illustrations/q037.svg"
+      "illustration": "illustrations/q037.svg"
     },
     {
       "id": 38,
@@ -368,7 +368,7 @@
       "question_content": "Влияет ли грех Адама на нас?",
       "answer": "Да. Мы все – дети Адама. Он был нашим представителем, и поэтому из-за его первого греха мы все рождаемся в греховном состоянии.",
       "topic_id": 4,
-      "svg_image": "illustrations/q038.svg"
+      "illustration": "illustrations/q038.svg"
     },
     {
       "id": 39,
@@ -376,7 +376,7 @@
       "question_content": "Как называется это греховное состояние?",
       "answer": "Первородный грех.",
       "topic_id": 4,
-      "svg_image": "illustrations/q039.svg"
+      "illustration": "illustrations/q039.svg"
     },
     {
       "id": 40,
@@ -384,7 +384,7 @@
       "question_content": "В каких еще грехах, кроме первородного, мы виновны?",
       "answer": "Мы виновны перед Богом в своих личных грехах, которые мы совершаем в делах, словах или мыслях.",
       "topic_id": 4,
-      "svg_image": "illustrations/q040.svg"
+      "illustration": "illustrations/q040.svg"
     },
     {
       "id": 41,
@@ -392,7 +392,7 @@
       "question_content": "Чего мы заслуживаем за свои грехи?",
       "answer": "Божьего гнева и наказания.",
       "topic_id": 4,
-      "svg_image": "illustrations/q041.svg"
+      "illustration": "illustrations/q041.svg"
     },
     {
       "id": 42,
@@ -400,7 +400,7 @@
       "question_content": "Может ли кто-нибудь попасть на небеса в таком греховном состоянии?",
       "answer": "Нет. Наши сердца должны измениться, прежде чем мы сможем попасть на небеса.",
       "topic_id": 4,
-      "svg_image": "illustrations/q042.svg"
+      "illustration": "illustrations/q042.svg"
     },
     {
       "id": 43,
@@ -408,7 +408,7 @@
       "question_content": "Что сделал Бог, чтобы спасти Свой народ от гнева и наказания?",
       "answer": "Он послал Своего Сына, чтобы любой, кто поверит в Него, не погиб, но имел жизнь вечную.",
       "topic_id": 5,
-      "svg_image": "illustrations/q043.svg"
+      "illustration": "illustrations/q043.svg"
     },
     {
       "id": 44,
@@ -416,7 +416,7 @@
       "question_content": "Кто такой Божий Сын?",
       "answer": "Это Господь Иисус Христос.",
       "topic_id": 5,
-      "svg_image": "illustrations/q044.svg"
+      "illustration": "illustrations/q044.svg"
     },
     {
       "id": 45,
@@ -424,7 +424,7 @@
       "question_content": "Как Божий Сын пришел в наш мир?",
       "answer": "Он родился в Вифлееме в хлеву.",
       "topic_id": 5,
-      "svg_image": "illustrations/q045.svg"
+      "illustration": "illustrations/q045.svg"
     },
     {
       "id": 46,
@@ -432,7 +432,7 @@
       "question_content": "Кто стал Его матерью?",
       "answer": "Дева Мария.",
       "topic_id": 5,
-      "svg_image": "illustrations/q046.svg"
+      "illustration": "illustrations/q046.svg"
     },
     {
       "id": 47,
@@ -440,7 +440,7 @@
       "question_content": "Был ли у Иисуса Христа земной отец?",
       "answer": "Нет. Он родился в мир по действию силы Святого Духа.",
       "topic_id": 5,
-      "svg_image": "illustrations/q047.svg"
+      "illustration": "illustrations/q047.svg"
     },
     {
       "id": 48,
@@ -448,7 +448,7 @@
       "question_content": "Почему Он родился именно таким образом?",
       "answer": "Чтобы быть свободным от первородного греха.",
       "topic_id": 5,
-      "svg_image": "illustrations/q048.svg"
+      "illustration": "illustrations/q048.svg"
     },
     {
       "id": 49,
@@ -456,7 +456,7 @@
       "question_content": "Согрешил ли Иисус хотя бы один раз?",
       "answer": "Нет. Он всегда и во всем повиновался Богу.",
       "topic_id": 5,
-      "svg_image": "illustrations/q049.svg"
+      "illustration": "illustrations/q049.svg"
     },
     {
       "id": 50,
@@ -464,7 +464,7 @@
       "question_content": "Почему Божьего Сына зовут Иисус?",
       "answer": "«Иисус» означает Спаситель, и Он спасает Свой народ от грехов.",
       "topic_id": 5,
-      "svg_image": "illustrations/q050.svg"
+      "illustration": "illustrations/q050.svg"
     },
     {
       "id": 51,
@@ -472,7 +472,7 @@
       "question_content": "Как Иисус спас Свой народ от грехов?",
       "answer": "Иисус Христос пострадал и умер на кресте вместо людей, чтобы заплатить цену за все их грехи.",
       "topic_id": 5,
-      "svg_image": "illustrations/q051.svg"
+      "illustration": "illustrations/q051.svg"
     },
     {
       "id": 52,
@@ -480,7 +480,7 @@
       "question_content": "За кого пострадал и умер Иисус Христос?",
       "answer": "За всех тех людей, которых Бог Отец дал Ему.",
       "topic_id": 5,
-      "svg_image": "illustrations/q052.svg"
+      "illustration": "illustrations/q052.svg"
     },
     {
       "id": 53,
@@ -488,7 +488,7 @@
       "question_content": "Кто будет спасен?",
       "answer": "Только тот, кто покается в своих грехах и поверит в Иисуса Христа.",
       "topic_id": 5,
-      "svg_image": "illustrations/q053.svg"
+      "illustration": "illustrations/q053.svg"
     },
     {
       "id": 54,
@@ -496,7 +496,7 @@
       "question_content": "Как ты можешь покаяться в грехах?",
       "answer": "Я должен сожалеть о своих грехах, ненавидеть их и желать прекратить их делать. Я должен хотеть во всем угождать Богу.",
       "topic_id": 5,
-      "svg_image": "illustrations/q054.svg"
+      "illustration": "illustrations/q054.svg"
     },
     {
       "id": 55,
@@ -504,7 +504,7 @@
       "question_content": "Можешь ли ты сам решить покаяться и поверить в Иисуса Христа?",
       "answer": "Нет. Я могу сделать это только с помощью Святого Духа.",
       "topic_id": 5,
-      "svg_image": "illustrations/q055.svg"
+      "illustration": "illustrations/q055.svg"
     },
     {
       "id": 56,
@@ -512,7 +512,7 @@
       "question_content": "Как ты можешь получить помощь Святого Духа?",
       "answer": "Я могу помолиться Богу и попросить Его дать мне эту помощь.",
       "topic_id": 5,
-      "svg_image": "illustrations/q056.svg"
+      "illustration": "illustrations/q056.svg"
     },
     {
       "id": 57,
@@ -520,7 +520,7 @@
       "question_content": "Как спасались люди, жившие до того, как Христос умер за наши грехи?",
       "answer": "Они верили в Спасителя, которого Бог обещал послать в будущем.",
       "topic_id": 5,
-      "svg_image": "illustrations/q057.svg"
+      "illustration": "illustrations/q057.svg"
     },
     {
       "id": 58,
@@ -528,7 +528,7 @@
       "question_content": "Как Иисус Христос исполнил ветхозаветные пророчества о Нем?",
       "answer": "Он пришел, чтобы быть Пророком, Священником и Царем.",
       "topic_id": 6,
-      "svg_image": "illustrations/q058.svg"
+      "illustration": "illustrations/q058.svg"
     },
     {
       "id": 59,
@@ -536,7 +536,7 @@
       "question_content": "В каком смысле Христос является нашим Пророком?",
       "answer": "Он учит нас воле Божьей.",
       "topic_id": 6,
-      "svg_image": "illustrations/q059.svg"
+      "illustration": "illustrations/q059.svg"
     },
     {
       "id": 60,
@@ -544,7 +544,7 @@
       "question_content": "В каком смысле Христос является нашим Священником?",
       "answer": "Мы виновны в грехе, а Он умер, став жертвой за грехи Своего народа. Теперь после Своего воскресения и вознесения на небо Он продолжает молиться о нас.",
       "topic_id": 6,
-      "svg_image": "illustrations/q060.svg"
+      "illustration": "illustrations/q060.svg"
     },
     {
       "id": 61,
@@ -552,7 +552,7 @@
       "question_content": "В каком смысле Христос является нашим Царем?",
       "answer": "Он правит миром и защищает Свой народ от сатаны.",
       "topic_id": 6,
-      "svg_image": "illustrations/q061.svg"
+      "illustration": "illustrations/q061.svg"
     },
     {
       "id": 62,
@@ -560,7 +560,7 @@
       "question_content": "Сколько заповедей дал Бог на горе Синай?",
       "answer": "Десять заповедей.",
       "topic_id": 7,
-      "svg_image": "illustrations/q062.svg"
+      "illustration": "illustrations/q062.svg"
     },
     {
       "id": 63,
@@ -568,7 +568,7 @@
       "question_content": "О чем говорят нам первые четыре заповеди?",
       "answer": "О том, как любить Бога.",
       "topic_id": 7,
-      "svg_image": "illustrations/q063.svg"
+      "illustration": "illustrations/q063.svg"
     },
     {
       "id": 64,
@@ -576,7 +576,7 @@
       "question_content": "О чем говорят нам заповеди с пятой по десятую?",
       "answer": "О том, как любить других людей.",
       "topic_id": 7,
-      "svg_image": "illustrations/q064.svg"
+      "illustration": "illustrations/q064.svg"
     },
     {
       "id": 65,
@@ -584,7 +584,7 @@
       "question_content": "О чем в целом говорят все десять заповедей?",
       "answer": "О том, что мы должны любить Господа Бога нашего всем сердцем, душой, силой и разумом и любить ближнего, как самого себя.",
       "topic_id": 7,
-      "svg_image": "illustrations/q065.svg"
+      "illustration": "illustrations/q065.svg"
     },
     {
       "id": 66,
@@ -592,7 +592,7 @@
       "question_content": "Кто наш ближний?",
       "answer": "Наш ближний – это любой человек.",
       "topic_id": 7,
-      "svg_image": "illustrations/q066.svg"
+      "illustration": "illustrations/q066.svg"
     },
     {
       "id": 67,
@@ -600,7 +600,7 @@
       "question_content": "О чем говорит первая заповедь?",
       "answer": "Первая заповедь гласит: «Да не будет у тебя других богов пред лицом Моим» (Исход 20:3).",
       "topic_id": 7,
-      "svg_image": "illustrations/q067.svg"
+      "illustration": "illustrations/q067.svg"
     },
     {
       "id": 68,
@@ -608,7 +608,7 @@
       "question_content": "Что велит нам делать первая заповедь?",
       "answer": "Поклоняться только Богу.",
       "topic_id": 7,
-      "svg_image": "illustrations/q068.svg"
+      "illustration": "illustrations/q068.svg"
     },
     {
       "id": 69,
@@ -616,7 +616,7 @@
       "question_content": "О чем говорит вторая заповедь?",
       "answer": "Вторая заповедь гласит: «Не делай себе кумира и никакого изображения того, что на небе вверху, и что на земле внизу, и что в воде ниже земли. Не поклоняйся им и не служи им; ибо Я Господь, Бог твой, Бог ревнитель, наказывающий детей за вину отцов до третьего рода, ненавидящих Меня, и творящий милость до тысячи родов любящим Меня и соблюдающим заповеди Мои» (Исход 20: 4-6).",
       "topic_id": 7,
-      "svg_image": "illustrations/q069.svg"
+      "illustration": "illustrations/q069.svg"
     },
     {
       "id": 70,
@@ -624,7 +624,7 @@
       "question_content": "Что велит нам делать вторая заповедь?",
       "answer": "Поклоняться Богу так, как Он говорит нам в Своем слове, и не использовать рукотворные идолы, статуи и изображения.",
       "topic_id": 7,
-      "svg_image": "illustrations/q070.svg"
+      "illustration": "illustrations/q070.svg"
     },
     {
       "id": 71,
@@ -632,7 +632,7 @@
       "question_content": "О чем говорит третья заповедь?",
       "answer": "Третья заповедь гласит: «Не произноси имени Господа, Бога твоего, напрасно; ибо Господь не оставит без наказания того, кто произносит имя Его напрасно» (Исход 20:7).",
       "topic_id": 7,
-      "svg_image": "illustrations/q071.svg"
+      "illustration": "illustrations/q071.svg"
     },
     {
       "id": 72,
@@ -640,7 +640,7 @@
       "question_content": "Что велит нам делать третья заповедь?",
       "answer": "Глубоко уважать Божье имя и не упоминать Его имени легкомысленно.",
       "topic_id": 7,
-      "svg_image": "illustrations/q072.svg"
+      "illustration": "illustrations/q072.svg"
     },
     {
       "id": 73,
@@ -648,7 +648,7 @@
       "question_content": "О чем говорит четвертая заповедь?",
       "answer": "Четвертая заповедь гласит: «Помни день субботний, чтобы святить его. Шесть дней работай, и делай всякие дела твои; а день седьмой – суббота Господу Богу твоему: не делай в оный никакого дела ни ты, ни сын твой, ни дочь твоя, ни раб твой, ни рабыня твоя, ни скот твой, ни пришелец, который в жилищах твоих. Ибо в шесть дней создал Господь небо и землю, море и все, что в них; а в день седьмой почил. Посему благословил Господь день субботний и освятил его» (Исход 20:8-11).",
       "topic_id": 7,
-      "svg_image": "illustrations/q073.svg"
+      "illustration": "illustrations/q073.svg"
     },
     {
       "id": 74,
@@ -656,7 +656,7 @@
       "question_content": "Что велит нам делать четвертая заповедь?",
       "answer": "Считать субботу святым днем.",
       "topic_id": 7,
-      "svg_image": "illustrations/q074.svg"
+      "illustration": "illustrations/q074.svg"
     },
     {
       "id": 75,
@@ -664,7 +664,7 @@
       "question_content": "Какой день недели является Божьей субботой для христиан?",
       "answer": "Последний день недели, или воскресный день, в который Христос воскрес из мертвых.",
       "topic_id": 7,
-      "svg_image": "illustrations/q075.svg"
+      "illustration": "illustrations/q075.svg"
     },
     {
       "id": 76,
@@ -672,7 +672,7 @@
       "question_content": "Что мы должны делать в Божью субботу?",
       "answer": "Мы должны поклоняться Богу вместе с Его народом или наедине, молиться Ему, прославлять Его, читать или слушать Его Слово и делать добро другим людям.",
       "topic_id": 7,
-      "svg_image": "illustrations/q076.svg"
+      "illustration": "illustrations/q076.svg"
     },
     {
       "id": 77,
@@ -680,7 +680,7 @@
       "question_content": "О чем говорит пятая заповедь?",
       "answer": "Пятая заповедь гласит: «Почитай отца твоего и мать твою, чтобы продлились дни твои на земле, которую Господь Бог твой, дает тебе» (Исход 20:12).",
       "topic_id": 7,
-      "svg_image": "illustrations/q077.svg"
+      "illustration": "illustrations/q077.svg"
     },
     {
       "id": 78,
@@ -688,7 +688,7 @@
       "question_content": "Что велит нам делать пятая заповедь?",
       "answer": "Любить своих родителей и повиноваться им и тем людям, которым дана власть над нами.",
       "topic_id": 7,
-      "svg_image": "illustrations/q078.svg"
+      "illustration": "illustrations/q078.svg"
     },
     {
       "id": 79,
@@ -696,7 +696,7 @@
       "question_content": "О чем говорит шестая заповедь?",
       "answer": "Шестая заповедь гласит: «Не убивай» (Исход 20:13).",
       "topic_id": 7,
-      "svg_image": "illustrations/q079.svg"
+      "illustration": "illustrations/q079.svg"
     },
     {
       "id": 80,
@@ -704,7 +704,7 @@
       "question_content": "Что велит нам делать шестая заповедь?",
       "answer": "Не лишать никого жизни и не драться ни с кем.",
       "topic_id": 7,
-      "svg_image": "illustrations/q080.svg"
+      "illustration": "illustrations/q080.svg"
     },
     {
       "id": 81,
@@ -712,7 +712,7 @@
       "question_content": "О чем говорит седьмая заповедь?",
       "answer": "Седьмая заповедь гласит: «Не прелюбодействуй» (Исход 20:14).",
       "topic_id": 7,
-      "svg_image": "illustrations/q081.svg"
+      "illustration": "illustrations/q081.svg"
     },
     {
       "id": 82,
@@ -720,7 +720,7 @@
       "question_content": "Что велит нам делать седьмая заповедь?",
       "answer": "Быть чистыми в мыслях, словах и делах.",
       "topic_id": 7,
-      "svg_image": "illustrations/q082.svg"
+      "illustration": "illustrations/q082.svg"
     },
     {
       "id": 83,
@@ -728,7 +728,7 @@
       "question_content": "О чем говорит восьмая заповедь?",
       "answer": "Восьмая заповедь гласит: «Не кради» (Исход 20:15).",
       "topic_id": 7,
-      "svg_image": "illustrations/q083.svg"
+      "illustration": "illustrations/q083.svg"
     },
     {
       "id": 84,
@@ -736,7 +736,7 @@
       "question_content": "Что велит нам делать восьмая заповедь?",
       "answer": "Быть честными и хорошо работать, чтобы заботиться о себе и о других, и уважать чужую собственность.",
       "topic_id": 7,
-      "svg_image": "illustrations/q084.svg"
+      "illustration": "illustrations/q084.svg"
     },
     {
       "id": 85,
@@ -744,7 +744,7 @@
       "question_content": "О чем говорит девятая заповедь?",
       "answer": "Девятая заповедь гласит: «Не произноси ложного свидетельства на ближнего твоего» (Исход 20:16).",
       "topic_id": 7,
-      "svg_image": "illustrations/q085.svg"
+      "illustration": "illustrations/q085.svg"
     },
     {
       "id": 86,
@@ -752,7 +752,7 @@
       "question_content": "Что велит нам делать девятая заповедь?",
       "answer": "Всегда говорить правду.",
       "topic_id": 7,
-      "svg_image": "illustrations/q086.svg"
+      "illustration": "illustrations/q086.svg"
     },
     {
       "id": 87,
@@ -760,7 +760,7 @@
       "question_content": "О чем говорит десятая заповедь?",
       "answer": "Десятая заповедь гласит: «Не желай дома ближнего твоего; не желай жены ближнего твоего, ни раба его, ни рабыни его, ни вола его, ни осла его, ничего, что у ближнего твоего» (Исход 20:17).",
       "topic_id": 7,
-      "svg_image": "illustrations/q087.svg"
+      "illustration": "illustrations/q087.svg"
     },
     {
       "id": 88,
@@ -768,7 +768,7 @@
       "question_content": "Что велит нам делать десятая заповедь?",
       "answer": "Быть довольными тем, что мы имеем, и никому не завидовать.",
       "topic_id": 7,
-      "svg_image": "illustrations/q088.svg"
+      "illustration": "illustrations/q088.svg"
     },
     {
       "id": 89,
@@ -776,7 +776,7 @@
       "question_content": "Можем ли мы полностью и правильно соблюсти все десять заповедей?",
       "answer": "Нет. Мы нарушаем их каждый день в мыслях, словах и делах.",
       "topic_id": 8,
-      "svg_image": "illustrations/q089.svg"
+      "illustration": "illustrations/q089.svg"
     },
     {
       "id": 90,
@@ -784,7 +784,7 @@
       "question_content": "Смог ли кто-нибудь полностью исполнить все десять заповедей?",
       "answer": "Только Иисус Христос, Который является Богом и человеком одновременно, полностью и правильно исполнил все Божьи заповеди.",
       "topic_id": 8,
-      "svg_image": "illustrations/q090.svg"
+      "illustration": "illustrations/q090.svg"
     },
     {
       "id": 91,
@@ -792,7 +792,7 @@
       "question_content": "Чего мы заслужили за нарушение Божьих заповедей?",
       "answer": "Божьего гнева и наказания.",
       "topic_id": 8,
-      "svg_image": "illustrations/q091.svg"
+      "illustration": "illustrations/q091.svg"
     },
     {
       "id": 92,
@@ -800,7 +800,7 @@
       "question_content": "Как мы можем спастись от Божьего гнева и наказания?",
       "answer": "Для тех, кто покается в своих грехах, Бог по Своей милости дал единственную возможность спасения: через веру в Господа Иисуса Христа.",
       "topic_id": 9,
-      "svg_image": "illustrations/q092.svg"
+      "illustration": "illustrations/q092.svg"
     },
     {
       "id": 93,
@@ -808,7 +808,7 @@
       "question_content": "Что такое вера?",
       "answer": "Вера в Иисуса Христа – это дар Божий. Он проявляется в том, что мы полностью доверяем Христу свое спасение от греха.",
       "topic_id": 9,
-      "svg_image": "illustrations/q093.svg"
+      "illustration": "illustrations/q093.svg"
     },
     {
       "id": 94,
@@ -816,7 +816,7 @@
       "question_content": "Что такое покаяние?",
       "answer": "Покаяние – это также дар Божий. Он проявляется в том, что мы искренно сожалеем о своих грехах и обращаемся от них к Иисусу Христу и после этого живем в послушании Ему.",
       "topic_id": 9,
-      "svg_image": "illustrations/q094.svg"
+      "illustration": "illustrations/q094.svg"
     },
     {
       "id": 95,
@@ -824,7 +824,7 @@
       "question_content": "Как Бог помогает нам жить после того, как Он спас нас?",
       "answer": "Через Свое Слово в Библии, церковные установления и молитву.",
       "topic_id": 10,
-      "svg_image": "illustrations/q095.svg"
+      "illustration": "illustrations/q095.svg"
     },
     {
       "id": 96,
@@ -832,7 +832,7 @@
       "question_content": "Как мы должны читать Божье Слово?",
       "answer": "Мы должны читать Библию внимательно и верить всему, что она говорит.",
       "topic_id": 10,
-      "svg_image": "illustrations/q096.svg"
+      "illustration": "illustrations/q096.svg"
     },
     {
       "id": 97,
@@ -840,7 +840,7 @@
       "question_content": "Какие есть церковные установления?",
       "answer": "Церковные установления – это крещение и вечеря Господня.",
       "topic_id": 11,
-      "svg_image": "illustrations/q097.svg"
+      "illustration": "illustrations/q097.svg"
     },
     {
       "id": 98,
@@ -848,7 +848,7 @@
       "question_content": "Что такое крещение?",
       "answer": "Крещение – это внешнее омовение водой во имя Отца и Сына и Святого Духа, которое является символом внутреннего очищения от греха кровью Иисуса Христа и нашей принадлежности Богу.",
       "topic_id": 11,
-      "svg_image": "illustrations/q098.svg"
+      "illustration": "illustrations/q098.svg"
     },
     {
       "id": 99,
@@ -856,7 +856,7 @@
       "question_content": "Что такое Вечеря Господня?",
       "answer": "Вечеря Господня – это символическое вкушение хлеба и принятие вина в напоминание нам о смерти Господа Иисуса Христа за Его народ.",
       "topic_id": 11,
-      "svg_image": "illustrations/q099.svg"
+      "illustration": "illustrations/q099.svg"
     },
     {
       "id": 100,
@@ -864,7 +864,7 @@
       "question_content": "Что означают хлеб и вино?",
       "answer": "Они символизируют тело Христа и Его кровь.",
       "topic_id": 11,
-      "svg_image": "illustrations/q100.svg"
+      "illustration": "illustrations/q100.svg"
     },
     {
       "id": 101,
@@ -872,7 +872,7 @@
       "question_content": "Почему Иисус Христос повелел верующим в Него соблюдать это установление?",
       "answer": "Чтобы вспоминать о Его страданиях и смерти и возвещать о них в мире до конца его существования.",
       "topic_id": 11,
-      "svg_image": "illustrations/q101.svg"
+      "illustration": "illustrations/q101.svg"
     },
     {
       "id": 102,
@@ -880,7 +880,7 @@
       "question_content": "Что такое молитва?",
       "answer": "Молитва – это прошение у Бога того, что соответствует Его воле, это исповедание грехов и благодарение за все Его милости.",
       "topic_id": 12,
-      "svg_image": "illustrations/q102.svg"
+      "illustration": "illustrations/q102.svg"
     },
     {
       "id": 103,
@@ -888,7 +888,7 @@
       "question_content": "Во имя кого мы должны молиться?",
       "answer": "Во имя Иисуса Христа.",
       "topic_id": 12,
-      "svg_image": "illustrations/q103.svg"
+      "illustration": "illustrations/q103.svg"
     },
     {
       "id": 104,
@@ -896,7 +896,7 @@
       "question_content": "Что дал нам Бог, чтобы научить нас молиться?",
       "answer": "Он дал нам для этого всю Библию, но особенно Христос учит нас молиться в Своей молитве «Отче наш».",
       "topic_id": 12,
-      "svg_image": "illustrations/q104.svg"
+      "illustration": "illustrations/q104.svg"
     },
     {
       "id": 105,
@@ -904,7 +904,7 @@
       "question_content": "О чем говорится в молитве «Отче наш»?",
       "answer": "«Молитесь же так: Отче наш, сущий на небесах! да святится имя Твое; да придет Царствие Твое; да будет воля Твоя и на земле, как на небе; хлеб наш насущный дай нам на сей день; и прости нам долги наши, как и мы прощаем должникам нашим; и не введи нас в искушение, но избавь нас от лукавого; ибо Твое есть Царство и сила и слава во веки. Аминь» (Евангелие от Матфея 6:9-13).",
       "topic_id": 12,
-      "svg_image": "illustrations/q105.svg"
+      "illustration": "illustrations/q105.svg"
     },
     {
       "id": 106,
@@ -912,7 +912,7 @@
       "question_content": "Остался ли Иисус Христос после Своей смерти в могиле?",
       "answer": "Нет. Он воскрес из мертвых на третий день.",
       "topic_id": 13,
-      "svg_image": "illustrations/q106.svg"
+      "illustration": "illustrations/q106.svg"
     },
     {
       "id": 107,
@@ -920,7 +920,7 @@
       "question_content": "Где Христос находится сейчас?",
       "answer": "Он находится на небе, сидит по правую руку Бога Отца, всегда молясь за Свой народ.",
       "topic_id": 13,
-      "svg_image": "illustrations/q107.svg"
+      "illustration": "illustrations/q107.svg"
     },
     {
       "id": 108,
@@ -928,7 +928,7 @@
       "question_content": "Придет ли Христос снова в наш мир?",
       "answer": "Да. В конце времен Христос вернется, чтобы судить мир.",
       "topic_id": 13,
-      "svg_image": "illustrations/q108.svg"
+      "illustration": "illustrations/q108.svg"
     },
     {
       "id": 109,
@@ -936,7 +936,7 @@
       "question_content": "Что происходит с человеком, когда он умирает?",
       "answer": "Его тело разлагается, а душа продолжает жить и отправляется либо в рай, либо в ад.",
       "topic_id": 14,
-      "svg_image": "illustrations/q109.svg"
+      "illustration": "illustrations/q109.svg"
     },
     {
       "id": 110,
@@ -944,7 +944,7 @@
       "question_content": "Будут ли когда-нибудь воскрешены тела умерших?",
       "answer": "Да. Когда Христос придет снова, тела умерших будут воскрешены и навсегда воссоединятся с их душами.",
       "topic_id": 14,
-      "svg_image": "illustrations/q110.svg"
+      "illustration": "illustrations/q110.svg"
     },
     {
       "id": 111,
@@ -952,7 +952,7 @@
       "question_content": "Куда Бог отправляет неверующих грешников после их смерти?",
       "answer": "В ад.",
       "topic_id": 15,
-      "svg_image": "illustrations/q111.svg"
+      "illustration": "illustrations/q111.svg"
     },
     {
       "id": 112,
@@ -960,7 +960,7 @@
       "question_content": "Что такое ад?",
       "answer": "Это ужасное место вечного мучения и наказания.",
       "topic_id": 15,
-      "svg_image": "illustrations/q112.svg"
+      "illustration": "illustrations/q112.svg"
     },
     {
       "id": 113,
@@ -968,7 +968,7 @@
       "question_content": "Куда направляется после смерти послушный Богу человек?",
       "answer": "В рай.",
       "topic_id": 16,
-      "svg_image": "illustrations/q113.svg"
+      "illustration": "illustrations/q113.svg"
     },
     {
       "id": 114,
@@ -976,7 +976,7 @@
       "question_content": "Что такое рай?",
       "answer": "Это славное место вечного счастья и радости, где находится Сам Христос.",
       "topic_id": 16,
-      "svg_image": "illustrations/q114.svg"
+      "illustration": "illustrations/q114.svg"
     }
   ],
   "verses": [
