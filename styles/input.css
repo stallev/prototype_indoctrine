@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-md-primary: var(--md-sys-color-primary);
+  --color-md-on-primary: var(--md-sys-color-on-primary);
+  --color-md-secondary: var(--md-sys-color-secondary);
+  --color-md-surface: var(--md-sys-color-surface);
+  --color-md-on-surface: var(--md-sys-color-on-surface);
+  --color-md-surface-container: var(--md-sys-color-surface-container);
+  --color-md-surface-tint: var(--md-sys-color-surface-tint);
+  --color-md-outline: var(--md-sys-color-outline);
+
+  --font-sans: "Roboto", "Segoe UI", sans-serif;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+:root {
+  /* Светлая спокойная палитра; согласована с SVG-палитрой (#BFE3F0) */
+  --md-sys-color-primary: #3d5a80;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-secondary: #7fb4b0;
+  --md-sys-color-surface: #f5fbfe;
+  --md-sys-color-on-surface: #1a2332;
+  --md-sys-color-surface-container: #ffffff;
+  --md-sys-color-surface-tint: #bfe3f0;
+  --md-sys-color-outline: #8a9bb0;
+
+  --md-elevation-1: 0 1px 2px rgb(0 0 0 / 0.08), 0 1px 3px rgb(0 0 0 / 0.06);
+  --md-elevation-2: 0 2px 6px rgb(0 0 0 / 0.10), 0 1px 4px rgb(0 0 0 / 0.06);
+}
+
+body {
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  overflow-x: hidden;
+}
+
+/* Fallback until real illustrations exist: keep the 4:3 frame stable. */
+.illustration-frame {
+  aspect-ratio: 4 / 3;
+}

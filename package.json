@@ -1,0 +1,15 @@
+{
+  "name": "prototype-indoctrine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Статический HTML-прототип катехизиса",
+  "scripts": {
+    "build:css": "tailwindcss -i ./styles/input.css -o ./styles/app.css",
+    "watch:css": "tailwindcss -i ./styles/input.css -o ./styles/app.css --watch",
+    "serve": "npx --yes serve ."
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4",
+    "tailwindcss": "^4"
+  }
+}

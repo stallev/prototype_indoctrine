@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Катехизис</title>
+  <link rel="stylesheet" href="styles/app.css" />
+</head>
+<body class="font-sans antialiased">
+  <!-- Top App Bar -->
+  <header
+    class="sticky top-0 z-30 flex h-14 items-center gap-2 px-2 md:pl-[272px]"
+    style="background-color: var(--md-sys-color-surface-container); box-shadow: var(--md-elevation-1);"
+  >
+    <button
+      id="drawer-toggle"
+      type="button"
+      class="flex h-11 w-11 items-center justify-center rounded-full md:hidden"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+      aria-controls="nav-drawer"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <h1 class="truncate text-lg font-medium">Катехизис</h1>
+  </header>
+
+  <!-- Overlay (mobile only, shown while drawer is open) -->
+  <div id="drawer-overlay" class="fixed inset-0 z-30 hidden bg-black/40 md:hidden" aria-hidden="true"></div>
+
+  <!-- Navigation Drawer -->
+  <nav
+    id="nav-drawer"
+    role="navigation"
+    aria-label="Оглавление"
+    class="fixed inset-y-0 left-0 z-40 w-[272px] -translate-x-full overflow-y-auto transition-transform duration-200 ease-out md:translate-x-0"
+    style="background-color: var(--md-sys-color-surface-container); box-shadow: var(--md-elevation-2);"
+  >
+    <div class="flex h-14 items-center justify-between px-4">
+      <span class="text-base font-medium">Содержание</span>
+      <button
+        id="drawer-close"
+        type="button"
+        class="flex h-11 w-11 items-center justify-center rounded-full md:hidden"
+        aria-label="Закрыть меню"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+    <ul id="nav-topics" class="pb-4"></ul>
+  </nav>
+
+  <!-- Main content -->
+  <main id="app-main" class="min-h-[calc(100vh-3.5rem)] px-4 py-6 md:ml-[272px] md:px-8"></main>
+
+  <!-- Templates -->
+  <template id="tpl-topic-item">
+    <li>
+      <button
+        type="button"
+        class="nav-topic-button flex min-h-[44px] w-full items-center justify-between gap-2 px-4 py-2 text-left"
+        aria-expanded="false"
+      >
+        <span class="nav-topic-name truncate"></span>
+        <svg class="nav-topic-caret h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <ul class="nav-questions hidden pl-4"></ul>
+    </li>
+  </template>
+
+  <template id="tpl-question-item">
+    <li>
+      <a class="nav-question-link flex min-h-[44px] items-center px-4 py-2 text-sm" href="#">
+        <span class="nav-question-number shrink-0"></span>
+        <span class="nav-question-content ml-2 truncate"></span>
+      </a>
+    </li>
+  </template>
+
+  <template id="tpl-verse-block">
+    <li class="verse-item">
+      <blockquote class="verse-text"></blockquote>
+      <cite class="verse-reference"></cite>
+    </li>
+  </template>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
