@@ -1,0 +1,2352 @@
+{
+  "topics": [
+    {
+      "topic_id": 1,
+      "topic_name": "Бог"
+    },
+    {
+      "topic_id": 2,
+      "topic_name": "Сотворение"
+    },
+    {
+      "topic_id": 3,
+      "topic_name": "Как человек согрешил?"
+    },
+    {
+      "topic_id": 4,
+      "topic_name": "Что произошло в результате греха?"
+    },
+    {
+      "topic_id": 5,
+      "topic_name": "Спасение"
+    },
+    {
+      "topic_id": 6,
+      "topic_name": "Иисус Христос – Пророк, Священник и Царь"
+    },
+    {
+      "topic_id": 7,
+      "topic_name": "Десять заповедей"
+    },
+    {
+      "topic_id": 8,
+      "topic_name": "Соблюдение Божьих законов"
+    },
+    {
+      "topic_id": 9,
+      "topic_name": "Способ спасения"
+    },
+    {
+      "topic_id": 10,
+      "topic_name": "Жизнь спасенного человека"
+    },
+    {
+      "topic_id": 11,
+      "topic_name": "Крещение и вечеря Господня"
+    },
+    {
+      "topic_id": 12,
+      "topic_name": "Молитва"
+    },
+    {
+      "topic_id": 13,
+      "topic_name": "Где Иисус Христос находится сейчас?"
+    },
+    {
+      "topic_id": 14,
+      "topic_name": "Смерть"
+    },
+    {
+      "topic_id": 15,
+      "topic_name": "Ад"
+    },
+    {
+      "topic_id": 16,
+      "topic_name": "Рай"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "question_number": 1,
+      "question_content": "Кто тебя сотворил?",
+      "answer": "Бог.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q001.svg"
+    },
+    {
+      "id": 2,
+      "question_number": 2,
+      "question_content": "Для чего Бог сотворил тебя?",
+      "answer": "Чтобы я прославлял Его и наслаждался Им.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q002.svg"
+    },
+    {
+      "id": 3,
+      "question_number": 3,
+      "question_content": "Что еще сотворил Бог?",
+      "answer": "Бог сотворил все.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q003.svg"
+    },
+    {
+      "id": 4,
+      "question_number": 4,
+      "question_content": "Для чего Бог сотворил все?",
+      "answer": "Для Своей славы.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q004.svg"
+    },
+    {
+      "id": 5,
+      "question_number": 5,
+      "question_content": "Где Бог учит нас прославлять Его и наслаждаться Им?",
+      "answer": "В Своем Слове – Библии.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q005.svg"
+    },
+    {
+      "id": 6,
+      "question_number": 6,
+      "question_content": "Кто написал Библию?",
+      "answer": "Святые люди, которых Святой Дух научил, что нужно написать.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q006.svg"
+    },
+    {
+      "id": 7,
+      "question_number": 7,
+      "question_content": "Кто есть Бог?",
+      "answer": "Бог – это Дух.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q007.svg"
+    },
+    {
+      "id": 8,
+      "question_number": 8,
+      "question_content": "Кто такой дух?",
+      "answer": "Это невидимое существо, не имеющее тела, подобного нашему.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q008.svg"
+    },
+    {
+      "id": 9,
+      "question_number": 9,
+      "question_content": "Где находится Бог?",
+      "answer": "Бог везде.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q009.svg"
+    },
+    {
+      "id": 10,
+      "question_number": 10,
+      "question_content": "Было ли у Бога начало?",
+      "answer": "Нет. Он существовал всегда.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q010.svg"
+    },
+    {
+      "id": 11,
+      "question_number": 11,
+      "question_content": "Будет ли у Бога конец?",
+      "answer": "Нет. Он будет существовать всегда.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q011.svg"
+    },
+    {
+      "id": 12,
+      "question_number": 12,
+      "question_content": "Изменяется ли Бог?",
+      "answer": "Нет. Он никогда не изменяется, Он всегда один и тот же.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q012.svg"
+    },
+    {
+      "id": 13,
+      "question_number": 13,
+      "question_content": "Знает ли Бог все?",
+      "answer": "Да. От Него ничего нельзя спрятать.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q013.svg"
+    },
+    {
+      "id": 14,
+      "question_number": 14,
+      "question_content": "Все ли Бог может?",
+      "answer": "Да. Он может все, что захочет.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q014.svg"
+    },
+    {
+      "id": 15,
+      "question_number": 15,
+      "question_content": "Можешь ли ты увидеть Бога?",
+      "answer": "Нет. Я не могу увидеть Бога, но Он всегда видит меня.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q015.svg"
+    },
+    {
+      "id": 16,
+      "question_number": 16,
+      "question_content": "Сколько есть Богов?",
+      "answer": "Есть только один Бог.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q016.svg"
+    },
+    {
+      "id": 17,
+      "question_number": 17,
+      "question_content": "Сколько личностей существует в Боге?",
+      "answer": "Три личности.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q017.svg"
+    },
+    {
+      "id": 18,
+      "question_number": 18,
+      "question_content": "Кто эти три личности?",
+      "answer": "Отец, Сын и Святой Дух.",
+      "topic_id": 1,
+      "svg_image": "illustrations/q018.svg"
+    },
+    {
+      "id": 19,
+      "question_number": 19,
+      "question_content": "Кто сотворил мир?",
+      "answer": "Бог.",
+      "topic_id": 2,
+      "svg_image": "illustrations/q019.svg"
+    },
+    {
+      "id": 20,
+      "question_number": 20,
+      "question_content": "Из чего Бог сотворил мир?",
+      "answer": "Из ничего. До сотворения мира ничего не было.",
+      "topic_id": 2,
+      "svg_image": "illustrations/q020.svg"
+    },
+    {
+      "id": 21,
+      "question_number": 21,
+      "question_content": "Как Бог сотворил мир?",
+      "answer": "Своим могущественным словом.",
+      "topic_id": 2,
+      "svg_image": "illustrations/q021.svg"
+    },
+    {
+      "id": 22,
+      "question_number": 22,
+      "question_content": "Сколько времени ушло на сотворение мира?",
+      "answer": "Шесть дней.",
+      "topic_id": 2,
+      "svg_image": "illustrations/q022.svg"
+    },
+    {
+      "id": 23,
+      "question_number": 23,
+      "question_content": "Что Бог делал в седьмой день?",
+      "answer": "Он отдыхал, и седьмой день недели Он сделал особенным.",
+      "topic_id": 2,
+      "svg_image": "illustrations/q023.svg"
+    },
+    {
+      "id": 24,
+      "question_number": 24,
+      "question_content": "Кто был первым сотворенным мужчиной?",
+      "answer": "Адам.",
+      "topic_id": 2,
+      "svg_image": "illustrations/q024.svg"
+    },
+    {
+      "id": 25,
+      "question_number": 25,
+      "question_content": "Кто был первой сотворенной женщиной?",
+      "answer": "Ева.",
+      "topic_id": 2,
+      "svg_image": "illustrations/q025.svg"
+    },
+    {
+      "id": 26,
+      "question_number": 26,
+      "question_content": "Из чего Бог сотворил Адама?",
+      "answer": "Из праха земного.",
+      "topic_id": 2,
+      "svg_image": "illustrations/q026.svg"
+    },
+    {
+      "id": 27,
+      "question_number": 27,
+      "question_content": "Из чего Бог сотворил Еву?",
+      "answer": "Из ребра Адама.",
+      "topic_id": 2,
+      "svg_image": "illustrations/q027.svg"
+    },
+    {
+      "id": 28,
+      "question_number": 28,
+      "question_content": "Что еще кроме тела Бог дал Адаму и Еве?",
+      "answer": "Он дал им души, которые никогда не умрут.",
+      "topic_id": 2,
+      "svg_image": "illustrations/q028.svg"
+    },
+    {
+      "id": 29,
+      "question_number": 29,
+      "question_content": "А у тебя есть душа?",
+      "answer": "Да. У меня есть душа, которая никогда не умрет.",
+      "topic_id": 2,
+      "svg_image": "illustrations/q029.svg"
+    },
+    {
+      "id": 30,
+      "question_number": 30,
+      "question_content": "Откуда ты знаешь, что у тебя есть душа?",
+      "answer": "Бог говорит мне об этом в Библии.",
+      "topic_id": 2,
+      "svg_image": "illustrations/q030.svg"
+    },
+    {
+      "id": 31,
+      "question_number": 31,
+      "question_content": "Были ли Адам и Ева хорошими, когда Бог сотворил их?",
+      "answer": "Да, они были очень хорошими, святыми и счастливыми. Все, что Бог сотворил, было хорошим.",
+      "topic_id": 3,
+      "svg_image": "illustrations/q031.svg"
+    },
+    {
+      "id": 32,
+      "question_number": 32,
+      "question_content": "Что такое грех?",
+      "answer": "Грех – это любое непослушание Божьему закону.",
+      "topic_id": 3,
+      "svg_image": "illustrations/q032.svg"
+    },
+    {
+      "id": 33,
+      "question_number": 33,
+      "question_content": "Что такое непослушание Божьему закону?",
+      "answer": "Это значит делать то, чего Бог говорит не делать.",
+      "topic_id": 3,
+      "svg_image": "illustrations/q033.svg"
+    },
+    {
+      "id": 34,
+      "question_number": 34,
+      "question_content": "Что такое несоблюдение Божьего закона?",
+      "answer": "Это значит не быть таким, как требует Бог, или не делать того, чего требует Бог.",
+      "topic_id": 3,
+      "svg_image": "illustrations/q034.svg"
+    },
+    {
+      "id": 35,
+      "question_number": 35,
+      "question_content": "Навсегда ли Адам и Ева остались хорошими?",
+      "answer": "Нет. Они согрешили, не послушавшись Бога.",
+      "topic_id": 3,
+      "svg_image": "illustrations/q035.svg"
+    },
+    {
+      "id": 36,
+      "question_number": 36,
+      "question_content": "Как согрешили Адам и Ева?",
+      "answer": "Они съели плод, который Бог запретил им есть.",
+      "topic_id": 3,
+      "svg_image": "illustrations/q036.svg"
+    },
+    {
+      "id": 37,
+      "question_number": 37,
+      "question_content": "Что произошло с Адамом и Евой, когда они согрешили?",
+      "answer": "Они были отделены от Бога.",
+      "topic_id": 4,
+      "svg_image": "illustrations/q037.svg"
+    },
+    {
+      "id": 38,
+      "question_number": 38,
+      "question_content": "Влияет ли грех Адама на нас?",
+      "answer": "Да. Мы все – дети Адама. Он был нашим представителем, и поэтому из-за его первого греха мы все рождаемся в греховном состоянии.",
+      "topic_id": 4,
+      "svg_image": "illustrations/q038.svg"
+    },
+    {
+      "id": 39,
+      "question_number": 39,
+      "question_content": "Как называется это греховное состояние?",
+      "answer": "Первородный грех.",
+      "topic_id": 4,
+      "svg_image": "illustrations/q039.svg"
+    },
+    {
+      "id": 40,
+      "question_number": 40,
+      "question_content": "В каких еще грехах, кроме первородного, мы виновны?",
+      "answer": "Мы виновны перед Богом в своих личных грехах, которые мы совершаем в делах, словах или мыслях.",
+      "topic_id": 4,
+      "svg_image": "illustrations/q040.svg"
+    },
+    {
+      "id": 41,
+      "question_number": 41,
+      "question_content": "Чего мы заслуживаем за свои грехи?",
+      "answer": "Божьего гнева и наказания.",
+      "topic_id": 4,
+      "svg_image": "illustrations/q041.svg"
+    },
+    {
+      "id": 42,
+      "question_number": 42,
+      "question_content": "Может ли кто-нибудь попасть на небеса в таком греховном состоянии?",
+      "answer": "Нет. Наши сердца должны измениться, прежде чем мы сможем попасть на небеса.",
+      "topic_id": 4,
+      "svg_image": "illustrations/q042.svg"
+    },
+    {
+      "id": 43,
+      "question_number": 43,
+      "question_content": "Что сделал Бог, чтобы спасти Свой народ от гнева и наказания?",
+      "answer": "Он послал Своего Сына, чтобы любой, кто поверит в Него, не погиб, но имел жизнь вечную.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q043.svg"
+    },
+    {
+      "id": 44,
+      "question_number": 44,
+      "question_content": "Кто такой Божий Сын?",
+      "answer": "Это Господь Иисус Христос.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q044.svg"
+    },
+    {
+      "id": 45,
+      "question_number": 45,
+      "question_content": "Как Божий Сын пришел в наш мир?",
+      "answer": "Он родился в Вифлееме в хлеву.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q045.svg"
+    },
+    {
+      "id": 46,
+      "question_number": 46,
+      "question_content": "Кто стал Его матерью?",
+      "answer": "Дева Мария.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q046.svg"
+    },
+    {
+      "id": 47,
+      "question_number": 47,
+      "question_content": "Был ли у Иисуса Христа земной отец?",
+      "answer": "Нет. Он родился в мир по действию силы Святого Духа.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q047.svg"
+    },
+    {
+      "id": 48,
+      "question_number": 48,
+      "question_content": "Почему Он родился именно таким образом?",
+      "answer": "Чтобы быть свободным от первородного греха.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q048.svg"
+    },
+    {
+      "id": 49,
+      "question_number": 49,
+      "question_content": "Согрешил ли Иисус хотя бы один раз?",
+      "answer": "Нет. Он всегда и во всем повиновался Богу.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q049.svg"
+    },
+    {
+      "id": 50,
+      "question_number": 50,
+      "question_content": "Почему Божьего Сына зовут Иисус?",
+      "answer": "«Иисус» означает Спаситель, и Он спасает Свой народ от грехов.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q050.svg"
+    },
+    {
+      "id": 51,
+      "question_number": 51,
+      "question_content": "Как Иисус спас Свой народ от грехов?",
+      "answer": "Иисус Христос пострадал и умер на кресте вместо людей, чтобы заплатить цену за все их грехи.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q051.svg"
+    },
+    {
+      "id": 52,
+      "question_number": 52,
+      "question_content": "За кого пострадал и умер Иисус Христос?",
+      "answer": "За всех тех людей, которых Бог Отец дал Ему.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q052.svg"
+    },
+    {
+      "id": 53,
+      "question_number": 53,
+      "question_content": "Кто будет спасен?",
+      "answer": "Только тот, кто покается в своих грехах и поверит в Иисуса Христа.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q053.svg"
+    },
+    {
+      "id": 54,
+      "question_number": 54,
+      "question_content": "Как ты можешь покаяться в грехах?",
+      "answer": "Я должен сожалеть о своих грехах, ненавидеть их и желать прекратить их делать. Я должен хотеть во всем угождать Богу.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q054.svg"
+    },
+    {
+      "id": 55,
+      "question_number": 55,
+      "question_content": "Можешь ли ты сам решить покаяться и поверить в Иисуса Христа?",
+      "answer": "Нет. Я могу сделать это только с помощью Святого Духа.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q055.svg"
+    },
+    {
+      "id": 56,
+      "question_number": 56,
+      "question_content": "Как ты можешь получить помощь Святого Духа?",
+      "answer": "Я могу помолиться Богу и попросить Его дать мне эту помощь.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q056.svg"
+    },
+    {
+      "id": 57,
+      "question_number": 57,
+      "question_content": "Как спасались люди, жившие до того, как Христос умер за наши грехи?",
+      "answer": "Они верили в Спасителя, которого Бог обещал послать в будущем.",
+      "topic_id": 5,
+      "svg_image": "illustrations/q057.svg"
+    },
+    {
+      "id": 58,
+      "question_number": 58,
+      "question_content": "Как Иисус Христос исполнил ветхозаветные пророчества о Нем?",
+      "answer": "Он пришел, чтобы быть Пророком, Священником и Царем.",
+      "topic_id": 6,
+      "svg_image": "illustrations/q058.svg"
+    },
+    {
+      "id": 59,
+      "question_number": 59,
+      "question_content": "В каком смысле Христос является нашим Пророком?",
+      "answer": "Он учит нас воле Божьей.",
+      "topic_id": 6,
+      "svg_image": "illustrations/q059.svg"
+    },
+    {
+      "id": 60,
+      "question_number": 60,
+      "question_content": "В каком смысле Христос является нашим Священником?",
+      "answer": "Мы виновны в грехе, а Он умер, став жертвой за грехи Своего народа. Теперь после Своего воскресения и вознесения на небо Он продолжает молиться о нас.",
+      "topic_id": 6,
+      "svg_image": "illustrations/q060.svg"
+    },
+    {
+      "id": 61,
+      "question_number": 61,
+      "question_content": "В каком смысле Христос является нашим Царем?",
+      "answer": "Он правит миром и защищает Свой народ от сатаны.",
+      "topic_id": 6,
+      "svg_image": "illustrations/q061.svg"
+    },
+    {
+      "id": 62,
+      "question_number": 62,
+      "question_content": "Сколько заповедей дал Бог на горе Синай?",
+      "answer": "Десять заповедей.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q062.svg"
+    },
+    {
+      "id": 63,
+      "question_number": 63,
+      "question_content": "О чем говорят нам первые четыре заповеди?",
+      "answer": "О том, как любить Бога.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q063.svg"
+    },
+    {
+      "id": 64,
+      "question_number": 64,
+      "question_content": "О чем говорят нам заповеди с пятой по десятую?",
+      "answer": "О том, как любить других людей.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q064.svg"
+    },
+    {
+      "id": 65,
+      "question_number": 65,
+      "question_content": "О чем в целом говорят все десять заповедей?",
+      "answer": "О том, что мы должны любить Господа Бога нашего всем сердцем, душой, силой и разумом и любить ближнего, как самого себя.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q065.svg"
+    },
+    {
+      "id": 66,
+      "question_number": 66,
+      "question_content": "Кто наш ближний?",
+      "answer": "Наш ближний – это любой человек.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q066.svg"
+    },
+    {
+      "id": 67,
+      "question_number": 67,
+      "question_content": "О чем говорит первая заповедь?",
+      "answer": "Первая заповедь гласит: «Да не будет у тебя других богов пред лицом Моим» (Исход 20:3).",
+      "topic_id": 7,
+      "svg_image": "illustrations/q067.svg"
+    },
+    {
+      "id": 68,
+      "question_number": 68,
+      "question_content": "Что велит нам делать первая заповедь?",
+      "answer": "Поклоняться только Богу.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q068.svg"
+    },
+    {
+      "id": 69,
+      "question_number": 69,
+      "question_content": "О чем говорит вторая заповедь?",
+      "answer": "Вторая заповедь гласит: «Не делай себе кумира и никакого изображения того, что на небе вверху, и что на земле внизу, и что в воде ниже земли. Не поклоняйся им и не служи им; ибо Я Господь, Бог твой, Бог ревнитель, наказывающий детей за вину отцов до третьего рода, ненавидящих Меня, и творящий милость до тысячи родов любящим Меня и соблюдающим заповеди Мои» (Исход 20: 4-6).",
+      "topic_id": 7,
+      "svg_image": "illustrations/q069.svg"
+    },
+    {
+      "id": 70,
+      "question_number": 70,
+      "question_content": "Что велит нам делать вторая заповедь?",
+      "answer": "Поклоняться Богу так, как Он говорит нам в Своем слове, и не использовать рукотворные идолы, статуи и изображения.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q070.svg"
+    },
+    {
+      "id": 71,
+      "question_number": 71,
+      "question_content": "О чем говорит третья заповедь?",
+      "answer": "Третья заповедь гласит: «Не произноси имени Господа, Бога твоего, напрасно; ибо Господь не оставит без наказания того, кто произносит имя Его напрасно» (Исход 20:7).",
+      "topic_id": 7,
+      "svg_image": "illustrations/q071.svg"
+    },
+    {
+      "id": 72,
+      "question_number": 72,
+      "question_content": "Что велит нам делать третья заповедь?",
+      "answer": "Глубоко уважать Божье имя и не упоминать Его имени легкомысленно.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q072.svg"
+    },
+    {
+      "id": 73,
+      "question_number": 73,
+      "question_content": "О чем говорит четвертая заповедь?",
+      "answer": "Четвертая заповедь гласит: «Помни день субботний, чтобы святить его. Шесть дней работай, и делай всякие дела твои; а день седьмой – суббота Господу Богу твоему: не делай в оный никакого дела ни ты, ни сын твой, ни дочь твоя, ни раб твой, ни рабыня твоя, ни скот твой, ни пришелец, который в жилищах твоих. Ибо в шесть дней создал Господь небо и землю, море и все, что в них; а в день седьмой почил. Посему благословил Господь день субботний и освятил его» (Исход 20:8-11).",
+      "topic_id": 7,
+      "svg_image": "illustrations/q073.svg"
+    },
+    {
+      "id": 74,
+      "question_number": 74,
+      "question_content": "Что велит нам делать четвертая заповедь?",
+      "answer": "Считать субботу святым днем.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q074.svg"
+    },
+    {
+      "id": 75,
+      "question_number": 75,
+      "question_content": "Какой день недели является Божьей субботой для христиан?",
+      "answer": "Последний день недели, или воскресный день, в который Христос воскрес из мертвых.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q075.svg"
+    },
+    {
+      "id": 76,
+      "question_number": 76,
+      "question_content": "Что мы должны делать в Божью субботу?",
+      "answer": "Мы должны поклоняться Богу вместе с Его народом или наедине, молиться Ему, прославлять Его, читать или слушать Его Слово и делать добро другим людям.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q076.svg"
+    },
+    {
+      "id": 77,
+      "question_number": 77,
+      "question_content": "О чем говорит пятая заповедь?",
+      "answer": "Пятая заповедь гласит: «Почитай отца твоего и мать твою, чтобы продлились дни твои на земле, которую Господь Бог твой, дает тебе» (Исход 20:12).",
+      "topic_id": 7,
+      "svg_image": "illustrations/q077.svg"
+    },
+    {
+      "id": 78,
+      "question_number": 78,
+      "question_content": "Что велит нам делать пятая заповедь?",
+      "answer": "Любить своих родителей и повиноваться им и тем людям, которым дана власть над нами.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q078.svg"
+    },
+    {
+      "id": 79,
+      "question_number": 79,
+      "question_content": "О чем говорит шестая заповедь?",
+      "answer": "Шестая заповедь гласит: «Не убивай» (Исход 20:13).",
+      "topic_id": 7,
+      "svg_image": "illustrations/q079.svg"
+    },
+    {
+      "id": 80,
+      "question_number": 80,
+      "question_content": "Что велит нам делать шестая заповедь?",
+      "answer": "Не лишать никого жизни и не драться ни с кем.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q080.svg"
+    },
+    {
+      "id": 81,
+      "question_number": 81,
+      "question_content": "О чем говорит седьмая заповедь?",
+      "answer": "Седьмая заповедь гласит: «Не прелюбодействуй» (Исход 20:14).",
+      "topic_id": 7,
+      "svg_image": "illustrations/q081.svg"
+    },
+    {
+      "id": 82,
+      "question_number": 82,
+      "question_content": "Что велит нам делать седьмая заповедь?",
+      "answer": "Быть чистыми в мыслях, словах и делах.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q082.svg"
+    },
+    {
+      "id": 83,
+      "question_number": 83,
+      "question_content": "О чем говорит восьмая заповедь?",
+      "answer": "Восьмая заповедь гласит: «Не кради» (Исход 20:15).",
+      "topic_id": 7,
+      "svg_image": "illustrations/q083.svg"
+    },
+    {
+      "id": 84,
+      "question_number": 84,
+      "question_content": "Что велит нам делать восьмая заповедь?",
+      "answer": "Быть честными и хорошо работать, чтобы заботиться о себе и о других, и уважать чужую собственность.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q084.svg"
+    },
+    {
+      "id": 85,
+      "question_number": 85,
+      "question_content": "О чем говорит девятая заповедь?",
+      "answer": "Девятая заповедь гласит: «Не произноси ложного свидетельства на ближнего твоего» (Исход 20:16).",
+      "topic_id": 7,
+      "svg_image": "illustrations/q085.svg"
+    },
+    {
+      "id": 86,
+      "question_number": 86,
+      "question_content": "Что велит нам делать девятая заповедь?",
+      "answer": "Всегда говорить правду.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q086.svg"
+    },
+    {
+      "id": 87,
+      "question_number": 87,
+      "question_content": "О чем говорит десятая заповедь?",
+      "answer": "Десятая заповедь гласит: «Не желай дома ближнего твоего; не желай жены ближнего твоего, ни раба его, ни рабыни его, ни вола его, ни осла его, ничего, что у ближнего твоего» (Исход 20:17).",
+      "topic_id": 7,
+      "svg_image": "illustrations/q087.svg"
+    },
+    {
+      "id": 88,
+      "question_number": 88,
+      "question_content": "Что велит нам делать десятая заповедь?",
+      "answer": "Быть довольными тем, что мы имеем, и никому не завидовать.",
+      "topic_id": 7,
+      "svg_image": "illustrations/q088.svg"
+    },
+    {
+      "id": 89,
+      "question_number": 89,
+      "question_content": "Можем ли мы полностью и правильно соблюсти все десять заповедей?",
+      "answer": "Нет. Мы нарушаем их каждый день в мыслях, словах и делах.",
+      "topic_id": 8,
+      "svg_image": "illustrations/q089.svg"
+    },
+    {
+      "id": 90,
+      "question_number": 90,
+      "question_content": "Смог ли кто-нибудь полностью исполнить все десять заповедей?",
+      "answer": "Только Иисус Христос, Который является Богом и человеком одновременно, полностью и правильно исполнил все Божьи заповеди.",
+      "topic_id": 8,
+      "svg_image": "illustrations/q090.svg"
+    },
+    {
+      "id": 91,
+      "question_number": 91,
+      "question_content": "Чего мы заслужили за нарушение Божьих заповедей?",
+      "answer": "Божьего гнева и наказания.",
+      "topic_id": 8,
+      "svg_image": "illustrations/q091.svg"
+    },
+    {
+      "id": 92,
+      "question_number": 92,
+      "question_content": "Как мы можем спастись от Божьего гнева и наказания?",
+      "answer": "Для тех, кто покается в своих грехах, Бог по Своей милости дал единственную возможность спасения: через веру в Господа Иисуса Христа.",
+      "topic_id": 9,
+      "svg_image": "illustrations/q092.svg"
+    },
+    {
+      "id": 93,
+      "question_number": 93,
+      "question_content": "Что такое вера?",
+      "answer": "Вера в Иисуса Христа – это дар Божий. Он проявляется в том, что мы полностью доверяем Христу свое спасение от греха.",
+      "topic_id": 9,
+      "svg_image": "illustrations/q093.svg"
+    },
+    {
+      "id": 94,
+      "question_number": 94,
+      "question_content": "Что такое покаяние?",
+      "answer": "Покаяние – это также дар Божий. Он проявляется в том, что мы искренно сожалеем о своих грехах и обращаемся от них к Иисусу Христу и после этого живем в послушании Ему.",
+      "topic_id": 9,
+      "svg_image": "illustrations/q094.svg"
+    },
+    {
+      "id": 95,
+      "question_number": 95,
+      "question_content": "Как Бог помогает нам жить после того, как Он спас нас?",
+      "answer": "Через Свое Слово в Библии, церковные установления и молитву.",
+      "topic_id": 10,
+      "svg_image": "illustrations/q095.svg"
+    },
+    {
+      "id": 96,
+      "question_number": 96,
+      "question_content": "Как мы должны читать Божье Слово?",
+      "answer": "Мы должны читать Библию внимательно и верить всему, что она говорит.",
+      "topic_id": 10,
+      "svg_image": "illustrations/q096.svg"
+    },
+    {
+      "id": 97,
+      "question_number": 97,
+      "question_content": "Какие есть церковные установления?",
+      "answer": "Церковные установления – это крещение и вечеря Господня.",
+      "topic_id": 11,
+      "svg_image": "illustrations/q097.svg"
+    },
+    {
+      "id": 98,
+      "question_number": 98,
+      "question_content": "Что такое крещение?",
+      "answer": "Крещение – это внешнее омовение водой во имя Отца и Сына и Святого Духа, которое является символом внутреннего очищения от греха кровью Иисуса Христа и нашей принадлежности Богу.",
+      "topic_id": 11,
+      "svg_image": "illustrations/q098.svg"
+    },
+    {
+      "id": 99,
+      "question_number": 99,
+      "question_content": "Что такое Вечеря Господня?",
+      "answer": "Вечеря Господня – это символическое вкушение хлеба и принятие вина в напоминание нам о смерти Господа Иисуса Христа за Его народ.",
+      "topic_id": 11,
+      "svg_image": "illustrations/q099.svg"
+    },
+    {
+      "id": 100,
+      "question_number": 100,
+      "question_content": "Что означают хлеб и вино?",
+      "answer": "Они символизируют тело Христа и Его кровь.",
+      "topic_id": 11,
+      "svg_image": "illustrations/q100.svg"
+    },
+    {
+      "id": 101,
+      "question_number": 101,
+      "question_content": "Почему Иисус Христос повелел верующим в Него соблюдать это установление?",
+      "answer": "Чтобы вспоминать о Его страданиях и смерти и возвещать о них в мире до конца его существования.",
+      "topic_id": 11,
+      "svg_image": "illustrations/q101.svg"
+    },
+    {
+      "id": 102,
+      "question_number": 102,
+      "question_content": "Что такое молитва?",
+      "answer": "Молитва – это прошение у Бога того, что соответствует Его воле, это исповедание грехов и благодарение за все Его милости.",
+      "topic_id": 12,
+      "svg_image": "illustrations/q102.svg"
+    },
+    {
+      "id": 103,
+      "question_number": 103,
+      "question_content": "Во имя кого мы должны молиться?",
+      "answer": "Во имя Иисуса Христа.",
+      "topic_id": 12,
+      "svg_image": "illustrations/q103.svg"
+    },
+    {
+      "id": 104,
+      "question_number": 104,
+      "question_content": "Что дал нам Бог, чтобы научить нас молиться?",
+      "answer": "Он дал нам для этого всю Библию, но особенно Христос учит нас молиться в Своей молитве «Отче наш».",
+      "topic_id": 12,
+      "svg_image": "illustrations/q104.svg"
+    },
+    {
+      "id": 105,
+      "question_number": 105,
+      "question_content": "О чем говорится в молитве «Отче наш»?",
+      "answer": "«Молитесь же так: Отче наш, сущий на небесах! да святится имя Твое; да придет Царствие Твое; да будет воля Твоя и на земле, как на небе; хлеб наш насущный дай нам на сей день; и прости нам долги наши, как и мы прощаем должникам нашим; и не введи нас в искушение, но избавь нас от лукавого; ибо Твое есть Царство и сила и слава во веки. Аминь» (Евангелие от Матфея 6:9-13).",
+      "topic_id": 12,
+      "svg_image": "illustrations/q105.svg"
+    },
+    {
+      "id": 106,
+      "question_number": 106,
+      "question_content": "Остался ли Иисус Христос после Своей смерти в могиле?",
+      "answer": "Нет. Он воскрес из мертвых на третий день.",
+      "topic_id": 13,
+      "svg_image": "illustrations/q106.svg"
+    },
+    {
+      "id": 107,
+      "question_number": 107,
+      "question_content": "Где Христос находится сейчас?",
+      "answer": "Он находится на небе, сидит по правую руку Бога Отца, всегда молясь за Свой народ.",
+      "topic_id": 13,
+      "svg_image": "illustrations/q107.svg"
+    },
+    {
+      "id": 108,
+      "question_number": 108,
+      "question_content": "Придет ли Христос снова в наш мир?",
+      "answer": "Да. В конце времен Христос вернется, чтобы судить мир.",
+      "topic_id": 13,
+      "svg_image": "illustrations/q108.svg"
+    },
+    {
+      "id": 109,
+      "question_number": 109,
+      "question_content": "Что происходит с человеком, когда он умирает?",
+      "answer": "Его тело разлагается, а душа продолжает жить и отправляется либо в рай, либо в ад.",
+      "topic_id": 14,
+      "svg_image": "illustrations/q109.svg"
+    },
+    {
+      "id": 110,
+      "question_number": 110,
+      "question_content": "Будут ли когда-нибудь воскрешены тела умерших?",
+      "answer": "Да. Когда Христос придет снова, тела умерших будут воскрешены и навсегда воссоединятся с их душами.",
+      "topic_id": 14,
+      "svg_image": "illustrations/q110.svg"
+    },
+    {
+      "id": 111,
+      "question_number": 111,
+      "question_content": "Куда Бог отправляет неверующих грешников после их смерти?",
+      "answer": "В ад.",
+      "topic_id": 15,
+      "svg_image": "illustrations/q111.svg"
+    },
+    {
+      "id": 112,
+      "question_number": 112,
+      "question_content": "Что такое ад?",
+      "answer": "Это ужасное место вечного мучения и наказания.",
+      "topic_id": 15,
+      "svg_image": "illustrations/q112.svg"
+    },
+    {
+      "id": 113,
+      "question_number": 113,
+      "question_content": "Куда направляется после смерти послушный Богу человек?",
+      "answer": "В рай.",
+      "topic_id": 16,
+      "svg_image": "illustrations/q113.svg"
+    },
+    {
+      "id": 114,
+      "question_number": 114,
+      "question_content": "Что такое рай?",
+      "answer": "Это славное место вечного счастья и радости, где находится Сам Христос.",
+      "topic_id": 16,
+      "svg_image": "illustrations/q114.svg"
+    }
+  ],
+  "verses": [
+    {
+      "id": 1,
+      "book": "Бытие",
+      "chapter": 1,
+      "verses": "27",
+      "reference": "Бытие 1:27",
+      "text": "И сотворил Бог человека по образу Своему, по образу Божию сотворил его; мужчину и женщину сотворил их"
+    },
+    {
+      "id": 2,
+      "book": "1-е Коринфянам",
+      "chapter": 10,
+      "verses": "31",
+      "reference": "1-е Коринфянам 10:31",
+      "text": "Итак, едите ли, пьете ли, или иное что делаете, все делайте в славу Божию"
+    },
+    {
+      "id": 3,
+      "book": "Бытие",
+      "chapter": 1,
+      "verses": "31",
+      "reference": "Бытие 1:31",
+      "text": "И увидел Бог все, что Он создал, и вот, хорошо весьма. И был вечер, и было утро: день шестой"
+    },
+    {
+      "id": 4,
+      "book": "Откровение",
+      "chapter": 4,
+      "verses": "11",
+      "reference": "Откровение 4:11",
+      "text": "Достоин Ты, Господи, приять славу и честь и силу: ибо Ты сотворил все, и все по Твоей воле существует и сотворено"
+    },
+    {
+      "id": 5,
+      "book": "Евангелие от Иоанна",
+      "chapter": 5,
+      "verses": "39",
+      "reference": "Евангелие от Иоанна 5:39",
+      "text": "Исследуйте Писания, ибо вы думаете через них иметь жизнь вечную; а они свидетельствуют о Мне"
+    },
+    {
+      "id": 6,
+      "book": "2-е Тимофею",
+      "chapter": 3,
+      "verses": "16",
+      "reference": "2-е Тимофею 3:16",
+      "text": "Все Писание богодухновенно и полезно для научения, для обличения, для исправления, для наставления в праведности"
+    },
+    {
+      "id": 7,
+      "book": "Евангелие от Иоанна",
+      "chapter": 4,
+      "verses": "24",
+      "reference": "Евангелие от Иоанна 4:24",
+      "text": "Бог есть дух, и поклоняющиеся Ему должны поклоняться в духе и истине"
+    },
+    {
+      "id": 8,
+      "book": "Колоссянам",
+      "chapter": 1,
+      "verses": "15",
+      "reference": "Колоссянам 1:15",
+      "text": "Который есть образ Бога невидимого, рожденный прежде всякой твари"
+    },
+    {
+      "id": 9,
+      "book": "Иов",
+      "chapter": 11,
+      "verses": "7-9",
+      "reference": "Иов 11:7-9",
+      "text": "Можешь ли ты исследованием найти Бога? Можешь ли совершенно постигнуть Вседержителя? Он превыше небес – что можешь сделать? Глубже преисподней – что можешь узнать? Длиннее земли мера Его и шире моря"
+    },
+    {
+      "id": 10,
+      "book": "Псалом",
+      "chapter": 89,
+      "verses": "3",
+      "reference": "Псалом 89:3",
+      "text": "Прежде, нежели родились горы, и Ты образовал землю и вселенную, и от века и до века Ты – Бог"
+    },
+    {
+      "id": 11,
+      "book": "Псалом",
+      "chapter": 101,
+      "verses": "27-28",
+      "reference": "Псалом 101:27-28",
+      "text": "Они погибнут, а Ты пребудешь; и все они, как риза, обветшают, и, как одежду, Ты переменишь их, и изменятся; но Ты – тот же, и лета Твои не кончатся"
+    },
+    {
+      "id": 12,
+      "book": "Псалом",
+      "chapter": 101,
+      "verses": "28",
+      "reference": "Псалом 101:28",
+      "text": "Ты – тот же, и лета Твои не кончатся"
+    },
+    {
+      "id": 13,
+      "book": "Псалом",
+      "chapter": 43,
+      "verses": "22",
+      "reference": "Псалом 43:22",
+      "text": "То не взыскал ли бы этого Бог? Ибо Он знает тайны сердца"
+    },
+    {
+      "id": 14,
+      "book": "Псалом",
+      "chapter": 134,
+      "verses": "6",
+      "reference": "Псалом 134:6",
+      "text": "Господь творит все, что хочет, на небесах и на земле, на морях и во всех безднах"
+    },
+    {
+      "id": 15,
+      "book": "Второзаконие",
+      "chapter": 6,
+      "verses": "4",
+      "reference": "Второзаконие 6:4",
+      "text": "Слушай, Израиль: Господь, Бог наш, Господь един есть"
+    },
+    {
+      "id": 16,
+      "book": "Евангелие от Матфея",
+      "chapter": 28,
+      "verses": "19",
+      "reference": "Евангелие от Матфея 28:19",
+      "text": "Итак, идите, научите все народы, крестя их во имя Отца и Сына и Святого Духа"
+    },
+    {
+      "id": 17,
+      "book": "Евреям",
+      "chapter": 11,
+      "verses": "3",
+      "reference": "Евреям 11:3",
+      "text": "Верою познаем, что веки устроены словом Божьим, так что из невидимого произошло видимое"
+    },
+    {
+      "id": 18,
+      "book": "Псалом",
+      "chapter": 148,
+      "verses": "5",
+      "reference": "Псалом 148:5",
+      "text": "Да хвалят имя Господа, ибо Он повелел, и сотворилось"
+    },
+    {
+      "id": 19,
+      "book": "Бытие",
+      "chapter": 1,
+      "verses": "1-31",
+      "reference": "Бытие 1:1-31",
+      "text": null
+    },
+    {
+      "id": 20,
+      "book": "Бытие",
+      "chapter": 2,
+      "verses": "2-3",
+      "reference": "Бытие 2:2-3",
+      "text": "И совершил Бог к седьмому дню дела Свои, которые Он делал, и почил в день седьмой от всех дел Своих, которые делал. И благословил Бог седьмой день, и освятил его, ибо в этот день почил от всех дел Своих, которые Бог творил и созидал"
+    },
+    {
+      "id": 21,
+      "book": "Бытие",
+      "chapter": 5,
+      "verses": "1-2",
+      "reference": "Бытие 5:1-2",
+      "text": "Вот родословие Адама: когда Бог сотворил человека, по подобию Божию создал его, мужчину и женщину сотворил их, и благословил их, и нарек им имя: человек, в день сотворения их"
+    },
+    {
+      "id": 22,
+      "book": "Бытие",
+      "chapter": 3,
+      "verses": "20",
+      "reference": "Бытие 3:20",
+      "text": "И нарек Адам имя жене своей: Ева, ибо она стала матерью всех живущих"
+    },
+    {
+      "id": 23,
+      "book": "Бытие",
+      "chapter": 2,
+      "verses": "7",
+      "reference": "Бытие 2:7",
+      "text": "И создал Бог человека из праха земного, и вдунул в лицо его дыхание жизни, и стал человек душою живою"
+    },
+    {
+      "id": 24,
+      "book": "Бытие",
+      "chapter": 2,
+      "verses": "22",
+      "reference": "Бытие 2:22",
+      "text": "И создал Господь Бог из ребра, взятого у человека, жену и привел ее к человеку"
+    },
+    {
+      "id": 25,
+      "book": "Евангелие от Матфея",
+      "chapter": 16,
+      "verses": "26",
+      "reference": "Евангелие от Матфея 16:26",
+      "text": "Какая польза человеку, если он приобретет весь мир, а душе своей повредит? Или какой выкуп даст человек за душу свою?"
+    },
+    {
+      "id": 26,
+      "book": "Псалом",
+      "chapter": 120,
+      "verses": "7",
+      "reference": "Псалом 120:7",
+      "text": "Господь сохранит тебя от всякого зла; сохранит душу твою Господь"
+    },
+    {
+      "id": 27,
+      "book": "1-е Иоанна",
+      "chapter": 3,
+      "verses": "4",
+      "reference": "1-е Иоанна 3:4",
+      "text": "Всякий, делающий грех, делает и беззаконие; и грех есть беззаконие"
+    },
+    {
+      "id": 28,
+      "book": "Иакова",
+      "chapter": 2,
+      "verses": "10-11",
+      "reference": "Иакова 2:10-11",
+      "text": "Кто соблюдает весь закон и согрешит в одном чем-нибудь, тот становится виновным во всем. Ибо Тот же, Кто сказал: “Не прелюбодействуй”, сказал и: “Не убей”; посему, если ты не прелюбодействуешь, но убьешь, то ты также преступник закона"
+    },
+    {
+      "id": 29,
+      "book": "Евангелие от Луки",
+      "chapter": 6,
+      "verses": "46",
+      "reference": "Евангелие от Луки 6:46",
+      "text": "Что вы зовете Меня: “Господи! Господи!” – и не делаете того, что Я говорю?"
+    },
+    {
+      "id": 30,
+      "book": "Бытие",
+      "chapter": 3,
+      "verses": "3",
+      "reference": "Бытие 3:3",
+      "text": "Только плодов дерева, которое среди рая, сказал Бог, не ешьте их и не прикасайтесь к ним, чтобы вам не умереть"
+    },
+    {
+      "id": 31,
+      "book": "Бытие",
+      "chapter": 3,
+      "verses": "6",
+      "reference": "Бытие 3:6",
+      "text": "И увидела жена, что дерево хорошо для пищи, и что оно приятно для глаз и вожделенно, потому что дает знание; и взяла плодов его, и ела; и дала также мужу своему, и он ел"
+    },
+    {
+      "id": 32,
+      "book": "Бытие",
+      "chapter": 3,
+      "verses": "23-24",
+      "reference": "Бытие 3:23-24",
+      "text": "И выслал его Господь Бог из сада Едемского, чтобы возделывать землю, из которой он взят. И изгнал Адама, и поставил на востоке у сада Едемского херувима и пламенный меч обращающийся, чтобы охранять путь к дереву жизни"
+    },
+    {
+      "id": 33,
+      "book": "Римлянам",
+      "chapter": 5,
+      "verses": "12",
+      "reference": "Римлянам 5:12",
+      "text": "Посему, как одним человеком грех вошел в мир, и грехом смерть, так и смерть перешла во всех человеков, потому что в нем все согрешили"
+    },
+    {
+      "id": 34,
+      "book": "Римлянам",
+      "chapter": 7,
+      "verses": "19-20",
+      "reference": "Римлянам 7:19-20",
+      "text": "Доброго, которого хочу, не делаю, а злое, которого не хочу, делаю. Если же делаю то, чего не хочу, уже не я делаю то, но живущий во мне грех"
+    },
+    {
+      "id": 35,
+      "book": "Евангелие от Матфея",
+      "chapter": 15,
+      "verses": "18-19",
+      "reference": "Евангелие от Матфея 15:18-19",
+      "text": "А исходящее из уст – из сердца исходит; сие оскверняет человека; ибо из сердца исходят злые помыслы, убийства, прелюбодеяния, любодеяния, кражи, лжесвидетельства, хуления…"
+    },
+    {
+      "id": 36,
+      "book": "Исаия",
+      "chapter": 59,
+      "verses": "2",
+      "reference": "Исаия 59:2",
+      "text": "Но беззакония ваши произвели разделение между вами и Богом вашим, и грехи ваши отвращают лицо Его от вас, чтобы не слышать"
+    },
+    {
+      "id": 37,
+      "book": "Псалом",
+      "chapter": 9,
+      "verses": "18",
+      "reference": "Псалом 9:18",
+      "text": "Да обратятся нечестивые в ад, все народы, забывающие Бога"
+    },
+    {
+      "id": 38,
+      "book": "Евангелие от Иоанна",
+      "chapter": 3,
+      "verses": "16",
+      "reference": "Евангелие от Иоанна 3:16",
+      "text": "Ибо так возлюбил Бог мир, что отдал Сына Своего единородного, дабы всякий верующий в Него не погиб, но имел жизнь вечную"
+    },
+    {
+      "id": 39,
+      "book": "Евангелие от Иоанна",
+      "chapter": 20,
+      "verses": "31",
+      "reference": "Евангелие от Иоанна 20:31",
+      "text": "Это же написано, дабы вы уверовали, что Иисус есть Христос, Сын Божий, и, веруя, имели жизнь во имя Его"
+    },
+    {
+      "id": 40,
+      "book": "Евангелие от Луки",
+      "chapter": 2,
+      "verses": "4-7",
+      "reference": "Евангелие от Луки 2:4-7",
+      "text": null
+    },
+    {
+      "id": 41,
+      "book": "Евангелие от Луки",
+      "chapter": 1,
+      "verses": "30-31",
+      "reference": "Евангелие от Луки 1:30-31",
+      "text": "И сказал Ей Ангел: не бойся, Мария, ибо Ты обрела благодать у Бога; и вот, зачнешь во чреве, и родишь Сына, и наречешь Ему имя: Иисус"
+    },
+    {
+      "id": 42,
+      "book": "Евангелие от Луки",
+      "chapter": 1,
+      "verses": "35",
+      "reference": "Евангелие от Луки 1:35",
+      "text": "Ангел сказал Ей в ответ: Дух Святой найдет на Тебя, и сила Всевышнего осенит Тебя; посему и рождаемое Святое наречется Сыном Божиим"
+    },
+    {
+      "id": 43,
+      "book": "Евреям",
+      "chapter": 7,
+      "verses": "26",
+      "reference": "Евреям 7:26",
+      "text": "Таков и должен быть у нас Первосвященник: святой, непричастный злу, непорочный, отделенный от грешников и превознесенный выше небес"
+    },
+    {
+      "id": 44,
+      "book": "Евреям",
+      "chapter": 4,
+      "verses": "15",
+      "reference": "Евреям 4:15",
+      "text": "Ибо мы имеем не такого первосвященника, который не может сострадать нам в немощах наших, но Который, подобно нам, искушен во всем, кроме греха"
+    },
+    {
+      "id": 45,
+      "book": "Евангелие от Матфея",
+      "chapter": 1,
+      "verses": "21",
+      "reference": "Евангелие от Матфея 1:21",
+      "text": "Родит же Сына, и наречешь Ему имя: Иисус; ибо Он спасет людей Своих от грехов их"
+    },
+    {
+      "id": 46,
+      "book": "Евреям",
+      "chapter": 9,
+      "verses": "28",
+      "reference": "Евреям 9:28",
+      "text": "Так и Христос, однажды принесши Себя в жертву, чтобы подъять грехи многих, во второй раз явится не для очищения греха, а для ожидающих Его во спасение"
+    },
+    {
+      "id": 47,
+      "book": "Евангелие от Иоанна",
+      "chapter": 6,
+      "verses": "44-45",
+      "reference": "Евангелие от Иоанна 6:44-45",
+      "text": "Никто не может придти ко Мне, если не привлечет его Отец, пославший Меня; и Я воскрешу его в последний день. У пророков написано: “И будут все научены Богом”. Всякий слышавший от Отца и научившийся приходит ко Мне"
+    },
+    {
+      "id": 48,
+      "book": "Евангелие от Марка",
+      "chapter": 1,
+      "verses": "14-15",
+      "reference": "Евангелие от Марка 1:14-15",
+      "text": "После же того, как предан был Иоанн, пришел Иисус в Галилею, проповедуя Евангелие Царствия Божия и говоря, что исполнилось время и приблизилось Царствие Божие: покайтесь и веруйте в Евангелие"
+    },
+    {
+      "id": 49,
+      "book": "Исаия",
+      "chapter": 1,
+      "verses": "16-17",
+      "reference": "Исаия 1:16-17",
+      "text": "Омойтесь, очиститесь; удалите злые деяния ваши от очей Моих; перестаньте делать зло; научитесь делать добро; ищите правды; спасайте угнетенного; защищайте сироту; вступайтесь за вдову"
+    },
+    {
+      "id": 50,
+      "book": "Римлянам",
+      "chapter": 2,
+      "verses": "4",
+      "reference": "Римлянам 2:4",
+      "text": "Или пренебрегаешь богатство благости, кротости и долготерпения Божия, не разумея, что благость Божия ведет тебя к покаянию?"
+    },
+    {
+      "id": 51,
+      "book": "Евангелие от Луки",
+      "chapter": 11,
+      "verses": "13",
+      "reference": "Евангелие от Луки 11:13",
+      "text": "Итак, если вы, будучи злы, умеете даяния благие давать детям вашим, тем более Отец Небесный даст Духа Святого просящим у Него"
+    },
+    {
+      "id": 52,
+      "book": "Римлянам",
+      "chapter": 4,
+      "verses": "3",
+      "reference": "Римлянам 4:3",
+      "text": "Ибо, что говорит Писание? “Поверил Авраам Богу, и это вменилось ему в праведность”"
+    },
+    {
+      "id": 53,
+      "book": "Деяния",
+      "chapter": 3,
+      "verses": "22",
+      "reference": "Деяния 3:22",
+      "text": "Моисей сказал отцам: “Господь Бог ваш воздвигнет вам из братьев ваших Пророка, как меня; слушайтесь Его во всем, что Он ни будет говорить вам”"
+    },
+    {
+      "id": 54,
+      "book": "Евреям",
+      "chapter": 5,
+      "verses": "6",
+      "reference": "Евреям 5:6",
+      "text": "Как и в другом месте говорит: “Ты священник вовек по чину Мелхиседека”"
+    },
+    {
+      "id": 55,
+      "book": "Псалом",
+      "chapter": 2,
+      "verses": "6",
+      "reference": "Псалом 2:6",
+      "text": "Я помазал Царя Моего над Сионом, святою горою Моею"
+    },
+    {
+      "id": 56,
+      "book": "Евангелие от Иоанна",
+      "chapter": 16,
+      "verses": "13-14",
+      "reference": "Евангелие от Иоанна 16:13-14",
+      "text": "Когда же придет Он, Дух истины, то наставит вас на всякую истину; ибо не от Себя говорить будет, но будет говорить, что услышит, и будущее возвестит вам. Он прославит Меня, потому что от Моего возьмет и возвестит вам"
+    },
+    {
+      "id": 57,
+      "book": "Колоссянам",
+      "chapter": 1,
+      "verses": "19-20",
+      "reference": "Колоссянам 1:19-20",
+      "text": "Ибо благоугодно было Отцу, чтобы в Нем обитала всякая полнота, и чтобы посредством Его примирить с Собою все, умиротворив через Него, Кровью креста Его, и земное и небесное"
+    },
+    {
+      "id": 58,
+      "book": "1-е Коринфянам",
+      "chapter": 15,
+      "verses": "24-25",
+      "reference": "1-е Коринфянам 15:24-25",
+      "text": "А затем конец, когда Он предаст Царство Богу и Отцу, когда упразднит всякое начальство и всякую власть и силу. Ибо Ему надлежит царствовать, доколе низложит всех врагов под ноги Свои"
+    },
+    {
+      "id": 59,
+      "book": "Исход",
+      "chapter": 20,
+      "verses": "3-17",
+      "reference": "Исход 20:3-17",
+      "text": null
+    },
+    {
+      "id": 60,
+      "book": "Исход",
+      "chapter": 20,
+      "verses": "3-11",
+      "reference": "Исход 20:3-11",
+      "text": null
+    },
+    {
+      "id": 61,
+      "book": "Исход",
+      "chapter": 20,
+      "verses": "12-17",
+      "reference": "Исход 20:12-17",
+      "text": null
+    },
+    {
+      "id": 62,
+      "book": "Евангелие от Матфея",
+      "chapter": 22,
+      "verses": "37-40",
+      "reference": "Евангелие от Матфея 22:37-40",
+      "text": "Иисус сказал ему: “Возлюби Господа Бога твоего всем сердцем твоим, и всею душою твоею, и всем разумением твоим”: сия есть первая и наибольшая заповедь; вторая же подобная ей: “Возлюби ближнего твоего, как самого себя”. На сих двух заповедях утверждается весь закон и пророки"
+    },
+    {
+      "id": 63,
+      "book": "Евангелие от Луки",
+      "chapter": 10,
+      "verses": "36-37",
+      "reference": "Евангелие от Луки 10:36-37",
+      "text": "Кто из этих троих, думаешь ты, был ближний попавшемуся разбойникам? Он сказал: “Оказавший ему милость”. Тогда Иисус сказал ему: “Иди, и ты поступай так же”"
+    },
+    {
+      "id": 64,
+      "book": "1-я Паралипоменон",
+      "chapter": 28,
+      "verses": "9",
+      "reference": "1-я Паралипоменон 28:9",
+      "text": "И ты, Соломон, сын мой, знай Бога отца твоего, и служи Ему от всего сердца и от всей души, ибо Господь испытует все сердца и знает все движения мыслей. Если будешь искать Его, то найдешь Его; а если оставишь Его, Он оставит тебя навсегда"
+    },
+    {
+      "id": 65,
+      "book": "Второзаконие",
+      "chapter": 12,
+      "verses": "32",
+      "reference": "Второзаконие 12:32",
+      "text": "Все, что я заповедую вам, старайтесь исполнять; не прибавляй к тому и не убавляй от того"
+    },
+    {
+      "id": 66,
+      "book": "Псалом",
+      "chapter": 28,
+      "verses": "2",
+      "reference": "Псалом 28:2",
+      "text": "Воздайте Господу славу имени Его; поклонитесь Господу в благолепном святилище Его"
+    },
+    {
+      "id": 67,
+      "book": "Левит",
+      "chapter": 19,
+      "verses": "30",
+      "reference": "Левит 19:30",
+      "text": "Субботы Мои храните и святилище Мое чтите. Я Господь"
+    },
+    {
+      "id": 68,
+      "book": "Деяния",
+      "chapter": 20,
+      "verses": "7",
+      "reference": "Деяния 20:7",
+      "text": "В первый же день недели, когда ученики собрались для преломления хлеба, Павел, намереваясь отправиться в следующий день, беседовал с ними и продолжил слово до полуночи"
+    },
+    {
+      "id": 69,
+      "book": "Откровение",
+      "chapter": 1,
+      "verses": "10",
+      "reference": "Откровение 1:10",
+      "text": "Я был в духе в день воскресный и слышал позади себя громкий голос, как бы трубный, который говорил: “Я есмь Алфа и Омега, первый и последний”"
+    },
+    {
+      "id": 70,
+      "book": "Исаия",
+      "chapter": 58,
+      "verses": "13-14",
+      "reference": "Исаия 58:13-14",
+      "text": "Если ты удержишь ногу твою ради субботы от исполнения прихотей твоих во святой день Мой и будешь называть субботу отрадою, святым днем Господним чествуемым, и почтишь ее тем, что не будешь заниматься обычными твоими делами, угождать твоей прихоти и пустословить, – то будешь иметь радость в Господе, и Я возведу тебя на высоты земли и дам вкусить тебе наследие Иакова, отца твоего: уста Господни изрекли это"
+    },
+    {
+      "id": 71,
+      "book": "Колоссянам",
+      "chapter": 3,
+      "verses": "20",
+      "reference": "Колоссянам 3:20",
+      "text": "Дети, будьте послушны родителям [вашим] во всем, ибо это благоугодно Господу"
+    },
+    {
+      "id": 72,
+      "book": "Псалом",
+      "chapter": 81,
+      "verses": "3-4",
+      "reference": "Псалом 81:3-4",
+      "text": null
+    },
+    {
+      "id": 73,
+      "book": "Евангелие от Матфея",
+      "chapter": 5,
+      "verses": "21-22",
+      "reference": "Евангелие от Матфея 5:21-22",
+      "text": "Вы слышали, что сказано древним: “Не убивай; кто же убьет, подлежит суду”. А Я говорю вам, что всякий, гневающийся на брата своего напрасно, подлежит суду; кто же скажет брату своему: “рака”, подлежит синедриону; а кто скажет “безумный”, подлежит геенне огненной"
+    },
+    {
+      "id": 74,
+      "book": "2-е Тимофею",
+      "chapter": 2,
+      "verses": "22",
+      "reference": "2-е Тимофею 2:22",
+      "text": "Юношеских похотей убегай, а держись правды, веры, любви, мира со всеми призывающими Господа от чистого сердца"
+    },
+    {
+      "id": 75,
+      "book": "Римлянам",
+      "chapter": 12,
+      "verses": "17",
+      "reference": "Римлянам 12:17",
+      "text": "Никому не воздавайте злом за зло, но пекитесь о добром пред всеми человеками"
+    },
+    {
+      "id": 76,
+      "book": "Захария",
+      "chapter": 8,
+      "verses": "16",
+      "reference": "Захария 8:16",
+      "text": "Вот дела, которые вы должны делать: говорите истину друг другу; по истине и миролюбно судите у ворот ваших"
+    },
+    {
+      "id": 77,
+      "book": "1-е Тимофею",
+      "chapter": 6,
+      "verses": "8",
+      "reference": "1-е Тимофею 6:8",
+      "text": "Имея пропитание и одежду, будем довольны тем"
+    },
+    {
+      "id": 78,
+      "book": "Псалом",
+      "chapter": 13,
+      "verses": "3",
+      "reference": "Псалом 13:3",
+      "text": "Все уклонились, сделались равно непотребными; нет делающего добро, нет ни одного"
+    },
+    {
+      "id": 79,
+      "book": "1-е Петра",
+      "chapter": 2,
+      "verses": "22",
+      "reference": "1-е Петра 2:22",
+      "text": "Он не сделал никакого греха, и не было лести в устах Его"
+    },
+    {
+      "id": 80,
+      "book": "Римлянам",
+      "chapter": 1,
+      "verses": "18",
+      "reference": "Римлянам 1:18",
+      "text": "Ибо открывается гнев Божий с неба на всякое нечестие и неправду человеков"
+    },
+    {
+      "id": 81,
+      "book": "Римлянам",
+      "chapter": 6,
+      "verses": "23",
+      "reference": "Римлянам 6:23",
+      "text": "Ибо возмездие за грех – смерть"
+    },
+    {
+      "id": 82,
+      "book": "Деяния",
+      "chapter": 2,
+      "verses": "21",
+      "reference": "Деяния 2:21",
+      "text": "И будет: всякий, кто призовет имя Господне, спасется"
+    },
+    {
+      "id": 83,
+      "book": "Евангелие от Луки",
+      "chapter": 18,
+      "verses": "13",
+      "reference": "Евангелие от Луки 18:13",
+      "text": "Мытарь же, стоя вдали, не смел даже поднять глаз на небо; но, ударяя себя в грудь, говорил: “Боже! будь милостив ко мне грешнику!”"
+    },
+    {
+      "id": 84,
+      "book": "Деяния",
+      "chapter": 2,
+      "verses": "42",
+      "reference": "Деяния 2:42",
+      "text": "И они постоянно пребывали в учении апостолов, в общении и преломлении хлеба и в молитвах"
+    },
+    {
+      "id": 85,
+      "book": "2-е Тимофею",
+      "chapter": 3,
+      "verses": "15",
+      "reference": "2-е Тимофею 3:15",
+      "text": "Притом же ты из детства знаешь Священные Писания, которые могут умудрить тебя во спасение верою во Христа Иисуса"
+    },
+    {
+      "id": 86,
+      "book": "Евангелие от Матфея",
+      "chapter": 28,
+      "verses": "19-20",
+      "reference": "Евангелие от Матфея 28:19-20",
+      "text": "Итак, идите, научите все народы, крестя их во имя Отца и Сына и Святого Духа, уча их соблюдать все, что Я повелел вам; и се, Я с вами во все дни до скончания века. Аминь"
+    },
+    {
+      "id": 87,
+      "book": "Деяния",
+      "chapter": 2,
+      "verses": "38",
+      "reference": "Деяния 2:38",
+      "text": "Петр же сказал им: “Покайтесь, и да крестится каждый из вас во имя Иисуса Христа для прощения грехов, и получите дар Святого Духа”"
+    },
+    {
+      "id": 88,
+      "book": "1-е Коринфянам",
+      "chapter": 11,
+      "verses": "23-25",
+      "reference": "1-е Коринфянам 11:23-25",
+      "text": "Ибо я от Самого Господа принял то, что и вам передал, что Господь Иисус в ту ночь, в которую предан был, взял хлеб и возблагодарив преломил и сказал: “Примите, едите, сие есть Тело Мое, за вас ломимое; сие творите в Мое воспоминание”. Также и чашу после вечери, и сказал: “Сия чаша есть новый завет в Моей Крови; сие творите, когда только будете пить, в Мое воспоминание”"
+    },
+    {
+      "id": 89,
+      "book": "1-е Коринфянам",
+      "chapter": 11,
+      "verses": "24-25",
+      "reference": "1-е Коринфянам 11:24-25",
+      "text": null
+    },
+    {
+      "id": 90,
+      "book": "1-е Коринфянам",
+      "chapter": 11,
+      "verses": "26",
+      "reference": "1-е Коринфянам 11:26",
+      "text": "Ибо всякий раз, когда вы едите хлеб сей и пьете чашу сию, смерть Господню возвещаете, доколе Он придет"
+    },
+    {
+      "id": 91,
+      "book": "Филиппийцам",
+      "chapter": 4,
+      "verses": "6-7",
+      "reference": "Филиппийцам 4:6-7",
+      "text": "Не заботьтесь ни о чем, но всегда в молитве и прошении с благодарением открывайте свои желания пред Богом, и мир Божий, который превыше всякого ума, соблюдет сердца ваши и помышления ваши во Христе Иисусе"
+    },
+    {
+      "id": 92,
+      "book": "Евангелие от Иоанна",
+      "chapter": 16,
+      "verses": "23",
+      "reference": "Евангелие от Иоанна 16:23",
+      "text": "…Истинно, истинно говорю вам: о чем ни попросите Отца во имя Мое, даст вам"
+    },
+    {
+      "id": 93,
+      "book": "Евангелие от Матфея",
+      "chapter": 6,
+      "verses": "9-13",
+      "reference": "Евангелие от Матфея 6:9-13",
+      "text": "Молитесь же так: Отче наш, сущий на небесах! да святится имя Твое; да придет Царствие Твое; да будет воля Твоя и на земле, как на небе; хлеб наш насущный дай нам на сей день; и прости нам долги наши, как и мы прощаем должникам нашим; и не введи нас в искушение, но избавь нас от лукавого; ибо Твое есть Царство и сила и слава во веки. Аминь"
+    },
+    {
+      "id": 94,
+      "book": "Евангелие от Матфея",
+      "chapter": 28,
+      "verses": "6",
+      "reference": "Евангелие от Матфея 28:6",
+      "text": "Его нет здесь: Он воскрес, как сказал; подойдите, посмотрите место, где лежал Господь"
+    },
+    {
+      "id": 95,
+      "book": "Евангелие от Марка",
+      "chapter": 16,
+      "verses": "19",
+      "reference": "Евангелие от Марка 16:19",
+      "text": "И так Господь после беседования с ними вознесся на небо и воссел одесную Бога"
+    },
+    {
+      "id": 96,
+      "book": "Евангелие от Матфея",
+      "chapter": 25,
+      "verses": "31-32",
+      "reference": "Евангелие от Матфея 25:31-32",
+      "text": "Когда же придет Сын Человеческий во славе Своей и все святые ангелы с Ним, тогда сядет на престоле славы Своей, и соберутся перед Ним все народы; и отделит одних от других, как пастырь отделяет овец от козлов"
+    },
+    {
+      "id": 97,
+      "book": "Евангелие от Луки",
+      "chapter": 16,
+      "verses": "22-23",
+      "reference": "Евангелие от Луки 16:22-23",
+      "text": "Умер нищий и отнесен был Ангелами на лоно Авраамово. Умер и богач, и похоронили его. И в аде, будучи в муках, он поднял глаза свои"
+    },
+    {
+      "id": 98,
+      "book": "Евангелие от Иоанна",
+      "chapter": 5,
+      "verses": "28-29",
+      "reference": "Евангелие от Иоанна 5:28-29",
+      "text": "Не дивитесь сему; ибо наступает время, в которое все, находящиеся в гробах, услышат глас Сына Божия; и изыдут творившие добро в воскресение жизни, а делавшие зло – в воскресение осуждения"
+    },
+    {
+      "id": 99,
+      "book": "Евангелие от Матфея",
+      "chapter": 25,
+      "verses": "41",
+      "reference": "Евангелие от Матфея 25:41",
+      "text": "Тогда скажет и тем, которые по левую сторону: “Идите от Меня, проклятые, в огонь вечный, уготованный дьяволу и ангелам его”"
+    },
+    {
+      "id": 100,
+      "book": "Евангелие от Луки",
+      "chapter": 16,
+      "verses": "28",
+      "reference": "Евангелие от Луки 16:28",
+      "text": "Ибо у меня пять братьев: пусть он засвидетельствует им, чтоб и они не пришли в это место мучения"
+    },
+    {
+      "id": 101,
+      "book": "Евангелие от Матфея",
+      "chapter": 25,
+      "verses": "34",
+      "reference": "Евангелие от Матфея 25:34",
+      "text": "Тогда скажет Царь тем, которые по правую сторону Его: “Придите, благословенные Отца Моего, наследуйте Царство, уготованное вам от создания мира”"
+    },
+    {
+      "id": 102,
+      "book": "Откровение",
+      "chapter": 21,
+      "verses": "4",
+      "reference": "Откровение 21:4",
+      "text": "И отрет Бог всякую слезу с очей их, и смерти не будет уже; ни плача, ни вопля, ни болезни уже не будет; ибо прежнее прошло"
+    }
+  ],
+  "question_verses": [
+    {
+      "question_id": 1,
+      "verse_id": 1,
+      "position": 1
+    },
+    {
+      "question_id": 2,
+      "verse_id": 2,
+      "position": 1
+    },
+    {
+      "question_id": 3,
+      "verse_id": 3,
+      "position": 1
+    },
+    {
+      "question_id": 4,
+      "verse_id": 4,
+      "position": 1
+    },
+    {
+      "question_id": 5,
+      "verse_id": 5,
+      "position": 1
+    },
+    {
+      "question_id": 6,
+      "verse_id": 6,
+      "position": 1
+    },
+    {
+      "question_id": 7,
+      "verse_id": 7,
+      "position": 1
+    },
+    {
+      "question_id": 8,
+      "verse_id": 8,
+      "position": 1
+    },
+    {
+      "question_id": 9,
+      "verse_id": 9,
+      "position": 1
+    },
+    {
+      "question_id": 10,
+      "verse_id": 10,
+      "position": 1
+    },
+    {
+      "question_id": 11,
+      "verse_id": 11,
+      "position": 1
+    },
+    {
+      "question_id": 12,
+      "verse_id": 12,
+      "position": 1
+    },
+    {
+      "question_id": 13,
+      "verse_id": 13,
+      "position": 1
+    },
+    {
+      "question_id": 14,
+      "verse_id": 14,
+      "position": 1
+    },
+    {
+      "question_id": 15,
+      "verse_id": 8,
+      "position": 1
+    },
+    {
+      "question_id": 16,
+      "verse_id": 15,
+      "position": 1
+    },
+    {
+      "question_id": 17,
+      "verse_id": 16,
+      "position": 1
+    },
+    {
+      "question_id": 18,
+      "verse_id": 16,
+      "position": 1
+    },
+    {
+      "question_id": 19,
+      "verse_id": 3,
+      "position": 1
+    },
+    {
+      "question_id": 20,
+      "verse_id": 17,
+      "position": 1
+    },
+    {
+      "question_id": 21,
+      "verse_id": 18,
+      "position": 1
+    },
+    {
+      "question_id": 22,
+      "verse_id": 19,
+      "position": 1
+    },
+    {
+      "question_id": 23,
+      "verse_id": 20,
+      "position": 1
+    },
+    {
+      "question_id": 24,
+      "verse_id": 21,
+      "position": 1
+    },
+    {
+      "question_id": 25,
+      "verse_id": 22,
+      "position": 1
+    },
+    {
+      "question_id": 26,
+      "verse_id": 23,
+      "position": 1
+    },
+    {
+      "question_id": 27,
+      "verse_id": 24,
+      "position": 1
+    },
+    {
+      "question_id": 28,
+      "verse_id": 23,
+      "position": 1
+    },
+    {
+      "question_id": 29,
+      "verse_id": 25,
+      "position": 1
+    },
+    {
+      "question_id": 30,
+      "verse_id": 26,
+      "position": 1
+    },
+    {
+      "question_id": 31,
+      "verse_id": 3,
+      "position": 1
+    },
+    {
+      "question_id": 32,
+      "verse_id": 27,
+      "position": 1
+    },
+    {
+      "question_id": 33,
+      "verse_id": 28,
+      "position": 1
+    },
+    {
+      "question_id": 34,
+      "verse_id": 29,
+      "position": 1
+    },
+    {
+      "question_id": 35,
+      "verse_id": 30,
+      "position": 1
+    },
+    {
+      "question_id": 36,
+      "verse_id": 31,
+      "position": 1
+    },
+    {
+      "question_id": 37,
+      "verse_id": 32,
+      "position": 1
+    },
+    {
+      "question_id": 38,
+      "verse_id": 33,
+      "position": 1
+    },
+    {
+      "question_id": 39,
+      "verse_id": 34,
+      "position": 1
+    },
+    {
+      "question_id": 40,
+      "verse_id": 35,
+      "position": 1
+    },
+    {
+      "question_id": 41,
+      "verse_id": 36,
+      "position": 1
+    },
+    {
+      "question_id": 42,
+      "verse_id": 37,
+      "position": 1
+    },
+    {
+      "question_id": 43,
+      "verse_id": 38,
+      "position": 1
+    },
+    {
+      "question_id": 44,
+      "verse_id": 39,
+      "position": 1
+    },
+    {
+      "question_id": 45,
+      "verse_id": 40,
+      "position": 1
+    },
+    {
+      "question_id": 46,
+      "verse_id": 41,
+      "position": 1
+    },
+    {
+      "question_id": 47,
+      "verse_id": 42,
+      "position": 1
+    },
+    {
+      "question_id": 48,
+      "verse_id": 43,
+      "position": 1
+    },
+    {
+      "question_id": 49,
+      "verse_id": 44,
+      "position": 1
+    },
+    {
+      "question_id": 50,
+      "verse_id": 45,
+      "position": 1
+    },
+    {
+      "question_id": 51,
+      "verse_id": 46,
+      "position": 1
+    },
+    {
+      "question_id": 52,
+      "verse_id": 47,
+      "position": 1
+    },
+    {
+      "question_id": 53,
+      "verse_id": 48,
+      "position": 1
+    },
+    {
+      "question_id": 54,
+      "verse_id": 49,
+      "position": 1
+    },
+    {
+      "question_id": 55,
+      "verse_id": 50,
+      "position": 1
+    },
+    {
+      "question_id": 56,
+      "verse_id": 51,
+      "position": 1
+    },
+    {
+      "question_id": 57,
+      "verse_id": 52,
+      "position": 1
+    },
+    {
+      "question_id": 58,
+      "verse_id": 53,
+      "position": 1
+    },
+    {
+      "question_id": 58,
+      "verse_id": 54,
+      "position": 2
+    },
+    {
+      "question_id": 58,
+      "verse_id": 55,
+      "position": 3
+    },
+    {
+      "question_id": 59,
+      "verse_id": 56,
+      "position": 1
+    },
+    {
+      "question_id": 60,
+      "verse_id": 57,
+      "position": 1
+    },
+    {
+      "question_id": 61,
+      "verse_id": 58,
+      "position": 1
+    },
+    {
+      "question_id": 62,
+      "verse_id": 59,
+      "position": 1
+    },
+    {
+      "question_id": 63,
+      "verse_id": 60,
+      "position": 1
+    },
+    {
+      "question_id": 64,
+      "verse_id": 61,
+      "position": 1
+    },
+    {
+      "question_id": 65,
+      "verse_id": 62,
+      "position": 1
+    },
+    {
+      "question_id": 66,
+      "verse_id": 63,
+      "position": 1
+    },
+    {
+      "question_id": 68,
+      "verse_id": 64,
+      "position": 1
+    },
+    {
+      "question_id": 70,
+      "verse_id": 65,
+      "position": 1
+    },
+    {
+      "question_id": 72,
+      "verse_id": 66,
+      "position": 1
+    },
+    {
+      "question_id": 74,
+      "verse_id": 67,
+      "position": 1
+    },
+    {
+      "question_id": 75,
+      "verse_id": 68,
+      "position": 1
+    },
+    {
+      "question_id": 75,
+      "verse_id": 69,
+      "position": 2
+    },
+    {
+      "question_id": 76,
+      "verse_id": 70,
+      "position": 1
+    },
+    {
+      "question_id": 78,
+      "verse_id": 71,
+      "position": 1
+    },
+    {
+      "question_id": 80,
+      "verse_id": 72,
+      "position": 1
+    },
+    {
+      "question_id": 80,
+      "verse_id": 73,
+      "position": 2
+    },
+    {
+      "question_id": 82,
+      "verse_id": 74,
+      "position": 1
+    },
+    {
+      "question_id": 84,
+      "verse_id": 75,
+      "position": 1
+    },
+    {
+      "question_id": 86,
+      "verse_id": 76,
+      "position": 1
+    },
+    {
+      "question_id": 88,
+      "verse_id": 77,
+      "position": 1
+    },
+    {
+      "question_id": 89,
+      "verse_id": 78,
+      "position": 1
+    },
+    {
+      "question_id": 90,
+      "verse_id": 44,
+      "position": 1
+    },
+    {
+      "question_id": 90,
+      "verse_id": 79,
+      "position": 2
+    },
+    {
+      "question_id": 91,
+      "verse_id": 80,
+      "position": 1
+    },
+    {
+      "question_id": 91,
+      "verse_id": 81,
+      "position": 2
+    },
+    {
+      "question_id": 92,
+      "verse_id": 82,
+      "position": 1
+    },
+    {
+      "question_id": 93,
+      "verse_id": 38,
+      "position": 1
+    },
+    {
+      "question_id": 94,
+      "verse_id": 83,
+      "position": 1
+    },
+    {
+      "question_id": 95,
+      "verse_id": 84,
+      "position": 1
+    },
+    {
+      "question_id": 95,
+      "verse_id": 85,
+      "position": 2
+    },
+    {
+      "question_id": 96,
+      "verse_id": 6,
+      "position": 1
+    },
+    {
+      "question_id": 97,
+      "verse_id": 86,
+      "position": 1
+    },
+    {
+      "question_id": 98,
+      "verse_id": 87,
+      "position": 1
+    },
+    {
+      "question_id": 99,
+      "verse_id": 88,
+      "position": 1
+    },
+    {
+      "question_id": 100,
+      "verse_id": 89,
+      "position": 1
+    },
+    {
+      "question_id": 101,
+      "verse_id": 90,
+      "position": 1
+    },
+    {
+      "question_id": 102,
+      "verse_id": 91,
+      "position": 1
+    },
+    {
+      "question_id": 103,
+      "verse_id": 92,
+      "position": 1
+    },
+    {
+      "question_id": 104,
+      "verse_id": 93,
+      "position": 1
+    },
+    {
+      "question_id": 106,
+      "verse_id": 94,
+      "position": 1
+    },
+    {
+      "question_id": 107,
+      "verse_id": 95,
+      "position": 1
+    },
+    {
+      "question_id": 108,
+      "verse_id": 96,
+      "position": 1
+    },
+    {
+      "question_id": 109,
+      "verse_id": 97,
+      "position": 1
+    },
+    {
+      "question_id": 110,
+      "verse_id": 98,
+      "position": 1
+    },
+    {
+      "question_id": 111,
+      "verse_id": 99,
+      "position": 1
+    },
+    {
+      "question_id": 112,
+      "verse_id": 100,
+      "position": 1
+    },
+    {
+      "question_id": 113,
+      "verse_id": 101,
+      "position": 1
+    },
+    {
+      "question_id": 114,
+      "verse_id": 102,
+      "position": 1
+    }
+  ]
+}
