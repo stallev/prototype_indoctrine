@@ -12,62 +12,62 @@
 
 ## Фаза 0. Подготовка
 
-- [ ] Прочитать `docs/static-prototype-spec.md` и `docs/svg-prompts-ts-spec.md`
-- [ ] Убедиться, что `data/catechism.json` и `images/_placeholder.svg` на месте
+- [x] Прочитать `docs/static-prototype-spec.md` и `docs/svg-prompts-ts-spec.md`
+- [x] Убедиться, что `data/catechism.json` и `images/_placeholder.svg` на месте
 
 ---
 
 ## Фаза 1. Scaffold
 
-- [ ] Создать `package.json` с `tailwindcss`, `@tailwindcss/cli`, скриптами `build:css`, `watch:css`, `serve`
-- [ ] Создать каталоги: `styles/`, `js/`, `public/illustrations/`
-- [ ] Добавить `styles/input.css` (`@import "tailwindcss"` + `@theme` + Material CSS variables)
-- [ ] Собрать `styles/app.css` (`npm run build:css`)
-- [ ] Создать заготовку `index.html` (app bar, drawer, overlay, `#app-main`)
-- [ ] Подключить `styles/app.css` и `js/app.js` (module) в HTML
-- [ ] Проверить отдачу через static server (`npm run serve`)
+- [x] Создать `package.json` с `tailwindcss`, `@tailwindcss/cli`, скриптами `build:css`, `watch:css`, `serve`
+- [x] Создать каталоги: `styles/`, `js/`, `public/illustrations/`
+- [x] Добавить `styles/input.css` (`@import "tailwindcss"` + `@theme` + Material CSS variables)
+- [x] Собрать `styles/app.css` (`npm run build:css`)
+- [x] Создать заготовку `index.html` (app bar, drawer, overlay, `#app-main`)
+- [x] Подключить `styles/app.css` и `js/app.js` (module) в HTML
+- [x] Проверить отдачу через static server (`npm run serve`)
 
 ---
 
 ## Фаза 2. HTML shell и Material-стили
 
-- [ ] Top App Bar: заголовок продукта, кнопка-гамбургер (mobile)
-- [ ] Navigation Drawer + overlay
-- [ ] Базовая типографика и поверхности через CSS variables / Tailwind
-- [ ] Mobile-first вёрстка; на `md+` — постоянный drawer
-- [ ] Без фиолетовых «AI-дефолтных» градиентов; палитра согласована со спекой
+- [x] Top App Bar: заголовок продукта, кнопка-гамбургер (mobile)
+- [x] Navigation Drawer + overlay
+- [x] Базовая типографика и поверхности через CSS variables / Tailwind
+- [x] Mobile-first вёрстка; на `md+` — постоянный drawer
+- [x] Без фиолетовых «AI-дефолтных» градиентов; палитра согласована со спекой
 
 ---
 
 ## Фаза 3. Данные и роутинг
 
-- [ ] Реализовать `js/catechism-browser.js`: `initCatechism`, `questionsForTopic`, `versesForQuestion`, `getQuestionWithVerses`, пути иллюстраций
-- [ ] В `js/app.js`: `fetch('data/catechism.json')`, инициализация, обработка ошибок загрузки
-- [ ] Hash-роутер: `#/`, `#/topic/:id`, `#/q/:n`
-- [ ] Рендер оглавления (16 topics)
-- [ ] Рендер списка вопросов раздела
-- [ ] Рендер страницы вопроса: номер, вопрос, ответ, стихи, prev/next
-- [ ] Правила: пустые стихи скрыты; `text === null` → только reference; кавычки `« »` при рендере
-- [ ] Экранирование текста из JSON (XSS)
+- [x] Реализовать `js/catechism-browser.js`: `initCatechism`, `questionsForTopic`, `versesForQuestion`, `getQuestionWithVerses`, пути иллюстраций
+- [x] В `js/app.js`: `fetch('data/catechism.json')`, инициализация, обработка ошибок загрузки
+- [x] Hash-роутер: `#/`, `#/topic/:id`, `#/q/:n`
+- [x] Рендер оглавления (16 topics)
+- [x] Рендер списка вопросов раздела
+- [x] Рендер страницы вопроса: номер, вопрос, ответ, стихи, prev/next
+- [x] Правила: пустые стихи скрыты; `text === null` → только reference; кавычки `« »` при рендере
+- [x] Экранирование текста из JSON (XSS) — через `textContent`, без `innerHTML`-интерполяции
 
 ---
 
 ## Фаза 4. Мобильное меню
 
-- [ ] Открытие/закрытие drawer (гамбургер, overlay, Escape, выбор пункта)
-- [ ] Accordion / вложенный список: topic → questions
-- [ ] `aria-expanded`, `aria-controls`, `aria-current`, focus trap на mobile
-- [ ] При resize на `md+` — сброс modal-состояния drawer
-- [ ] Touch-цели ≥ 44px
+- [x] Открытие/закрытие drawer (гамбургер, overlay, Escape, выбор пункта)
+- [x] Accordion / вложенный список: topic → questions
+- [x] `aria-expanded`, `aria-controls`, `aria-current`, focus trap на mobile
+- [x] При resize на `md+` — сброс modal-состояния drawer
+- [x] Touch-цели ≥ 44px
 
 ---
 
 ## Фаза 5. Иллюстрации и placeholder
 
-- [ ] `<img>` с `src` из `public/` + `question.illustration`
-- [ ] `onerror` → `images/_placeholder.svg` без цикла перезагрузки
-- [ ] `alt`, `aspect-ratio: 4/3`
-- [ ] Проверка: при пустом `public/illustrations/` все вопросы показывают placeholder
+- [x] `<img>` с `src` из `public/` + `question.illustration`
+- [x] `onerror` → `images/_placeholder.svg` без цикла перезагрузки
+- [x] `alt`, `aspect-ratio: 4/3`
+- [x] Проверка: при пустом `public/illustrations/` все вопросы показывают placeholder
 
 ---
 
