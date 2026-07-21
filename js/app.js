@@ -256,35 +256,10 @@ function setContainerWidth(variant) {
   mainEl.classList.add(...variant);
 }
 
-function renderHome() {
-  setContainerWidth(CONTAINER_READING);
-  mainEl.replaceChildren();
-
-  const heading = document.createElement('h2');
-  heading.className = 'mb-4 text-xl font-medium';
-  heading.textContent = 'Содержание';
-  mainEl.appendChild(heading);
-
-  const list = createDrillList();
-  for (const topic of allTopics()) {
-    const name = document.createElement('span');
-    name.className = 'truncate font-medium';
-    name.textContent = topic.topic_name;
-    list.appendChild(createDrillItem(`#/topic/${topic.topic_id}`, [name]));
-  }
-  mainEl.appendChild(list);
-}
-
 function renderTopic(topicId) {
   setContainerWidth(CONTAINER_READING);
   const topic = getTopic(topicId);
   mainEl.replaceChildren();
-
-  const back = document.createElement('a');
-  back.href = '#/';
-  back.className = 'mb-4 inline-flex items-center gap-1 text-sm font-medium text-md-primary';
-  back.append(chevronIcon('left'), document.createTextNode('К оглавлению'));
-  mainEl.appendChild(back);
 
   const heading = document.createElement('h2');
   heading.className = 'mb-4 text-xl font-medium';
@@ -403,10 +378,15 @@ function renderLoadError(message) {
 }
 
 // --- Hash router (§3.1) ---
+// No dedicated "home"/table-of-contents route: the sidebar already lists
+// every topic and question, so a duplicate listing screen would just repeat
+// it. "#/" (and anything invalid) redirects straight into the first question.
+
+const HOME_HASH = '#/q/1';
 
 function parseHash() {
   const hash = window.location.hash || '#/';
-  if (hash === '#/') return { name: 'home' };
+  if (hash === '#/') return { name: 'redirect-home' };
   let match = hash.match(/^#\/topic\/(\d+)$/);
   if (match) return { name: 'topic', id: Number(match[1]) };
   match = hash.match(/^#\/q\/(\d+)$/);
@@ -417,24 +397,23 @@ function parseHash() {
 function router() {
   const route = parseHash();
 
-  if (route.name === 'invalid') {
-    window.location.hash = '#/';
+  if (route.name === 'invalid' || route.name === 'redirect-home') {
+    window.location.hash = HOME_HASH;
     return;
   }
   if (route.name === 'topic' && !getTopic(route.id)) {
-    window.location.hash = '#/';
+    window.location.hash = HOME_HASH;
     return;
   }
   if (
     route.name === 'question' &&
     (route.n < MIN_QUESTION || route.n > MAX_QUESTION || !getQuestionWithVerses(route.n))
   ) {
-    window.location.hash = '#/';
+    window.location.hash = HOME_HASH;
     return;
   }
 
-  if (route.name === 'home') renderHome();
-  else if (route.name === 'topic') renderTopic(route.id);
+  if (route.name === 'topic') renderTopic(route.id);
   else if (route.name === 'question') renderQuestion(route.n);
 
   updateActiveNav(route);

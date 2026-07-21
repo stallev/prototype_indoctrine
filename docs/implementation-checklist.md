@@ -43,8 +43,7 @@
 
 - [x] Реализовать `js/catechism-browser.js`: `initCatechism`, `questionsForTopic`, `versesForQuestion`, `getQuestionWithVerses`, пути иллюстраций
 - [x] В `js/app.js`: `fetch('data/catechism.json')`, инициализация, обработка ошибок загрузки
-- [x] Hash-роутер: `#/`, `#/topic/:id`, `#/q/:n`
-- [x] Рендер оглавления (16 topics)
+- [x] Hash-роутер: `#/` (редирект на `#/q/1`), `#/topic/:id`, `#/q/:n` — отдельного экрана-оглавления нет, эту роль уже выполняет drawer
 - [x] Рендер списка вопросов раздела
 - [x] Рендер страницы вопроса: номер, вопрос, ответ, стихи, prev/next
 - [x] Правила: пустые стихи скрыты; `text === null` → только reference; кавычки `« »` при рендере

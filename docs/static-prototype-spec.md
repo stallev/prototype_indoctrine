@@ -70,7 +70,7 @@ JS — ES modules. CSS и JS **не** инлайнить в HTML.
 flowchart TB
   Load[fetch catechism.json] --> Init[catechism-browser: индексы и хелперы]
   Init --> Router[hash router]
-  Router -->|hash home| Home[Оглавление: topics]
+  Router -->|hash empty| Redirect["#/ → #/q/1"]
   Router -->|hash topic id| Topic[Список вопросов раздела]
   Router -->|hash q n| Question[Страница вопроса]
   Question --> Ill[img illustration или placeholder]
@@ -78,16 +78,21 @@ flowchart TB
 
 ### 3.1. Hash-роутинг
 
+Нет отдельного маршрута-оглавления: полный список разделов и вопросов уже
+доступен в Navigation Drawer (на mobile — по гамбургеру, на desktop — как
+постоянная/сворачиваемая боковая панель), поэтому дублирующий экран со
+списком 16 разделов не нужен.
+
 | Маршрут | Содержимое |
 |---------|------------|
-| `#/` | Оглавление: список 16 разделов (`topics`) |
+| `#/` | Редирект на `#/q/1` (первый вопрос) |
 | `#/topic/:id` | Вопросы раздела (`questionsForTopic`), сортировка по `question_number` |
 | `#/q/:n` | Карточка вопроса `n` (1–114) |
 
 Правила:
 
-- Неизвестный или невалидный hash → редирект на `#/`.
-- Номер вопроса вне 1…114 → `#/`.
+- Неизвестный или невалидный hash, а также сам `#/` → редирект на `#/q/1`.
+- Номер вопроса вне 1…114 → редирект на `#/q/1`.
 - Навигация меняет только hash; перезагрузки страницы нет.
 - При `hashchange` и при старте (`DOMContentLoaded`) — один и тот же обработчик роутера.
 
@@ -357,7 +362,7 @@ img.addEventListener('error', () => {
 
 1. `initCatechism(await loadJson())`.
 2. Привязка роутера к `hashchange` / старту.
-3. Рендер home / topic / question в `#app-main`.
+3. Рендер topic / question в `#app-main` (нет отдельного home-рендера — `#/` редиректит на `#/q/1`).
 4. Управление drawer (§6).
 5. Делегирование кликов prev/next и пунктов меню.
 
@@ -369,7 +374,7 @@ img.addEventListener('error', () => {
 
 - [x] Один HTML-файл содержит весь shell; стили и скрипты — внешние файлы.
 - [x] Все 114 вопросов открываются по `#/q/:n` из JSON.
-- [x] 16 разделов в оглавлении и drawer; вопросы разделов совпадают с `topic_id`.
+- [x] 16 разделов в drawer (нет отдельного экрана-оглавления — дублировал бы drawer); вопросы разделов совпадают с `topic_id`.
 - [x] Стихи в порядке `position`; пустой список / `text: null` обработаны по §7.3.
 - [x] Отсутствующая иллюстрация → `_placeholder.svg` через `onerror`.
 - [x] Mobile: гамбургер, drawer, overlay, Escape, a11y-атрибуты.

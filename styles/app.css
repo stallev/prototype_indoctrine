@@ -525,6 +525,9 @@
     --tw-tracking: var(--tracking-wide);
     letter-spacing: var(--tracking-wide);
   }
+  .text-inherit {
+    color: inherit;
+  }
   .text-md-outline {
     color: var(--color-md-outline);
   }
@@ -542,6 +545,9 @@
   }
   .not-italic {
     font-style: normal;
+  }
+  .no-underline {
+    text-decoration-line: none;
   }
   .antialiased {
     -webkit-font-smoothing: antialiased;
