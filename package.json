@@ -4,6 +4,7 @@
   "private": true,
   "description": "Статический HTML-прототип катехизиса",
   "scripts": {
+    "build": "npm run build:css",
     "build:css": "tailwindcss -i ./styles/input.css -o ./styles/app.css",
     "watch:css": "tailwindcss -i ./styles/input.css -o ./styles/app.css --watch",
     "serve": "npx --yes serve ."
