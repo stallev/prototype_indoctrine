@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project status
 
-Phases 0–7 of `docs/implementation-checklist.md` are done: scaffold, HTML shell, routing/rendering, accessible mobile drawer, `prompts/illustration-prompts.ts` (114 entries), and all 114 `public/illustrations/qNNN.svg` files (generated from a shared vector-primitive library for consistency, not hand-authored one-by-one — see git history on `prompts/illustration-prompts.ts` and `public/illustrations/` for how). Only Phase 8 (final acceptance pass) remains. There is no test suite. Before writing code, check `docs/implementation-checklist.md` for the current phase and what's already been marked done.
+All phases (0–8) of `docs/implementation-checklist.md` are done and accepted: scaffold, HTML shell, routing/rendering, accessible mobile drawer, `prompts/illustration-prompts.ts` (114 entries), all 114 `public/illustrations/qNNN.svg` files (generated from a shared vector-primitive library for consistency, not hand-authored one-by-one — see git history on those paths for how), and the final acceptance pass (automated full-coverage route/data sweep in-browser, illustration-fallback regression test, doctrinal audit of every sensitive question per `specs/svg-illustration-spec.md` §7). There is no test suite — acceptance was verified via an in-browser scripted sweep, not an automated test file; if you add one, put it in a way that doesn't require a browser dependency the static prototype otherwise has none of. Check `docs/implementation-checklist.md` before assuming what's next; there is no committed roadmap past Phase 8.
 
 ## Avoid AI slop
 

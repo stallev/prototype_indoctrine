@@ -2,7 +2,7 @@
 
 Спецификация однофайлового HTML-прототипа: каждая «страница» показывает материал по одному вопросу катехизиса. Данные — из [`data/catechism.json`](../data/catechism.json); подходы к рендеру — из [`utils/catechism.ts`](../utils/catechism.ts).
 
-**Статус:** спека готова, код ещё не реализован.
+**Статус:** реализовано и принято (см. §10).
 
 Связанные документы:
 
@@ -367,15 +367,15 @@ img.addEventListener('error', () => {
 
 ## 10. Критерии приёмки прототипа
 
-- [ ] Один HTML-файл содержит весь shell; стили и скрипты — внешние файлы.
-- [ ] Все 114 вопросов открываются по `#/q/:n` из JSON.
-- [ ] 16 разделов в оглавлении и drawer; вопросы разделов совпадают с `topic_id`.
-- [ ] Стихи в порядке `position`; пустой список / `text: null` обработаны по §7.3.
-- [ ] Отсутствующая иллюстрация → `_placeholder.svg` через `onerror`.
-- [ ] Mobile: гамбургер, drawer, overlay, Escape, a11y-атрибуты.
-- [ ] Desktop `md+`: постоянный drawer, без overlay.
-- [ ] CSS собран Tailwind v4 из `input.css` с CSS variables Material-токенов.
-- [ ] Прототип работает через static server (`npm run serve` или аналог).
+- [x] Один HTML-файл содержит весь shell; стили и скрипты — внешние файлы.
+- [x] Все 114 вопросов открываются по `#/q/:n` из JSON.
+- [x] 16 разделов в оглавлении и drawer; вопросы разделов совпадают с `topic_id`.
+- [x] Стихи в порядке `position`; пустой список / `text: null` обработаны по §7.3.
+- [x] Отсутствующая иллюстрация → `_placeholder.svg` через `onerror`.
+- [x] Mobile: гамбургер, drawer, overlay, Escape, a11y-атрибуты.
+- [x] Desktop `md+`: постоянный drawer, без overlay.
+- [x] CSS собран Tailwind v4 из `input.css` с CSS variables Material-токенов.
+- [x] Прототип работает через static server (`npm run serve` или аналог).
 
 ---
 

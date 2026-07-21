@@ -2,7 +2,7 @@
 
 Формальный контракт будущего файла `prompts/illustration-prompts.ts`: типизированный массив из **114** промптов для генерации `public/illustrations/qNNN.svg`.
 
-**Статус:** спека готова, файл промптов ещё не создан.
+**Статус:** реализовано и принято (см. §8).
 
 Опора:
 
@@ -214,13 +214,13 @@ flowchart LR
 
 ## 8. Критерии приёмки файла
 
-- [ ] Файл существует по пути `prompts/illustration-prompts.ts`.
-- [ ] Экспортированы `IllustrationPromptEntry`, `illustrationPrompts`, `getPromptByQuestionNumber`, `promptsMissingSceneBrief`, `promptsMissingNumbers`.
-- [ ] 114 записей, номера 1…114 без пропусков.
-- [ ] Все `scene_brief` непустые; чувствительные вопросы согласованы с §7.
-- [ ] Все `prompt` собраны по §8, без оставшихся `{{…}}`; блок стиха опущен при отсутствии стихов.
-- [ ] Нет Node/fs-импортов; нет встроенной SVG-разметки в полях.
-- [ ] Комментарий в шапке файла ссылается на `specs/svg-illustration-spec.md`.
+- [x] Файл существует по пути `prompts/illustration-prompts.ts`.
+- [x] Экспортированы `IllustrationPromptEntry`, `illustrationPrompts`, `getPromptByQuestionNumber`, `promptsMissingSceneBrief`, `promptsMissingNumbers`.
+- [x] 114 записей, номера 1…114 без пропусков.
+- [x] Все `scene_brief` непустые; чувствительные вопросы согласованы с §7.
+- [x] Все `prompt` собраны по §8, без оставшихся `{{…}}`; блок стиха опущен при отсутствии стихов.
+- [x] Нет Node/fs-импортов; нет встроенной SVG-разметки в полях.
+- [x] Комментарий в шапке файла ссылается на `specs/svg-illustration-spec.md`.
 
 ---
 

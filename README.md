@@ -19,9 +19,9 @@
 
 ## Статический прототип
 
-**Статус: спека готова, код ещё нет.**
+**Статус: реализован и принят (Фазы 0–8 чек-листа).**
 
-Планируется однофайловый HTML SPA (Material UI-стиль через Tailwind v4 + CSS variables, mobile-first, адаптивное меню). Данные рендерятся из `data/catechism.json` по подходам `utils/catechism.ts`; при отсутствии файла иллюстрации — `images/_placeholder.svg`.
+Однофайловый HTML SPA (Material UI-стиль через Tailwind v4 + CSS variables, mobile-first, адаптивное меню). Данные рендерятся из `data/catechism.json` через `js/catechism-browser.js`; иллюстрации — все 114 сгенерированы (`public/illustrations/qNNN.svg`), при отсутствии файла — `images/_placeholder.svg`. Запуск: `npm install && npm run build:css && npm run serve`.
 
 | Документ | Содержание |
 |----------|------------|
