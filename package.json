@@ -9,7 +9,7 @@
     "serve": "npx --yes serve ."
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4",
-    "tailwindcss": "^4"
+    "@tailwindcss/cli": "4",
+    "tailwindcss": "4"
   }
 }

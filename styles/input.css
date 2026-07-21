@@ -57,3 +57,19 @@ body {
 .nav-topic-button[aria-expanded="true"] .nav-topic-caret {
   transform: rotate(90deg);
 }
+
+/* Desktop-only collapsible sidebar (separate from the mobile modal drawer
+   open/closed state above). #nav-drawer's existing transition-transform
+   already animates this; #content-offset/#app-header get their own
+   transitions declared alongside their base classes in index.html. */
+@media (min-width: 768px) {
+  #nav-drawer.sidebar-collapsed {
+    translate: -272px 0;
+  }
+  #content-offset.sidebar-collapsed {
+    margin-left: 0;
+  }
+  #app-header.sidebar-collapsed {
+    padding-left: 0.5rem;
+  }
+}

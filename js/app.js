@@ -18,6 +18,9 @@ const drawerEl = document.getElementById('nav-drawer');
 const overlayEl = document.getElementById('drawer-overlay');
 const drawerToggleEl = document.getElementById('drawer-toggle');
 const drawerCloseEl = document.getElementById('drawer-close');
+const sidebarToggleEl = document.getElementById('sidebar-toggle');
+const contentOffsetEl = document.getElementById('content-offset');
+const appHeaderEl = document.getElementById('app-header');
 const topicItemTpl = document.getElementById('tpl-topic-item');
 const questionItemTpl = document.getElementById('tpl-question-item');
 const verseBlockTpl = document.getElementById('tpl-verse-block');
@@ -90,8 +93,29 @@ function closeDrawer() {
 drawerToggleEl.addEventListener('click', () => (drawerOpen ? closeDrawer() : openDrawer()));
 drawerCloseEl.addEventListener('click', closeDrawer);
 overlayEl.addEventListener('click', closeDrawer);
+
+// --- Desktop sidebar collapse (separate from the mobile modal above: no
+// overlay/focus-trap/scroll-lock, just a persistent layout toggle) ---
+
+let sidebarCollapsed = false;
+
+function setSidebarCollapsed(collapsed) {
+  sidebarCollapsed = collapsed;
+  drawerEl.classList.toggle('sidebar-collapsed', collapsed);
+  contentOffsetEl.classList.toggle('sidebar-collapsed', collapsed);
+  appHeaderEl.classList.toggle('sidebar-collapsed', collapsed);
+  sidebarToggleEl.setAttribute('aria-expanded', String(!collapsed));
+  sidebarToggleEl.setAttribute('aria-label', collapsed ? 'Показать содержание' : 'Скрыть содержание');
+}
+
+sidebarToggleEl.addEventListener('click', () => setSidebarCollapsed(!sidebarCollapsed));
+
 mqDesktop.addEventListener('change', (event) => {
-  if (event.matches) closeDrawer();
+  if (event.matches) {
+    closeDrawer();
+  } else {
+    setSidebarCollapsed(false);
+  }
 });
 
 // --- Navigation drawer content (topics accordion) ---
@@ -158,12 +182,12 @@ function updateActiveNav(route) {
 
 function createIllustration(question) {
   const img = document.createElement('img');
-  // Mobile: full-bleed at the card's native 4:3 ratio (via .illustration-frame).
-  // Desktop: cap the rendered height so a wide/projector viewport doesn't
-  // blow the picture up to an enormous size — width then follows from the
-  // same 4:3 ratio and the image sits centered above the card's text.
-  img.className =
-    'illustration-frame w-full object-contain md:mx-auto md:mt-6 md:h-[320px] md:w-auto md:rounded-lg lg:h-[360px] xl:h-[400px] 2xl:h-[440px]';
+  // Mobile: full-bleed at the card's native 4:3 ratio (via .illustration-frame),
+  // image on top of the text below it.
+  // Desktop: the card becomes a left/right split (see renderQuestion) — the
+  // image fills the entire left column's height (whatever height the text
+  // column ends up needing), so it switches to h-full/w-full + object-cover.
+  img.className = 'illustration-frame w-full object-contain md:h-full md:w-full md:object-cover';
   img.width = 1200;
   img.height = 900;
   img.alt = `Иллюстрация к вопросу ${question.question_number}`;
@@ -220,7 +244,20 @@ function createDrillItem(href, contentNodes) {
 
 // --- Page renderers ---
 
+// Reading screens (lists) cap at a comfortable text-column width; the
+// question screen becomes a wide left/right split on desktop and needs the
+// room. Both variants are literal Tailwind classes here (not built from
+// interpolated strings) so the CSS build's content scan picks them up.
+const CONTAINER_READING = ['md:max-w-2xl', 'lg:max-w-3xl', 'xl:max-w-4xl', '2xl:max-w-5xl'];
+const CONTAINER_SPLIT = ['md:max-w-4xl', 'lg:max-w-5xl', 'xl:max-w-6xl', '2xl:max-w-7xl'];
+
+function setContainerWidth(variant) {
+  mainEl.classList.remove(...CONTAINER_READING, ...CONTAINER_SPLIT);
+  mainEl.classList.add(...variant);
+}
+
 function renderHome() {
+  setContainerWidth(CONTAINER_READING);
   mainEl.replaceChildren();
 
   const heading = document.createElement('h2');
@@ -239,6 +276,7 @@ function renderHome() {
 }
 
 function renderTopic(topicId) {
+  setContainerWidth(CONTAINER_READING);
   const topic = getTopic(topicId);
   mainEl.replaceChildren();
 
@@ -286,31 +324,42 @@ function createNavButton(label, targetN, direction) {
 }
 
 function renderQuestion(n) {
+  setContainerWidth(CONTAINER_SPLIT);
   const q = getQuestionWithVerses(n);
   const topic = getTopic(q.topic_id);
   mainEl.replaceChildren();
 
+  // Mobile: image stacked on top of text (plain block flow, unchanged).
+  // Desktop (md+): left/right split — image fills the left half's full
+  // height, text is vertically centered in the right half. `items-stretch`
+  // is what makes the image match the text column's height (see
+  // createIllustration's md:h-full/object-cover).
   const card = document.createElement('article');
-  card.className = 'overflow-hidden rounded-lg bg-md-surface-container shadow-e1';
-  card.appendChild(createIllustration(q));
+  card.className =
+    'overflow-hidden rounded-lg bg-md-surface-container shadow-e1 md:flex md:items-stretch md:min-h-[460px] lg:min-h-[520px] xl:min-h-[560px]';
+
+  const imageWrap = document.createElement('div');
+  imageWrap.className = 'md:w-1/2 md:shrink-0';
+  imageWrap.appendChild(createIllustration(q));
+  card.appendChild(imageWrap);
 
   const body = document.createElement('div');
-  body.className = 'p-4 md:p-6 lg:p-8';
+  body.className = 'p-4 md:flex md:w-1/2 md:flex-col md:justify-center md:p-10 lg:p-12';
 
   const topicLabel = document.createElement('a');
   topicLabel.href = `#/topic/${q.topic_id}`;
   topicLabel.className =
-    'inline-block rounded-full bg-md-secondary/15 px-3 py-1 text-xs font-medium uppercase tracking-wide text-md-secondary transition-colors hover:bg-md-secondary/25 md:text-sm';
+    'inline-block w-fit rounded-full bg-md-secondary/15 px-3 py-1 text-xs font-medium uppercase tracking-wide text-md-secondary transition-colors hover:bg-md-secondary/25 md:text-sm';
   topicLabel.textContent = topic?.topic_name ?? '';
   body.appendChild(topicLabel);
 
   const heading = document.createElement('h2');
-  heading.className = 'mt-3 text-xl font-medium leading-snug md:text-2xl lg:text-3xl';
+  heading.className = 'mt-3 text-xl font-medium leading-snug md:text-3xl lg:text-4xl';
   heading.textContent = `${q.question_number}. ${q.question_content}`;
   body.appendChild(heading);
 
   const answer = document.createElement('p');
-  answer.className = 'mt-3 text-base leading-relaxed md:text-lg lg:text-xl';
+  answer.className = 'mt-3 text-base leading-relaxed md:text-xl lg:text-2xl';
   answer.textContent = q.answer;
   body.appendChild(answer);
 
@@ -323,13 +372,13 @@ function renderQuestion(n) {
       const textEl = li.querySelector('.verse-text');
       if (verse.text) {
         textEl.textContent = `«${verse.text}»`;
-        textEl.className = 'verse-text italic leading-relaxed md:text-lg lg:text-xl';
+        textEl.className = 'verse-text italic leading-relaxed md:text-xl lg:text-2xl';
       } else {
         textEl.remove();
       }
       const refEl = li.querySelector('.verse-reference');
       refEl.textContent = verse.reference;
-      refEl.className = 'verse-reference mt-1 block text-sm not-italic text-md-secondary md:text-base';
+      refEl.className = 'verse-reference mt-1 block text-sm not-italic text-md-secondary md:text-base lg:text-lg';
       verseList.appendChild(li);
     }
     body.appendChild(verseList);
