@@ -158,7 +158,7 @@ function updateActiveNav(route) {
 
 function createIllustration(question) {
   const img = document.createElement('img');
-  img.className = 'illustration-frame w-full rounded-lg object-contain';
+  img.className = 'illustration-frame w-full object-contain';
   img.width = 1200;
   img.height = 900;
   img.alt = `Иллюстрация к вопросу ${question.question_number}`;
@@ -171,6 +171,48 @@ function createIllustration(question) {
   return img;
 }
 
+// --- Small UI helpers shared across screens ---
+
+/** Chevron used both as a "drill in" affordance and for back/prev/next nav. */
+function chevronIcon(direction = 'right', extraClass = '') {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('width', '18');
+  svg.setAttribute('height', '18');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('fill', 'none');
+  svg.setAttribute('aria-hidden', 'true');
+  svg.classList.add('shrink-0');
+  if (direction === 'left') svg.classList.add('-scale-x-100');
+  if (extraClass) svg.classList.add(...extraClass.split(' '));
+  svg.innerHTML =
+    '<path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+  return svg;
+}
+
+/** Rounded surface list used for "оглавление" / topic question lists — each
+ * row is a full-width tap target with a trailing chevron signalling that it
+ * drills into another screen (topics → questions → question). */
+function createDrillList() {
+  const list = document.createElement('ul');
+  list.className = 'overflow-hidden rounded-lg bg-md-surface-container shadow-e1';
+  return list;
+}
+
+function createDrillItem(href, contentNodes) {
+  const li = document.createElement('li');
+  li.className = 'border-b border-md-outline/15 last:border-b-0';
+  const link = document.createElement('a');
+  link.href = href;
+  link.className =
+    'flex min-h-[56px] items-center justify-between gap-3 px-4 py-3 transition-colors hover:bg-md-surface-tint/25 focus-visible:bg-md-surface-tint/25 focus-visible:outline-none';
+  const content = document.createElement('span');
+  content.className = 'flex min-w-0 items-center gap-3';
+  content.append(...contentNodes);
+  link.append(content, chevronIcon('right', 'text-md-outline'));
+  li.appendChild(link);
+  return li;
+}
+
 // --- Page renderers ---
 
 function renderHome() {
@@ -181,18 +223,12 @@ function renderHome() {
   heading.textContent = 'Содержание';
   mainEl.appendChild(heading);
 
-  const list = document.createElement('ul');
-  list.className = 'overflow-hidden rounded-lg';
-  list.style.backgroundColor = 'var(--md-sys-color-surface-container)';
-  list.style.boxShadow = 'var(--md-elevation-1)';
+  const list = createDrillList();
   for (const topic of allTopics()) {
-    const li = document.createElement('li');
-    const link = document.createElement('a');
-    link.href = `#/topic/${topic.topic_id}`;
-    link.className = 'flex min-h-[44px] items-center px-4 py-3';
-    link.textContent = topic.topic_name;
-    li.appendChild(link);
-    list.appendChild(li);
+    const name = document.createElement('span');
+    name.className = 'truncate font-medium';
+    name.textContent = topic.topic_name;
+    list.appendChild(createDrillItem(`#/topic/${topic.topic_id}`, [name]));
   }
   mainEl.appendChild(list);
 }
@@ -203,9 +239,8 @@ function renderTopic(topicId) {
 
   const back = document.createElement('a');
   back.href = '#/';
-  back.className = 'mb-4 inline-block text-sm';
-  back.style.color = 'var(--md-sys-color-primary)';
-  back.textContent = '← К оглавлению';
+  back.className = 'mb-4 inline-flex items-center gap-1 text-sm font-medium text-md-primary';
+  back.append(chevronIcon('left'), document.createTextNode('К оглавлению'));
   mainEl.appendChild(back);
 
   const heading = document.createElement('h2');
@@ -213,39 +248,36 @@ function renderTopic(topicId) {
   heading.textContent = topic.topic_name;
   mainEl.appendChild(heading);
 
-  const list = document.createElement('ul');
-  list.className = 'overflow-hidden rounded-lg';
-  list.style.backgroundColor = 'var(--md-sys-color-surface-container)';
-  list.style.boxShadow = 'var(--md-elevation-1)';
+  const list = createDrillList();
   for (const q of questionsForTopic(topicId)) {
-    const li = document.createElement('li');
-    const link = document.createElement('a');
-    link.href = `#/q/${q.question_number}`;
-    link.className = 'flex min-h-[44px] items-center gap-2 px-4 py-3';
-    const num = document.createElement('span');
-    num.textContent = `${q.question_number}.`;
+    const badge = document.createElement('span');
+    badge.className =
+      'flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-md-primary/10 text-sm font-medium text-md-primary';
+    badge.textContent = String(q.question_number);
     const content = document.createElement('span');
+    content.className = 'truncate';
     content.textContent = q.question_content;
-    link.append(num, content);
-    li.appendChild(link);
-    list.appendChild(li);
+    list.appendChild(createDrillItem(`#/q/${q.question_number}`, [badge, content]));
   }
   mainEl.appendChild(list);
 }
 
-function createNavLink(label, targetN) {
-  if (targetN === null) {
-    const span = document.createElement('span');
-    span.setAttribute('aria-disabled', 'true');
-    span.style.color = 'var(--md-sys-color-outline)';
-    span.textContent = label;
-    return span;
-  }
-  const link = document.createElement('a');
-  link.href = `#/q/${targetN}`;
-  link.style.color = 'var(--md-sys-color-primary)';
-  link.textContent = label;
-  return link;
+function createNavButton(label, targetN, direction) {
+  const disabled = targetN === null;
+  const el = document.createElement(disabled ? 'span' : 'a');
+  if (!disabled) el.href = `#/q/${targetN}`;
+  el.className = disabled
+    ? 'inline-flex cursor-not-allowed items-center gap-1.5 rounded-full border border-md-outline/20 px-4 py-2 text-sm font-medium text-md-outline'
+    : 'inline-flex items-center gap-1.5 rounded-full border border-md-outline/40 px-4 py-2 text-sm font-medium text-md-primary transition-colors hover:bg-md-surface-tint/25';
+  if (disabled) el.setAttribute('aria-disabled', 'true');
+
+  const text = document.createElement('span');
+  text.textContent = label;
+
+  if (direction === 'left') el.append(chevronIcon('left'), text);
+  else el.append(text, chevronIcon('right'));
+
+  return el;
 }
 
 function renderQuestion(n) {
@@ -253,46 +285,58 @@ function renderQuestion(n) {
   const topic = getTopic(q.topic_id);
   mainEl.replaceChildren();
 
-  mainEl.appendChild(createIllustration(q));
+  const card = document.createElement('article');
+  card.className = 'overflow-hidden rounded-lg bg-md-surface-container shadow-e1';
+  card.appendChild(createIllustration(q));
+
+  const body = document.createElement('div');
+  body.className = 'p-4 md:p-6';
 
   const topicLabel = document.createElement('a');
   topicLabel.href = `#/topic/${q.topic_id}`;
-  topicLabel.className = 'mt-4 inline-block text-sm uppercase tracking-wide';
-  topicLabel.style.color = 'var(--md-sys-color-secondary)';
+  topicLabel.className =
+    'inline-block rounded-full bg-md-secondary/15 px-3 py-1 text-xs font-medium uppercase tracking-wide text-md-secondary transition-colors hover:bg-md-secondary/25';
   topicLabel.textContent = topic?.topic_name ?? '';
-  mainEl.appendChild(topicLabel);
+  body.appendChild(topicLabel);
 
   const heading = document.createElement('h2');
-  heading.className = 'mt-1 text-xl font-medium';
+  heading.className = 'mt-3 text-xl font-medium leading-snug';
   heading.textContent = `${q.question_number}. ${q.question_content}`;
-  mainEl.appendChild(heading);
+  body.appendChild(heading);
 
   const answer = document.createElement('p');
   answer.className = 'mt-3 text-base leading-relaxed';
   answer.textContent = q.answer;
-  mainEl.appendChild(answer);
+  body.appendChild(answer);
 
   if (q.verses.length > 0) {
     const verseList = document.createElement('ul');
-    verseList.className = 'mt-4 space-y-3';
+    verseList.className = 'mt-4 space-y-3 border-t border-md-outline/15 pt-4';
     for (const verse of q.verses) {
       const li = verseBlockTpl.content.firstElementChild.cloneNode(true);
+      li.className = 'verse-item border-l-4 border-md-secondary/40 pl-3';
       const textEl = li.querySelector('.verse-text');
       if (verse.text) {
         textEl.textContent = `«${verse.text}»`;
+        textEl.className = 'verse-text italic leading-relaxed';
       } else {
         textEl.remove();
       }
-      li.querySelector('.verse-reference').textContent = verse.reference;
+      const refEl = li.querySelector('.verse-reference');
+      refEl.textContent = verse.reference;
+      refEl.className = 'verse-reference mt-1 block text-sm not-italic text-md-secondary';
       verseList.appendChild(li);
     }
-    mainEl.appendChild(verseList);
+    body.appendChild(verseList);
   }
 
+  card.appendChild(body);
+  mainEl.appendChild(card);
+
   const nav = document.createElement('div');
-  nav.className = 'mt-6 flex items-center justify-between';
-  nav.appendChild(createNavLink('← Предыдущий', n > MIN_QUESTION ? n - 1 : null));
-  nav.appendChild(createNavLink('Следующий →', n < MAX_QUESTION ? n + 1 : null));
+  nav.className = 'mt-6 flex items-center justify-between gap-3';
+  nav.appendChild(createNavButton('Предыдущий', n > MIN_QUESTION ? n - 1 : null, 'left'));
+  nav.appendChild(createNavButton('Следующий', n < MAX_QUESTION ? n + 1 : null, 'right'));
   mainEl.appendChild(nav);
 }
 
