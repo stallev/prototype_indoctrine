@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Горы и море под широким небом</title><defs><linearGradient id="sky24" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky24)"/><path d="M0,560 L260,320 L460,540 L680,300 L900,540 L1200,380 V900 H0 Z" fill="#A9C5A0"/><rect y="700" width="1200" height="200" fill="#7FB4B0"/></svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Только что созданный мир</title><defs><linearGradient id="sky32" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky32)"/><defs><radialGradient id="glow33"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="600" cy="200" r="260" fill="url(#glow33)"/>
+  <path d="M0,660 Q300,560 600,610 T1200,590 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,740 Q350,640 700,710 T1200,680 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(250,720) scale(1.1)">
+    <rect x="-10" y="-10" width="20" height="90" rx="8" fill="#8B5A2B"/>
+    <circle cx="0" cy="-70" r="70" fill="#5E9E5A"/>
+    <circle cx="-40" cy="-40" r="45" fill="#9FCF6E"/>
+    <circle cx="45" cy="-45" r="42" fill="#9FCF6E"/></g><g transform="translate(950,700) scale(1)">
+    <rect x="-10" y="-10" width="20" height="90" rx="8" fill="#8B5A2B"/>
+    <circle cx="0" cy="-70" r="70" fill="#5E9E5A"/>
+    <circle cx="-40" cy="-40" r="45" fill="#9FCF6E"/>
+    <circle cx="45" cy="-45" r="42" fill="#9FCF6E"/></g><g transform="translate(500,220) scale(1.2)">
+    <path d="M-16,0 Q-8,-10 0,0 Q8,-10 16,0" fill="none" stroke="#8B5A2B" stroke-width="4" stroke-linecap="round"/></g></svg>

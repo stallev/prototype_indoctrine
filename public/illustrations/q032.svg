@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Развилка светлой и тёмной тропы</title><defs><linearGradient id="sky57" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky57)"/>
+  <path d="M0,680 Q300,580 600,630 T1200,610 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,760 Q350,660 700,730 T1200,700 V900 H0 Z" fill="#5E9E5A"/><path d="M600,900 L600,500" fill="none" stroke="#E9CE8E" stroke-width="100" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/><path d="M600,500 L1150,260" fill="none" stroke="#3D5A80" stroke-width="70" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/></svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Крест на холме Голгофы в тёплом свете</title><defs><linearGradient id="sky91" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky91)"/>
+  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#E9CE8E"/>
+  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#A0653A"/><g transform="translate(600,720) scale(1.8)">
+    <rect x="-12" y="-90" width="24" height="180" rx="6" fill="#A0653A"/>
+    <rect x="-46" y="-40" width="92" height="24" rx="6" fill="#A0653A"/></g></svg>

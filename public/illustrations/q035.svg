@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Печальные фигуры у сада</title><defs><linearGradient id="sky61" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky61)"/>
+  <path d="M0,720 Q300,620 600,670 T1200,650 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,800 Q350,700 700,770 T1200,740 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(900,660) scale(0.9)">
+    <rect x="-10" y="-10" width="20" height="90" rx="8" fill="#8B5A2B"/>
+    <circle cx="0" cy="-70" r="72" fill="#5E9E5A"/>
+    <circle cx="24" cy="-50" r="10" fill="#EB8A73"/>
+    <circle cx="-18" cy="-84" r="10" fill="#EB8A73"/>
+    <circle cx="6" cy="-100" r="10" fill="#EB8A73"/>
+    <path d="M46,-96 Q64,-88 58,-70 Q52,-56 60,-46" fill="none" stroke="#5E9E5A" stroke-width="7" stroke-linecap="round" opacity="0.8"/></g><g transform="translate(420,780) scale(1.2)">
+    <path d="M-34,-100 Q0,-118 34,-100 L28,60 Q0,74 -28,60 Z" fill="#A9C5A0"/>
+    <rect x="-40" y="-30" width="14" height="10" fill="#A0653A"/>
+    <path d="M-30,-96 L-46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
+    <path d="M30,-96 L46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="0" cy="-128" r="26" fill="#D9A878"/></g><g transform="translate(560,790) scale(1.2)">
+    <path d="M-36,-96 Q0,-114 36,-96 L30,70 Q0,86 -30,70 Z" fill="#7FB4B0"/>
+    <path d="M-28,-92 L-42,-24" stroke="#F1C9A5" stroke-width="15" stroke-linecap="round"/>
+    <path d="M28,-92 L42,-24" stroke="#F1C9A5" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="0" cy="-124" r="25" fill="#F1C9A5"/>
+    <path d="M-30,-136 Q0,-160 30,-136 Q34,-110 24,-96 L20,-116 Q0,-128 -20,-116 L-24,-96 Q-34,-110 -30,-136 Z" fill="#F5FBFE"/></g></svg>

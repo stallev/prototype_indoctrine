@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Библия с лучом света на страницах</title><defs><linearGradient id="sky163" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky163)"/><defs><radialGradient id="glow164"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="600" cy="200" r="260" fill="url(#glow164)"/>
+  <path d="M0,780 Q300,680 600,730 T1200,710 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,860 Q350,760 700,830 T1200,800 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(600,740) scale(1.9)">
+    <path d="M-70,-10 Q-35,-28 0,-10 L0,40 Q-35,24 -70,40 Z" fill="#F5FBFE" stroke="#E9CE8E" stroke-width="4"/>
+    <path d="M70,-10 Q35,-28 0,-10 L0,40 Q35,24 70,40 Z" fill="#F5FBFE" stroke="#E9CE8E" stroke-width="4"/>
+    <path d="M0,-10 L0,40" stroke="#E9CE8E" stroke-width="3"/></g></svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Одинокая гора и единственный луч света</title><defs><linearGradient id="sky102" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky102)"/><path d="M400,900 L600,320 L800,900 Z" fill="#A9C5A0"/><line x1="600" y1="320" x2="NaN" y2="NaN" stroke="#FCE39A" stroke-width="14" stroke-linecap="round" opacity="0.55"/><defs><radialGradient id="glow103"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="600" cy="300" r="150" fill="url(#glow103)"/></svg>

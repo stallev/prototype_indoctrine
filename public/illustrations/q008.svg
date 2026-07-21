@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Мягкое сияние без фигуры</title><defs><linearGradient id="sky15" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky15)"/><defs><radialGradient id="glow16"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="600" cy="420" r="300" fill="url(#glow16)"/><g transform="translate(600,420) scale(1.6)">
+    <ellipse cx="0" cy="0" rx="60" ry="26" fill="#FFFFFF" opacity="0.9"/>
+    <ellipse cx="-35" cy="6" rx="34" ry="20" fill="#FFFFFF" opacity="0.9"/>
+    <ellipse cx="38" cy="8" rx="30" ry="18" fill="#FFFFFF" opacity="0.9"/></g>
+  <path d="M0,780 Q300,680 600,730 T1200,710 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,860 Q350,760 700,830 T1200,800 V900 H0 Z" fill="#5E9E5A"/></svg>

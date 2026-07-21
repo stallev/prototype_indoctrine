@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Скрижали и сияние — любовь к Богу</title><defs><linearGradient id="sky95" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky95)"/><defs><radialGradient id="glow96"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="600" cy="200" r="260" fill="url(#glow96)"/>
+  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(420,760) scale(1.4)">
+    <path d="M-52,50 L-52,-30 Q-52,-60 -26,-60 L-26,50 Z" fill="#E9CE8E" stroke="#A0653A" stroke-width="4"/>
+    <path d="M52,50 L52,-30 Q52,-60 26,-60 L26,50 Z" fill="#E9CE8E" stroke="#A0653A" stroke-width="4"/></g></svg>

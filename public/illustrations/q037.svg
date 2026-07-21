@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Закрытые ворота сада вдалеке</title><defs><linearGradient id="sky63" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky63)"/>
+  <path d="M0,720 Q300,620 600,670 T1200,650 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,800 Q350,700 700,770 T1200,740 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(900,780) scale(0.8)">
+    <rect x="-70" y="-150" width="20" height="150" fill="#8B5A2B"/>
+    <rect x="50" y="-150" width="20" height="150" fill="#8B5A2B"/>
+    <rect x="-70" y="-160" width="140" height="20" rx="8" fill="#8B5A2B"/>
+    <rect x="-56" y="-120" width="52" height="120" rx="6" fill="#A0653A"/>
+       <rect x="4" y="-120" width="52" height="120" rx="6" fill="#A0653A"/></g><path d="M100,900 L600,780 L900,780" fill="none" stroke="#E9CE8E" stroke-width="90" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/></svg>

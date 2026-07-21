@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Пустая гробница с отваленным камнем</title><defs><linearGradient id="sky167" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky167)"/>
+  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(600,780) scale(1.6)">
+    <rect x="-90" y="-10" width="180" height="120" fill="#E9CE8E"/>
+    <path d="M-60,-10 Q-60,-90 0,-90 Q60,-90 60,-10 Z" fill="#A0653A"/>
+    <path d="M-40,-10 Q-40,-60 0,-60 Q40,-60 40,-10 Z" fill="#3D5A80" opacity="0.6"/>
+    <circle cx="90" cy="60" r="34" fill="#E9CE8E" stroke="#A0653A" stroke-width="4"/></g></svg>

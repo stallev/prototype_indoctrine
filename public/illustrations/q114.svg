@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Безмятежный сад в лучах света</title><defs><linearGradient id="sky177" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky177)"/><defs><radialGradient id="glow178"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="600" cy="300" r="320" fill="url(#glow178)"/>
+  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(260,720) scale(1.1)">
+    <rect x="-10" y="-10" width="20" height="90" rx="8" fill="#8B5A2B"/>
+    <circle cx="0" cy="-70" r="70" fill="#5E9E5A"/>
+    <circle cx="-40" cy="-40" r="45" fill="#9FCF6E"/>
+    <circle cx="45" cy="-45" r="42" fill="#9FCF6E"/></g><g transform="translate(940,700) scale(1)">
+    <rect x="-10" y="-10" width="20" height="90" rx="8" fill="#8B5A2B"/>
+    <circle cx="0" cy="-70" r="70" fill="#5E9E5A"/>
+    <circle cx="-40" cy="-40" r="45" fill="#9FCF6E"/>
+    <circle cx="45" cy="-45" r="42" fill="#9FCF6E"/></g><g transform="translate(500,260) scale(1.2)">
+    <path d="M-16,0 Q-8,-10 0,0 Q8,-10 16,0" fill="none" stroke="#8B5A2B" stroke-width="4" stroke-linecap="round"/></g><g transform="translate(700,300) scale(1)">
+    <path d="M-16,0 Q-8,-10 0,0 Q8,-10 16,0" fill="none" stroke="#8B5A2B" stroke-width="4" stroke-linecap="round"/></g><g transform="translate(600,820) scale(1)">
+    <circle cx="0" cy="-10" r="7" fill="#EB8A73"/><circle cx="9" cy="-3" r="7" fill="#EB8A73"/>
+    <circle cx="6" cy="8" r="7" fill="#EB8A73"/><circle cx="-6" cy="8" r="7" fill="#EB8A73"/>
+    <circle cx="-9" cy="-3" r="7" fill="#EB8A73"/><circle cx="0" cy="0" r="6" fill="#F2C94C"/>
+    <rect x="-2" y="12" width="4" height="20" fill="#5E9E5A"/></g></svg>

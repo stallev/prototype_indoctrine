@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Рассвет и росток над холмами</title><defs><linearGradient id="sky172" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky172)"/><defs><radialGradient id="glow173"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="600" cy="520" r="320" fill="url(#glow173)"/>
+  <path d="M0,820 Q300,720 600,770 T1200,750 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,900 Q350,800 700,870 T1200,840 V900 H0 Z" fill="#5E9E5A"/><path d="M600,780 Q590,730 600,700" fill="none" stroke="#5E9E5A" stroke-width="8" stroke-linecap="round"/><circle cx="600" cy="695" r="14" fill="#9FCF6E"/></svg>

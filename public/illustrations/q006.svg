@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Раскрытая Библия в свете</title><defs><linearGradient id="sky11" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky11)"/><defs><radialGradient id="glow12"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="600" cy="200" r="260" fill="url(#glow12)"/>
+  <path d="M0,720 Q300,620 600,670 T1200,650 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,800 Q350,700 700,770 T1200,740 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(600,640) scale(2)">
+    <path d="M-70,-10 Q-35,-28 0,-10 L0,40 Q-35,24 -70,40 Z" fill="#F5FBFE" stroke="#E9CE8E" stroke-width="4"/>
+    <path d="M70,-10 Q35,-28 0,-10 L0,40 Q35,24 70,40 Z" fill="#F5FBFE" stroke="#E9CE8E" stroke-width="4"/>
+    <path d="M0,-10 L0,40" stroke="#E9CE8E" stroke-width="3"/></g></svg>

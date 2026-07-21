@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Тяжёлые закрытые ворота, вдали свет</title><rect width="1200" height="900" fill="#8FCFE6"/>
+  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#A9C5A0"/>
+  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(420,780) scale(1.1)">
+    <rect x="-70" y="-150" width="20" height="150" fill="#8B5A2B"/>
+    <rect x="50" y="-150" width="20" height="150" fill="#8B5A2B"/>
+    <rect x="-70" y="-160" width="140" height="20" rx="8" fill="#8B5A2B"/>
+    <rect x="-56" y="-120" width="52" height="120" rx="6" fill="#3D5A80"/>
+       <rect x="4" y="-120" width="52" height="120" rx="6" fill="#3D5A80"/></g><defs><radialGradient id="glow67"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="980" cy="400" r="220" fill="url(#glow67)"/></svg>

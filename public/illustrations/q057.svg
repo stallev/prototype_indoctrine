@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Библейская фигура смотрит на далёкую звезду</title><defs><linearGradient id="sky86" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky86)"/><circle cx="140" cy="90" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="260" cy="60" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="420" cy="120" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="600" cy="70" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="780" cy="110" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="940" cy="60" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="1080" cy="100" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="200" cy="180" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="980" cy="200" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="520" cy="160" r="4" fill="#FFFFFF" opacity="0.85"/>
+  <path d="M0,780 Q300,680 600,730 T1200,710 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,860 Q350,760 700,830 T1200,800 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(950,220)">
+    <path d="M0,-28.6 L7.15,-7.15 L28.6,0 L7.15,7.15 L0,28.6 L-7.15,7.15 L-28.6,0 L-7.15,-7.15 Z" fill="#F2C94C"/></g><g transform="translate(500,800) scale(1.4)">
+    <path d="M-34,-100 Q0,-118 34,-100 L28,60 Q0,74 -28,60 Z" fill="#A9C5A0"/>
+    <rect x="-40" y="-30" width="14" height="10" fill="#A0653A"/>
+    <path d="M-30,-96 L-46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
+    <path d="M30,-96 L46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="0" cy="-128" r="26" fill="#D9A878"/></g></svg>

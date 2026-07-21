@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Ребёнок сидит тихо в покое</title><defs><linearGradient id="sky112" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky112)"/>
+  <path d="M0,790 Q300,690 600,740 T1200,720 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,870 Q350,770 700,840 T1200,810 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(600,800) scale(1.4)">
+    <path d="M-34,-56 Q0,-74 34,-56 L44,40 Q0,54 -44,40 Z" fill="#EB8A73"/>
+    <path d="M-28,-54 L-40,-10" stroke="#F1C9A5" stroke-width="15" stroke-linecap="round"/>
+    <path d="M28,-54 L40,-10" stroke="#F1C9A5" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="0" cy="-86" r="25" fill="#F1C9A5"/>
+    <path d="M-25,-92 Q0,-118 25,-92 Q27,-70 20,-58 Q25,-90 0,-96 Q-25,-90 -20,-58 Q-27,-70 -25,-92 Z" fill="#8B5A2B"/></g></svg>

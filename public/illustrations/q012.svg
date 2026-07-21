@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Скала на берегу моря</title><defs><linearGradient id="sky21" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky21)"/><rect y="640" width="1200" height="260" fill="#7FB4B0"/><path d="M420,760 Q480,560 600,600 Q700,620 660,760 Z" fill="#E9CE8E"/><g transform="translate(300,720) scale(1)">
+    <path d="M-120,0 Q-60,-24 0,0 T120,0 L120,40 Q60,64 0,40 T-120,40 Z" fill="#7FB4B0"/>
+    <path d="M-120,10 Q-60,-14 0,10 T120,10" fill="none" stroke="#BFE3F0" stroke-width="6" opacity="0.7"/></g><g transform="translate(900,730) scale(1)">
+    <path d="M-120,0 Q-60,-24 0,0 T120,0 L120,40 Q60,64 0,40 T-120,40 Z" fill="#7FB4B0"/>
+    <path d="M-120,10 Q-60,-14 0,10 T120,10" fill="none" stroke="#BFE3F0" stroke-width="6" opacity="0.7"/></g></svg>

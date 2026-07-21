@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Скрижали на горе Синай</title><defs><linearGradient id="sky94" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky94)"/><path d="M300,900 L600,260 L900,900 Z" fill="#A9C5A0"/><g transform="translate(600,780) scale(1.6)">
+    <path d="M-52,50 L-52,-30 Q-52,-60 -26,-60 L-26,50 Z" fill="#E9CE8E" stroke="#A0653A" stroke-width="4"/>
+    <path d="M52,50 L52,-30 Q52,-60 26,-60 L26,50 Z" fill="#E9CE8E" stroke="#A0653A" stroke-width="4"/></g></svg>

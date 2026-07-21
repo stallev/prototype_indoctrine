@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Ребёнок на пороге дома с цветком</title><defs><linearGradient id="sky141" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky141)"/>
+  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/><rect x="500" y="640" width="200" height="180" fill="#E9CE8E"/><path d="M490,640 L600,540 L710,640 Z" fill="#A0653A"/><g transform="translate(600,820) scale(1.2)">
+    <path d="M-34,-56 Q0,-74 34,-56 L44,40 Q0,54 -44,40 Z" fill="#EB8A73"/>
+    <path d="M-28,-54 L-40,-10" stroke="#F1C9A5" stroke-width="15" stroke-linecap="round"/>
+    <path d="M28,-54 L40,-10" stroke="#F1C9A5" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="0" cy="-86" r="25" fill="#F1C9A5"/>
+    <path d="M-25,-92 Q0,-118 25,-92 Q27,-70 20,-58 Q25,-90 0,-96 Q-25,-90 -20,-58 Q-27,-70 -25,-92 Z" fill="#8B5A2B"/></g><g transform="translate(680,830) scale(0.8)">
+    <circle cx="0" cy="-10" r="7" fill="#F2C94C"/><circle cx="9" cy="-3" r="7" fill="#F2C94C"/>
+    <circle cx="6" cy="8" r="7" fill="#F2C94C"/><circle cx="-6" cy="8" r="7" fill="#F2C94C"/>
+    <circle cx="-9" cy="-3" r="7" fill="#F2C94C"/><circle cx="0" cy="0" r="6" fill="#F2C94C"/>
+    <rect x="-2" y="12" width="4" height="20" fill="#5E9E5A"/></g></svg>

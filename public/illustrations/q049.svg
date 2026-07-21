@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Белая одежда без пятна на камне</title><defs><linearGradient id="sky75" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky75)"/><defs><radialGradient id="glow76"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="600" cy="200" r="260" fill="url(#glow76)"/>
+  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/><ellipse cx="600" cy="800" rx="80" ry="24" fill="#E9CE8E"/><g transform="translate(600,760) scale(1.6)">
+    <path d="M-50,10 Q0,-14 50,10 L46,30 Q0,10 -46,30 Z" fill="#F5FBFE" stroke="#E9CE8E" stroke-width="3"/></g></svg>

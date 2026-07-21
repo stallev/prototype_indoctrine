@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Ясли в хлеву под звездой</title><defs><linearGradient id="sky71" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky71)"/><circle cx="140" cy="90" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="260" cy="60" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="420" cy="120" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="600" cy="70" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="780" cy="110" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="940" cy="60" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="1080" cy="100" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="200" cy="180" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="980" cy="200" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="520" cy="160" r="4" fill="#FFFFFF" opacity="0.85"/>
+  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(600,180)">
+    <path d="M0,-41.6 L10.4,-10.4 L41.6,0 L10.4,10.4 L0,41.6 L-10.4,10.4 L-41.6,0 L-10.4,-10.4 Z" fill="#F2C94C"/></g><g transform="translate(600,760) scale(1.6)">
+    <path d="M-70,20 L-50,-20 L50,-20 L70,20 Z" fill="none" stroke="#8B5A2B" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M-60,10 L60,10" stroke="#F2C94C" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+    <ellipse cx="0" cy="0" rx="46" ry="16" fill="#F5FBFE"/></g></svg>

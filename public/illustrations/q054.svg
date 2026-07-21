@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Ребёнок кается у камня</title><defs><linearGradient id="sky81" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky81)"/>
+  <path d="M0,680 Q300,580 600,630 T1200,610 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,760 Q350,660 700,730 T1200,700 V900 H0 Z" fill="#5E9E5A"/><ellipse cx="700" cy="800" rx="70" ry="26" fill="#E9CE8E"/><g transform="translate(560,800) scale(1.3)">
+    <path d="M-28,-40 Q0,-20 28,-40 L24,10 Q0,20 -24,10 Z" fill="#F2C94C"/>
+       <path d="M-24,10 L-30,30 L30,30 L24,10 Z" fill="#3D5A80"/>
+    <path d="M-26,-56 L-34,-16" stroke="#F1C9A5" stroke-width="16" stroke-linecap="round"/>
+         <path d="M26,-56 L34,-16" stroke="#F1C9A5" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="0" cy="-88" r="26" fill="#F1C9A5"/>
+    <path d="M-26,-96 Q0,-124 26,-96 Q26,-108 0,-112 Q-26,-108 -26,-96 Z" fill="#A0653A"/></g></svg>

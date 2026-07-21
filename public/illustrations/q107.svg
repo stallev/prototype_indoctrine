@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Пустой трон с короной среди облаков</title><defs><linearGradient id="sky168" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky168)"/><g transform="translate(300,300) scale(1.4)">
+    <ellipse cx="0" cy="0" rx="60" ry="26" fill="#FFFFFF" opacity="0.9"/>
+    <ellipse cx="-35" cy="6" rx="34" ry="20" fill="#FFFFFF" opacity="0.9"/>
+    <ellipse cx="38" cy="8" rx="30" ry="18" fill="#FFFFFF" opacity="0.9"/></g><g transform="translate(900,340) scale(1.3)">
+    <ellipse cx="0" cy="0" rx="60" ry="26" fill="#FFFFFF" opacity="0.9"/>
+    <ellipse cx="-35" cy="6" rx="34" ry="20" fill="#FFFFFF" opacity="0.9"/>
+    <ellipse cx="38" cy="8" rx="30" ry="18" fill="#FFFFFF" opacity="0.9"/></g><g transform="translate(600,220) scale(1.2)">
+    <ellipse cx="0" cy="0" rx="60" ry="26" fill="#FFFFFF" opacity="0.9"/>
+    <ellipse cx="-35" cy="6" rx="34" ry="20" fill="#FFFFFF" opacity="0.9"/>
+    <ellipse cx="38" cy="8" rx="30" ry="18" fill="#FFFFFF" opacity="0.9"/></g><g transform="translate(600,780) scale(1.4)">
+    <path d="M-60,60 L-60,-60 Q-60,-90 -30,-90 L30,-90 Q60,-90 60,-60 L60,60 Z" fill="#E9CE8E" opacity="0.9"/>
+    <rect x="-70" y="50" width="140" height="24" rx="8" fill="#A0653A"/>
+    <g transform="translate(0,-20) scale(0.9)">
+    <path d="M-50,10 L-50,-10 L-25,-40 L0,-10 L25,-40 L50,-10 L50,10 Z" fill="#F2C94C"/>
+    <rect x="-50" y="10" width="100" height="18" rx="6" fill="#F2C94C"/>
+    <circle cx="-25" cy="-40" r="8" fill="#EB8A73"/>
+    <circle cx="25" cy="-40" r="8" fill="#EB8A73"/>
+    <circle cx="0" cy="-46" r="9" fill="#EB8A73"/></g></g></svg>

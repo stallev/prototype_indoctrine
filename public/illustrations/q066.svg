@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Один путник помогает другому подняться</title><defs><linearGradient id="sky101" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky101)"/>
+  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/><path d="M0,850 L1200,850" fill="none" stroke="#E9CE8E" stroke-width="90" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/><g transform="translate(560,830) scale(1)">
+    <path d="M-34,-100 Q0,-118 34,-100 L28,60 Q0,74 -28,60 Z" fill="#A9C5A0"/>
+    <rect x="-40" y="-30" width="14" height="10" fill="#A0653A"/>
+    <path d="M-30,-96 L-46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
+    <path d="M30,-96 L46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="0" cy="-128" r="26" fill="#D9A878"/></g><g transform="translate(700,790) scale(1.1)">
+    <path d="M-34,-100 Q0,-118 34,-100 L28,60 Q0,74 -28,60 Z" fill="#A9C5A0"/>
+    <rect x="-40" y="-30" width="14" height="10" fill="#A0653A"/>
+    <path d="M-30,-96 L-46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
+    <path d="M30,-96 L46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="0" cy="-128" r="26" fill="#D9A878"/></g></svg>

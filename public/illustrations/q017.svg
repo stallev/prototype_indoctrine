@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Три луча света сходятся в одной точке</title><defs><linearGradient id="sky29" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky29)"/>
+  <path d="M0,780 Q300,680 600,730 T1200,710 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,860 Q350,760 700,830 T1200,800 V900 H0 Z" fill="#5E9E5A"/><line x1="600" y1="300" x2="392.1539030917347" y2="420" stroke="#FCE39A" stroke-width="14" stroke-linecap="round" opacity="0.55"/><line x1="600" y1="300" x2="600" y2="540" stroke="#FCE39A" stroke-width="14" stroke-linecap="round" opacity="0.55"/><line x1="600" y1="300" x2="807.8460969082653" y2="420" stroke="#FCE39A" stroke-width="14" stroke-linecap="round" opacity="0.55"/><defs><radialGradient id="glow30"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="600" cy="300" r="120" fill="url(#glow30)"/></svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Светлый сад с распахнутыми воротами</title><defs><linearGradient id="sky176" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky176)"/>
+  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(600,780) scale(1.1)">
+    <rect x="-70" y="-150" width="20" height="150" fill="#8B5A2B"/>
+    <rect x="50" y="-150" width="20" height="150" fill="#8B5A2B"/>
+    <rect x="-70" y="-160" width="140" height="20" rx="8" fill="#8B5A2B"/>
+    <rect x="-70" y="-120" width="24" height="120" rx="6" fill="#A0653A" transform="rotate(-18 -70 0)"/>
+       <rect x="46" y="-120" width="24" height="120" rx="6" fill="#A0653A" transform="rotate(18 70 0)"/></g><g transform="translate(280,720) scale(1)">
+    <rect x="-10" y="-10" width="20" height="90" rx="8" fill="#8B5A2B"/>
+    <circle cx="0" cy="-70" r="70" fill="#5E9E5A"/>
+    <circle cx="-40" cy="-40" r="45" fill="#9FCF6E"/>
+    <circle cx="45" cy="-45" r="42" fill="#9FCF6E"/></g><g transform="translate(940,700) scale(0.9)">
+    <rect x="-10" y="-10" width="20" height="90" rx="8" fill="#8B5A2B"/>
+    <circle cx="0" cy="-70" r="70" fill="#5E9E5A"/>
+    <circle cx="-40" cy="-40" r="45" fill="#9FCF6E"/>
+    <circle cx="45" cy="-45" r="42" fill="#9FCF6E"/></g><g transform="translate(500,830) scale(0.9)">
+    <circle cx="0" cy="-10" r="7" fill="#EB8A73"/><circle cx="9" cy="-3" r="7" fill="#EB8A73"/>
+    <circle cx="6" cy="8" r="7" fill="#EB8A73"/><circle cx="-6" cy="8" r="7" fill="#EB8A73"/>
+    <circle cx="-9" cy="-3" r="7" fill="#EB8A73"/><circle cx="0" cy="0" r="6" fill="#F2C94C"/>
+    <rect x="-2" y="12" width="4" height="20" fill="#5E9E5A"/></g><g transform="translate(760,830) scale(0.9)">
+    <circle cx="0" cy="-10" r="7" fill="#F2C94C"/><circle cx="9" cy="-3" r="7" fill="#F2C94C"/>
+    <circle cx="6" cy="8" r="7" fill="#F2C94C"/><circle cx="-6" cy="8" r="7" fill="#F2C94C"/>
+    <circle cx="-9" cy="-3" r="7" fill="#F2C94C"/><circle cx="0" cy="0" r="6" fill="#F2C94C"/>
+    <rect x="-2" y="12" width="4" height="20" fill="#5E9E5A"/></g></svg>

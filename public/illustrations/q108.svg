@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Стадо овец и стадо коз на лугу</title><defs><linearGradient id="sky169" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky169)"/><defs><radialGradient id="glow170"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="600" cy="200" r="260" fill="url(#glow170)"/>
+  <path d="M0,680 Q300,580 600,630 T1200,610 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,760 Q350,660 700,730 T1200,700 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(360,800) scale(1.1)">
+    <ellipse cx="0" cy="0" rx="46" ry="30" fill="#F5FBFE"/>
+    <circle cx="-40" cy="-6" r="16" fill="#D9A878"/>
+    <rect x="-30" y="20" width="10" height="16" fill="#D9A878"/>
+    <rect x="20" y="20" width="10" height="16" fill="#D9A878"/></g><g transform="translate(460,810) scale(1)">
+    <ellipse cx="0" cy="0" rx="46" ry="30" fill="#F5FBFE"/>
+    <circle cx="-40" cy="-6" r="16" fill="#D9A878"/>
+    <rect x="-30" y="20" width="10" height="16" fill="#D9A878"/>
+    <rect x="20" y="20" width="10" height="16" fill="#D9A878"/></g><g transform="translate(760,810) scale(1)">
+    <ellipse cx="0" cy="0" rx="44" ry="26" fill="#A0653A"/>
+    <circle cx="-38" cy="-8" r="14" fill="#8B5A2B"/>
+    <path d="M-44,-20 L-50,-34" stroke="#8B5A2B" stroke-width="6" stroke-linecap="round"/>
+    <rect x="-28" y="16" width="9" height="14" fill="#8B5A2B"/>
+    <rect x="18" y="16" width="9" height="14" fill="#8B5A2B"/></g><g transform="translate(860,800) scale(1.1)">
+    <ellipse cx="0" cy="0" rx="44" ry="26" fill="#A0653A"/>
+    <circle cx="-38" cy="-8" r="14" fill="#8B5A2B"/>
+    <path d="M-44,-20 L-50,-34" stroke="#8B5A2B" stroke-width="6" stroke-linecap="round"/>
+    <rect x="-28" y="16" width="9" height="14" fill="#8B5A2B"/>
+    <rect x="18" y="16" width="9" height="14" fill="#8B5A2B"/></g><rect x="590" y="740" width="8" height="90" fill="#8B5A2B"/></svg>

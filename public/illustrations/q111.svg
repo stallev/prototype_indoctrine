@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Тёмные ворота вдали, светлая тропа в стороне</title><defs><linearGradient id="sky174" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky174)"/>
+  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#A9C5A0"/>
+  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(320,780) scale(1)">
+    <rect x="-70" y="-150" width="20" height="150" fill="#8B5A2B"/>
+    <rect x="50" y="-150" width="20" height="150" fill="#8B5A2B"/>
+    <rect x="-70" y="-160" width="140" height="20" rx="8" fill="#8B5A2B"/>
+    <rect x="-56" y="-120" width="52" height="120" rx="6" fill="#3D5A80"/>
+       <rect x="4" y="-120" width="52" height="120" rx="6" fill="#3D5A80"/></g><path d="M500,900 L900,700" fill="none" stroke="#E9CE8E" stroke-width="90" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/><defs><radialGradient id="glow175"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="950" cy="500" r="200" fill="url(#glow175)"/></svg>

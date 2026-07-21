@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Крест на холме у открытых ворот сада</title><defs><linearGradient id="sky69" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky69)"/>
+  <path d="M0,740 Q300,640 600,690 T1200,670 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,820 Q350,720 700,790 T1200,760 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(300,780) scale(0.8)">
+    <rect x="-70" y="-150" width="20" height="150" fill="#8B5A2B"/>
+    <rect x="50" y="-150" width="20" height="150" fill="#8B5A2B"/>
+    <rect x="-70" y="-160" width="140" height="20" rx="8" fill="#8B5A2B"/>
+    <rect x="-70" y="-120" width="24" height="120" rx="6" fill="#A0653A" transform="rotate(-18 -70 0)"/>
+       <rect x="46" y="-120" width="24" height="120" rx="6" fill="#A0653A" transform="rotate(18 70 0)"/></g><g transform="translate(850,700) scale(1.4)">
+    <rect x="-12" y="-90" width="24" height="180" rx="6" fill="#A0653A"/>
+    <rect x="-46" y="-40" width="92" height="24" rx="6" fill="#A0653A"/></g></svg>

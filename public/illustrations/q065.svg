@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Ребёнок помогает пожилому человеку</title><defs><linearGradient id="sky99" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky99)"/><defs><radialGradient id="glow100"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="600" cy="200" r="260" fill="url(#glow100)"/>
+  <path d="M0,680 Q300,580 600,630 T1200,610 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,760 Q350,660 700,730 T1200,700 V900 H0 Z" fill="#5E9E5A"/><path d="M0,850 L1200,850" fill="none" stroke="#E9CE8E" stroke-width="90" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/><g transform="translate(500,800) scale(1.2)">
+    <path d="M-30,-60 Q0,-78 30,-60 L26,20 Q0,32 -26,20 Z" fill="#F2C94C"/>
+       <rect x="-24" y="16" width="18" height="46" rx="8" fill="#3D5A80"/>
+       <rect x="6" y="16" width="18" height="46" rx="8" fill="#3D5A80"/>
+    <path d="M-26,-56 L-34,-16" stroke="#F1C9A5" stroke-width="16" stroke-linecap="round"/>
+         <path d="M26,-56 L34,-16" stroke="#F1C9A5" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="0" cy="-88" r="26" fill="#F1C9A5"/>
+    <path d="M-26,-96 Q0,-124 26,-96 Q26,-108 0,-112 Q-26,-108 -26,-96 Z" fill="#A0653A"/></g><g transform="translate(680,790) scale(1.1)">
+    <path d="M-34,-100 Q0,-118 34,-100 L28,60 Q0,74 -28,60 Z" fill="#A9C5A0"/>
+    <rect x="-40" y="-30" width="14" height="10" fill="#A0653A"/>
+    <path d="M-30,-96 L-46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
+    <path d="M30,-96 L46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="0" cy="-128" r="26" fill="#D9A878"/></g></svg>

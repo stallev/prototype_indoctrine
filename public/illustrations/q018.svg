@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Три круга света на фоне неба</title><defs><linearGradient id="sky31" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky31)"/>
+  <path d="M0,800 Q300,700 600,750 T1200,730 V900 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,880 Q350,780 700,850 T1200,820 V900 H0 Z" fill="#5E9E5A"/><circle cx="520" cy="320" r="90" fill="#FCE39A" opacity="0.6"/><circle cx="600" cy="300" r="90" fill="#FCE39A" opacity="0.6"/><circle cx="680" cy="320" r="90" fill="#FCE39A" opacity="0.6"/></svg>

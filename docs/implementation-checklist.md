@@ -73,21 +73,21 @@
 
 ## Фаза 6. Файл промптов SVG
 
-- [ ] Создать `prompts/illustration-prompts.ts` по [`svg-prompts-ts-spec.md`](svg-prompts-ts-spec.md)
-- [ ] Экспорт типов, массива, `getPromptByQuestionNumber`, `promptsMissingSceneBrief`, `promptsMissingNumbers`
-- [ ] Каркас 114 записей с метаданными из JSON
-- [ ] Наполнить все `scene_brief` (чувствительные — по §7 svg-спеки)
-- [ ] Собрать все `prompt` по шаблону §8 (блок стиха опускать при отсутствии)
-- [ ] Валидация: `promptsMissingSceneBrief()` и `promptsMissingNumbers()` → `[]`
+- [x] Создать `prompts/illustration-prompts.ts` по [`svg-prompts-ts-spec.md`](svg-prompts-ts-spec.md)
+- [x] Экспорт типов, массива, `getPromptByQuestionNumber`, `promptsMissingSceneBrief`, `promptsMissingNumbers`
+- [x] Каркас 114 записей с метаданными из JSON
+- [x] Наполнить все `scene_brief` (чувствительные — по §7 svg-спеки)
+- [x] Собрать все `prompt` по шаблону §8 (блок стиха опускать при отсутствии)
+- [x] Валидация: `promptsMissingSceneBrief()` и `promptsMissingNumbers()` → `[]`
 
 ---
 
 ## Фаза 7. Генерация SVG
 
-- [ ] Генерировать `public/illustrations/qNNN.svg` батчами из `illustrationPrompts`
-- [ ] Проверять каждый файл (или выборку + все чувствительные) по чек-листу §9
-- [ ] Убедиться, что `questions[].illustration` в JSON совпадает с именем файла
-- [ ] В прототипе placeholder заменяется на реальные SVG по мере появления файлов
+- [x] Генерировать `public/illustrations/qNNN.svg` батчами из `illustrationPrompts` (все 114, через общую библиотеку векторных примитивов для консистентности «кита персонажей»)
+- [x] Проверять каждый файл (или выборку + все чувствительные) по чек-листу §9 — автоматически (палитра, viewBox, отсутствие script/image/base64/URL, бюджет узлов/размера) + визуально все категории §7
+- [x] Убедиться, что `questions[].illustration` в JSON совпадает с именем файла
+- [x] В прототипе placeholder заменяется на реальные SVG по мере появления файлов
 
 ---
 
