@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project status
 
-Data, specs, and the Phase 1–2 scaffold (per `docs/implementation-checklist.md`) are done: `package.json`/Tailwind v4 build, `index.html` shell (app bar, drawer, overlay, `#app-main`), Material CSS tokens. Routing, data rendering, and drawer interactivity (Phases 3–4) are next. There is no test suite. Before writing code, check `docs/implementation-checklist.md` for the current phase and what's already been marked done.
+Phases 0–7 of `docs/implementation-checklist.md` are done: scaffold, HTML shell, routing/rendering, accessible mobile drawer, `prompts/illustration-prompts.ts` (114 entries), and all 114 `public/illustrations/qNNN.svg` files (generated from a shared vector-primitive library for consistency, not hand-authored one-by-one — see git history on `prompts/illustration-prompts.ts` and `public/illustrations/` for how). Only Phase 8 (final acceptance pass) remains. There is no test suite. Before writing code, check `docs/implementation-checklist.md` for the current phase and what's already been marked done.
 
 ## Avoid AI slop
 
