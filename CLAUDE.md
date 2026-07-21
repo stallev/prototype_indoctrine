@@ -4,7 +4,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project status
 
-This repo currently contains **data + specs only** — no application code has been written yet. There is no `package.json`, no build tooling, and no test suite. Before writing code, check `docs/implementation-checklist.md` for the current phase and what's already been marked done.
+Data, specs, and the Phase 1–2 scaffold (per `docs/implementation-checklist.md`) are done: `package.json`/Tailwind v4 build, `index.html` shell (app bar, drawer, overlay, `#app-main`), Material CSS tokens. Routing, data rendering, and drawer interactivity (Phases 3–4) are next. There is no test suite. Before writing code, check `docs/implementation-checklist.md` for the current phase and what's already been marked done.
+
+## Avoid AI slop
+
+This is a small, content-driven prototype (114 fixed questions) — not a product that needs to look "built out." Concretely, in this repo:
+
+- No filler UI: no hero/marketing copy, no fake stats or trust badges, no decorative emoji, no sections that don't map to real data (`topics`/`questions`/`verses`). If a spec doesn't call for a UI element, don't add it.
+- No premature abstraction: `js/catechism-browser.js` is a plain port of `utils/catechism.ts` — don't wrap it in generic "data layer" / "service" / "repository" classes it doesn't need. Match the existing helper-function style, not a framework-shaped rewrite.
+- No unused code paths: don't scaffold options, config flags, or extensibility hooks for formats/features the specs don't ask for (e.g. don't genericize past the fixed 1200×900 SVG canvas, the four JSON arrays, or the three routes).
+- No comment noise: don't restate what the code obviously does (see root style rules); only comment non-obvious constraints (the same bar the rest of this codebase already holds to — see e.g. the terse rationale comments in `utils/catechism.ts`).
+- No default-AI visual tells: no purple/indigo gradients, no glow effects, no generic icon-font soup — stick to the fixed Material token palette in `docs/static-prototype-spec.md` §5.1 and the fixed illustration palette in `specs/svg-illustration-spec.md` §3.
+- Keep scope to the current checklist phase — don't pull forward work from later phases (e.g. don't start generating SVGs while still on the routing phase) and don't leave a phase half-done with dead stubs.
 
 ## What this project is
 
@@ -64,11 +75,13 @@ Follow `docs/implementation-checklist.md` for build order — phases 1–5 (scaf
 
 ## Commands
 
-No tooling exists yet. Once scaffolded per the spec, expected commands (from `docs/static-prototype-spec.md` §5.3):
 ```
-npm run build:css   # tailwindcss -i ./styles/input.css -o ./styles/app.css
-npm run watch:css   # same, with --watch
-npm run serve       # npx serve . (static file server — needed because the app uses fetch() for JSON, file:// won't work)
+npm install          # tailwindcss v4 + @tailwindcss/cli (only devDependencies so far)
+npm run build:css    # tailwindcss -i ./styles/input.css -o ./styles/app.css
+npm run watch:css    # same, with --watch
+npm run serve        # npx serve . (static file server — needed because the app uses fetch() for JSON, file:// won't work)
 ```
+
+`.claude/launch.json` runs `serve` on port 3000 for browser-preview tooling.
 
 There is no test suite. Validation of `data/catechism.json` happens implicitly by importing `utils/catechism.ts` (Zod parse throws on invalid data/broken references).
