@@ -158,7 +158,12 @@ function updateActiveNav(route) {
 
 function createIllustration(question) {
   const img = document.createElement('img');
-  img.className = 'illustration-frame w-full object-contain';
+  // Mobile: full-bleed at the card's native 4:3 ratio (via .illustration-frame).
+  // Desktop: cap the rendered height so a wide/projector viewport doesn't
+  // blow the picture up to an enormous size — width then follows from the
+  // same 4:3 ratio and the image sits centered above the card's text.
+  img.className =
+    'illustration-frame w-full object-contain md:mx-auto md:mt-6 md:h-[320px] md:w-auto md:rounded-lg lg:h-[360px] xl:h-[400px] 2xl:h-[440px]';
   img.width = 1200;
   img.height = 900;
   img.alt = `Иллюстрация к вопросу ${question.question_number}`;
@@ -267,8 +272,8 @@ function createNavButton(label, targetN, direction) {
   const el = document.createElement(disabled ? 'span' : 'a');
   if (!disabled) el.href = `#/q/${targetN}`;
   el.className = disabled
-    ? 'inline-flex cursor-not-allowed items-center gap-1.5 rounded-full border border-md-outline/20 px-4 py-2 text-sm font-medium text-md-outline'
-    : 'inline-flex items-center gap-1.5 rounded-full border border-md-outline/40 px-4 py-2 text-sm font-medium text-md-primary transition-colors hover:bg-md-surface-tint/25';
+    ? 'inline-flex cursor-not-allowed items-center gap-1.5 rounded-full border border-md-outline/20 px-4 py-2 text-sm font-medium text-md-outline md:px-5 md:py-2.5 md:text-base'
+    : 'inline-flex items-center gap-1.5 rounded-full border border-md-outline/40 px-4 py-2 text-sm font-medium text-md-primary transition-colors hover:bg-md-surface-tint/25 md:px-5 md:py-2.5 md:text-base';
   if (disabled) el.setAttribute('aria-disabled', 'true');
 
   const text = document.createElement('span');
@@ -290,41 +295,41 @@ function renderQuestion(n) {
   card.appendChild(createIllustration(q));
 
   const body = document.createElement('div');
-  body.className = 'p-4 md:p-6';
+  body.className = 'p-4 md:p-6 lg:p-8';
 
   const topicLabel = document.createElement('a');
   topicLabel.href = `#/topic/${q.topic_id}`;
   topicLabel.className =
-    'inline-block rounded-full bg-md-secondary/15 px-3 py-1 text-xs font-medium uppercase tracking-wide text-md-secondary transition-colors hover:bg-md-secondary/25';
+    'inline-block rounded-full bg-md-secondary/15 px-3 py-1 text-xs font-medium uppercase tracking-wide text-md-secondary transition-colors hover:bg-md-secondary/25 md:text-sm';
   topicLabel.textContent = topic?.topic_name ?? '';
   body.appendChild(topicLabel);
 
   const heading = document.createElement('h2');
-  heading.className = 'mt-3 text-xl font-medium leading-snug';
+  heading.className = 'mt-3 text-xl font-medium leading-snug md:text-2xl lg:text-3xl';
   heading.textContent = `${q.question_number}. ${q.question_content}`;
   body.appendChild(heading);
 
   const answer = document.createElement('p');
-  answer.className = 'mt-3 text-base leading-relaxed';
+  answer.className = 'mt-3 text-base leading-relaxed md:text-lg lg:text-xl';
   answer.textContent = q.answer;
   body.appendChild(answer);
 
   if (q.verses.length > 0) {
     const verseList = document.createElement('ul');
-    verseList.className = 'mt-4 space-y-3 border-t border-md-outline/15 pt-4';
+    verseList.className = 'mt-4 space-y-3 border-t border-md-outline/15 pt-4 md:mt-6 md:space-y-4 md:pt-6';
     for (const verse of q.verses) {
       const li = verseBlockTpl.content.firstElementChild.cloneNode(true);
-      li.className = 'verse-item border-l-4 border-md-secondary/40 pl-3';
+      li.className = 'verse-item border-l-4 border-md-secondary/40 pl-3 md:pl-4';
       const textEl = li.querySelector('.verse-text');
       if (verse.text) {
         textEl.textContent = `«${verse.text}»`;
-        textEl.className = 'verse-text italic leading-relaxed';
+        textEl.className = 'verse-text italic leading-relaxed md:text-lg lg:text-xl';
       } else {
         textEl.remove();
       }
       const refEl = li.querySelector('.verse-reference');
       refEl.textContent = verse.reference;
-      refEl.className = 'verse-reference mt-1 block text-sm not-italic text-md-secondary';
+      refEl.className = 'verse-reference mt-1 block text-sm not-italic text-md-secondary md:text-base';
       verseList.appendChild(li);
     }
     body.appendChild(verseList);
@@ -334,7 +339,7 @@ function renderQuestion(n) {
   mainEl.appendChild(card);
 
   const nav = document.createElement('div');
-  nav.className = 'mt-6 flex items-center justify-between gap-3';
+  nav.className = 'mt-6 flex items-center justify-between gap-3 md:mt-8';
   nav.appendChild(createNavButton('Предыдущий', n > MIN_QUESTION ? n - 1 : null, 'left'));
   nav.appendChild(createNavButton('Следующий', n < MAX_QUESTION ? n + 1 : null, 'right'));
   mainEl.appendChild(nav);
