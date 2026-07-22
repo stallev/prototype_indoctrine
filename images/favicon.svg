@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Катехизис">
+  <rect width="64" height="64" rx="14" fill="#BFE3F0"/>
+  <circle cx="32" cy="26" r="16" fill="#FCE39A" opacity="0.55"/>
+  <rect x="27" y="14" width="10" height="36" rx="3" fill="#3D5A80"/>
+  <rect x="16" y="27" width="32" height="10" rx="3" fill="#3D5A80"/>
+</svg>
