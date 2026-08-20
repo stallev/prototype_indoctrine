@@ -1,22 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Печальные фигуры у сада</title><defs><linearGradient id="sky61" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky61)"/>
-  <path d="M0,720 Q300,620 600,670 T1200,650 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,800 Q350,700 700,770 T1200,740 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(900,660) scale(0.9)">
-    <rect x="-10" y="-10" width="20" height="90" rx="8" fill="#8B5A2B"/>
-    <circle cx="0" cy="-70" r="72" fill="#5E9E5A"/>
-    <circle cx="24" cy="-50" r="10" fill="#EB8A73"/>
-    <circle cx="-18" cy="-84" r="10" fill="#EB8A73"/>
-    <circle cx="6" cy="-100" r="10" fill="#EB8A73"/>
-    <path d="M46,-96 Q64,-88 58,-70 Q52,-56 60,-46" fill="none" stroke="#5E9E5A" stroke-width="7" stroke-linecap="round" opacity="0.8"/></g><g transform="translate(420,780) scale(1.2)">
-    <path d="M-34,-100 Q0,-118 34,-100 L28,60 Q0,74 -28,60 Z" fill="#A9C5A0"/>
-    <rect x="-40" y="-30" width="14" height="10" fill="#A0653A"/>
-    <path d="M-30,-96 L-46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
-    <path d="M30,-96 L46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
-    <circle cx="0" cy="-128" r="26" fill="#D9A878"/></g><g transform="translate(560,790) scale(1.2)">
-    <path d="M-36,-96 Q0,-114 36,-96 L30,70 Q0,86 -30,70 Z" fill="#7FB4B0"/>
-    <path d="M-28,-92 L-42,-24" stroke="#F1C9A5" stroke-width="15" stroke-linecap="round"/>
-    <path d="M28,-92 L42,-24" stroke="#F1C9A5" stroke-width="15" stroke-linecap="round"/>
-    <circle cx="0" cy="-124" r="25" fill="#F1C9A5"/>
-    <path d="M-30,-136 Q0,-160 30,-136 Q34,-110 24,-96 L20,-116 Q0,-128 -20,-116 L-24,-96 Q-34,-110 -30,-136 Z" fill="#F5FBFE"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Сад с деревом и плодом вдалеке; фигуры Адама и Евы у входа выглядят печальными.</title><defs><linearGradient id="q35sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#FCE39A"/></linearGradient></defs><rect width="1200" height="900" fill="url(#q35sky1)"/><path d="M0,680 Q300,570 600,641.5 T1200,630.5 V900 H0 Z" fill="#9FCF6E"/><path d="M0,780 Q300,690 600,748.5 T1200,739.5 V900 H0 Z" fill="#5E9E5A"/><path d="M0,850 Q300,810 600,836 T1200,832 V900 H0 Z" fill="#A9C5A0"/><g transform="translate(302,179) scale(1.0899999999999999)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(986,173) scale(0.9500000000000001)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(190,890) scale(1.1)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1117,888) scale(1.2)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(600,700) scale(1.4)">
+    <ellipse cx="0" cy="4" rx="40" ry="12.8" fill="#5E9E5A" opacity="0.22"/>
+    <rect x="-8" y="-60" width="16" height="60" rx="6" fill="#8B5A2B"/>
+    <circle cx="0" cy="-92" r="46" fill="#5E9E5A"/>
+    <circle cx="-28" cy="-72" r="30" fill="#5E9E5A"/>
+    <circle cx="28" cy="-72" r="30" fill="#5E9E5A"/>
+  </g><circle cx="600" cy="640" r="14" fill="#EB8A73"/><g transform="translate(320,810) scale(1)">
+    <ellipse cx="0" cy="4" rx="40" ry="12.8" fill="#5E9E5A" opacity="0.22"/>
+    <path d="M-34,10 Q-38,-70 0,-92 Q38,-70 34,10 Z" fill="#3D5A80"/>
+    <rect x="-34" y="-20" width="68" height="10" fill="#E9CE8E"/>
+    <path d="M-28,-84 L-40,-30" stroke="#D9A878" stroke-width="13" stroke-linecap="round"/>
+    <path d="M28,-84 L40,-30" stroke="#D9A878" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="0" cy="-118" r="24" fill="#D9A878"/><path d="M-24,-124 Q0,-146 24,-124 Q24,-134 0,-136 Q-24,-134 -24,-124 Z" fill="#8B5A2B"/>
+  </g><g transform="translate(460,810) scale(1)">
+    <ellipse cx="0" cy="4" rx="40" ry="12.8" fill="#5E9E5A" opacity="0.22"/>
+    <path d="M-34,10 Q-38,-70 0,-92 Q38,-70 34,10 Z" fill="#EB8A73"/>
+    <rect x="-34" y="-20" width="68" height="10" fill="#E9CE8E"/>
+    <path d="M-28,-84 L-40,-30" stroke="#D9A878" stroke-width="13" stroke-linecap="round"/>
+    <path d="M28,-84 L40,-30" stroke="#D9A878" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="0" cy="-118" r="24" fill="#D9A878"/><path d="M-30,-124 Q0,-158 30,-124 L26,-70 Q0,-84 -26,-70 Z" fill="#EB8A73"/>
+  </g></svg>

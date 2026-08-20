@@ -1,2 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Из пустоты — в свет</title><rect width="600" height="900" fill="#3D5A80"/><rect x="600" width="600" height="900" fill="#BFE3F0"/><defs><radialGradient id="glow34"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="900" cy="300" r="260" fill="url(#glow34)"/><path d="M600,900 Q800,720 1200,760 V900 Z" fill="#5E9E5A"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Слева — тёмное пустое пространство, справа — светлый цветущий пейзаж: свет из пустоты.</title><defs><linearGradient id="q20sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3D5A80"/><stop offset="1" stop-color="#8FCFE6"/></linearGradient><radialGradient id="q20glow2"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs><rect width="1200" height="900" fill="url(#q20sky1)"/><path d="M0,780 Q300,740 600,766 T1200,762 V900 H0 Z" fill="#5E9E5A"/><path transform="translate(177,124) scale(0.8500000000000001)" d="M0,-20 L5,-6 L20,0 L5,6 L0,20 L-5,6 L-20,0 L-5,-6 Z" fill="#FCE39A"/><path transform="translate(1031,158) scale(0.5)" d="M0,-20 L5,-6 L20,0 L5,6 L0,20 L-5,6 L-20,0 L-5,-6 Z" fill="#FCE39A"/><circle cx="900" cy="300" r="300" fill="url(#q20glow2)"/><g transform="translate(950,800) scale(1.2)">
+    <circle cx="0" cy="-10" r="7" fill="#EB8A73"/><circle cx="9" cy="-3" r="7" fill="#EB8A73"/>
+    <circle cx="6" cy="8" r="7" fill="#EB8A73"/><circle cx="-6" cy="8" r="7" fill="#EB8A73"/>
+    <circle cx="-9" cy="-3" r="7" fill="#EB8A73"/><circle cx="0" cy="0" r="6" fill="#F2C94C"/>
+    <rect x="-2" y="12" width="4" height="20" fill="#5E9E5A"/>
+  </g><g transform="translate(1050,790) scale(0.9)">
+    <ellipse cx="0" cy="4" rx="40" ry="12.8" fill="#5E9E5A" opacity="0.22"/>
+    <rect x="-8" y="-60" width="16" height="60" rx="6" fill="#8B5A2B"/>
+    <circle cx="0" cy="-92" r="46" fill="#5E9E5A"/>
+    <circle cx="-28" cy="-72" r="30" fill="#5E9E5A"/>
+    <circle cx="28" cy="-72" r="30" fill="#5E9E5A"/>
+  </g></svg>

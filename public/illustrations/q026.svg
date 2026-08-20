@@ -1,11 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Горсть земли на фоне сада</title><defs><linearGradient id="sky45" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky45)"/><defs><radialGradient id="glow46"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="600" cy="200" r="260" fill="url(#glow46)"/>
-  <path d="M0,740 Q300,640 600,690 T1200,670 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,820 Q350,720 700,790 T1200,760 V900 H0 Z" fill="#5E9E5A"/><ellipse cx="600" cy="740" rx="90" ry="30" fill="#A0653A"/><g transform="translate(1000,700) scale(0.9)">
-    <rect x="-10" y="-10" width="20" height="90" rx="8" fill="#8B5A2B"/>
-    <circle cx="0" cy="-70" r="70" fill="#5E9E5A"/>
-    <circle cx="-40" cy="-40" r="45" fill="#9FCF6E"/>
-    <circle cx="45" cy="-45" r="42" fill="#9FCF6E"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Горсть светлой земли на фоне цветущего сада — символ сотворения тела.</title><defs><linearGradient id="q26sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#FCE39A"/></linearGradient></defs><rect width="1200" height="900" fill="url(#q26sky1)"/><path d="M0,680 Q300,570 600,641.5 T1200,630.5 V900 H0 Z" fill="#9FCF6E"/><path d="M0,780 Q300,690 600,748.5 T1200,739.5 V900 H0 Z" fill="#5E9E5A"/><path d="M0,850 Q300,810 600,836 T1200,832 V900 H0 Z" fill="#A9C5A0"/><g transform="translate(305,122) scale(1.0899999999999999)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(789,146) scale(0.8)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(73,890) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1040,888) scale(1.2)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(950,790) scale(1)">
+    <ellipse cx="0" cy="4" rx="40" ry="12.8" fill="#5E9E5A" opacity="0.22"/>
+    <rect x="-8" y="-60" width="16" height="60" rx="6" fill="#8B5A2B"/>
+    <circle cx="0" cy="-92" r="46" fill="#5E9E5A"/>
+    <circle cx="-28" cy="-72" r="30" fill="#5E9E5A"/>
+    <circle cx="28" cy="-72" r="30" fill="#5E9E5A"/>
+  </g><g transform="translate(250,800) scale(1)">
+    <circle cx="0" cy="-10" r="7" fill="#EB8A73"/><circle cx="9" cy="-3" r="7" fill="#EB8A73"/>
+    <circle cx="6" cy="8" r="7" fill="#EB8A73"/><circle cx="-6" cy="8" r="7" fill="#EB8A73"/>
+    <circle cx="-9" cy="-3" r="7" fill="#EB8A73"/><circle cx="0" cy="0" r="6" fill="#F2C94C"/>
+    <rect x="-2" y="12" width="4" height="20" fill="#5E9E5A"/>
+  </g><ellipse transform="translate(600,800)" cx="0" cy="0" rx="60" ry="18" fill="#E9CE8E"/></svg>

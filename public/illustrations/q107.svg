@@ -1,21 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Пустой трон с короной среди облаков</title><defs><linearGradient id="sky168" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky168)"/><g transform="translate(300,300) scale(1.4)">
-    <ellipse cx="0" cy="0" rx="60" ry="26" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="-35" cy="6" rx="34" ry="20" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="38" cy="8" rx="30" ry="18" fill="#FFFFFF" opacity="0.9"/></g><g transform="translate(900,340) scale(1.3)">
-    <ellipse cx="0" cy="0" rx="60" ry="26" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="-35" cy="6" rx="34" ry="20" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="38" cy="8" rx="30" ry="18" fill="#FFFFFF" opacity="0.9"/></g><g transform="translate(600,220) scale(1.2)">
-    <ellipse cx="0" cy="0" rx="60" ry="26" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="-35" cy="6" rx="34" ry="20" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="38" cy="8" rx="30" ry="18" fill="#FFFFFF" opacity="0.9"/></g><g transform="translate(600,780) scale(1.4)">
-    <path d="M-60,60 L-60,-60 Q-60,-90 -30,-90 L30,-90 Q60,-90 60,-60 L60,60 Z" fill="#E9CE8E" opacity="0.9"/>
-    <rect x="-70" y="50" width="140" height="24" rx="8" fill="#A0653A"/>
-    <g transform="translate(0,-20) scale(0.9)">
-    <path d="M-50,10 L-50,-10 L-25,-40 L0,-10 L25,-40 L50,-10 L50,10 Z" fill="#F2C94C"/>
-    <rect x="-50" y="10" width="100" height="18" rx="6" fill="#F2C94C"/>
-    <circle cx="-25" cy="-40" r="8" fill="#EB8A73"/>
-    <circle cx="25" cy="-40" r="8" fill="#EB8A73"/>
-    <circle cx="0" cy="-46" r="9" fill="#EB8A73"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Пустой трон на возвышении среди светлых облаков, на сиденье — корона.</title><defs><linearGradient id="q107sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#FCE39A"/></linearGradient></defs><rect width="1200" height="900" fill="url(#q107sky1)"/><path d="M0,840 Q300,810 600,829.5 T1200,826.5 V900 H0 Z" fill="#F5FBFE"/><g transform="translate(278,145) scale(1.0899999999999999)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(882,209) scale(0.9500000000000001)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(226,890) scale(1.1)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1133,888) scale(1.2)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(300,300) scale(1.4)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(880,260) scale(1.2)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(600,780) scale(1.3)">
+    <rect x="-50" y="-100" width="100" height="20" rx="6" fill="#3D5A80"/>
+    <rect x="-50" y="-100" width="16" height="100" rx="6" fill="#3D5A80"/>
+    <rect x="34" y="-100" width="16" height="100" rx="6" fill="#3D5A80"/>
+    <rect x="-42" y="-16" width="84" height="16" rx="4" fill="#E9CE8E"/>
+  </g><g transform="translate(600,706) scale(0.78)">
+    <path d="M-40,20 L-40,-6 L-24,10 L-10,-16 L0,6 L10,-16 L24,10 L40,-6 L40,20 Z" fill="#F2C94C"/>
+    <rect x="-40" y="18" width="80" height="12" rx="4" fill="#F2C94C"/>
+    <circle cx="0" cy="-6" r="5" fill="#EB8A73"/>
+  </g></svg>

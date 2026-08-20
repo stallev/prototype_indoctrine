@@ -1,10 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Мягкое сияние без фигуры</title><defs><linearGradient id="sky15" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky15)"/><defs><radialGradient id="glow16"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="600" cy="420" r="300" fill="url(#glow16)"/><g transform="translate(600,420) scale(1.6)">
-    <ellipse cx="0" cy="0" rx="60" ry="26" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="-35" cy="6" rx="34" ry="20" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="38" cy="8" rx="30" ry="18" fill="#FFFFFF" opacity="0.9"/></g>
-  <path d="M0,780 Q300,680 600,730 T1200,710 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,860 Q350,760 700,830 T1200,800 V900 H0 Z" fill="#5E9E5A"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Мягкое сияние света в форме облака, без черт лица и фигуры.</title><defs><linearGradient id="q8sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/></linearGradient><radialGradient id="q8glow2"><stop offset="0" stop-color="#F5FBFE"/><stop offset="1" stop-color="#F5FBFE" stop-opacity="0"/></radialGradient></defs><rect width="1200" height="900" fill="url(#q8sky1)"/><path d="M0,820 Q300,790 600,809.5 T1200,806.5 V900 H0 Z" fill="#A9C5A0"/><g transform="translate(311,148) scale(1.0899999999999999)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(955,182) scale(0.8)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(199,890) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1086,888) scale(1.2)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><circle cx="600" cy="420" r="240" fill="url(#q8glow2)"/><g transform="translate(600,420) scale(1.6)" opacity="0.9"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#F5FBFE"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#F5FBFE"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#F5FBFE"/></g></svg>

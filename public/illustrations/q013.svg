@@ -1,10 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Раскрытая книга под лучом света</title><defs><linearGradient id="sky22" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky22)"/><defs><radialGradient id="glow23"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="600" cy="300" r="280" fill="url(#glow23)"/>
-  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(600,700) scale(1.8)">
-    <path d="M-70,-10 Q-35,-28 0,-10 L0,40 Q-35,24 -70,40 Z" fill="#F5FBFE" stroke="#E9CE8E" stroke-width="4"/>
-    <path d="M70,-10 Q35,-28 0,-10 L0,40 Q35,24 70,40 Z" fill="#F5FBFE" stroke="#E9CE8E" stroke-width="4"/>
-    <path d="M0,-10 L0,40" stroke="#E9CE8E" stroke-width="3"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Раскрытая книга под одиноким лучом света — символ всеведения.</title><defs><linearGradient id="q13sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/></linearGradient><radialGradient id="q13glow2"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs><rect width="1200" height="900" fill="url(#q13sky1)"/><path d="M0,800 Q300,740 600,779 T1200,773 V900 H0 Z" fill="#A9C5A0"/><g transform="translate(336,133) scale(0.97)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(940,177) scale(0.9500000000000001)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(104,890) scale(1.1)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1151,888) scale(1.05)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><circle cx="600" cy="140" r="320" fill="url(#q13glow2)"/><path d="M500,620 L594,120 L606,120 L700,620 Z" fill="#FCE39A" opacity="0.5"/><g transform="translate(600,760) scale(1.4)">
+    <path d="M0,-40 L-70,-52 L-70,20 L0,34 Z" fill="#F5FBFE" stroke="#A9C5A0" stroke-width="2"/>
+    <path d="M0,-40 L70,-52 L70,20 L0,34 Z" fill="#F5FBFE" stroke="#A9C5A0" stroke-width="2"/>
+    <rect x="-4" y="-40" width="8" height="74" fill="#3D5A80"/>
+  </g></svg>

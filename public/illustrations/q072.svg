@@ -1,11 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Ребёнок сидит тихо в покое</title><defs><linearGradient id="sky112" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky112)"/>
-  <path d="M0,790 Q300,690 600,740 T1200,720 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,870 Q350,770 700,840 T1200,810 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(600,800) scale(1.4)">
-    <path d="M-34,-56 Q0,-74 34,-56 L44,40 Q0,54 -44,40 Z" fill="#EB8A73"/>
-    <path d="M-28,-54 L-40,-10" stroke="#F1C9A5" stroke-width="15" stroke-linecap="round"/>
-    <path d="M28,-54 L40,-10" stroke="#F1C9A5" stroke-width="15" stroke-linecap="round"/>
-    <circle cx="0" cy="-86" r="25" fill="#F1C9A5"/>
-    <path d="M-25,-92 Q0,-118 25,-92 Q27,-70 20,-58 Q25,-90 0,-96 Q-25,-90 -20,-58 Q-27,-70 -25,-92 Z" fill="#8B5A2B"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Ребёнок сидит тихо с закрытыми глазами, руки сложены, вокруг покой.</title><defs><linearGradient id="q72sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/></linearGradient></defs><rect width="1200" height="900" fill="url(#q72sky1)"/><path d="M0,680 Q300,580 600,645 T1200,635 V900 H0 Z" fill="#9FCF6E"/><path d="M0,760 Q300,660 600,725 T1200,715 V900 H0 Z" fill="#5E9E5A"/><path d="M0,840 Q300,790 600,822.5 T1200,817.5 V900 H0 Z" fill="#A9C5A0"/><g transform="translate(343,110) scale(0.85)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(987,154) scale(0.8)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(171,890) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1078,888) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(600,820) scale(1.5)">
+    <ellipse cx="0" cy="4" rx="28" ry="8.96" fill="#5E9E5A" opacity="0.22"/>
+    <path d="M-26,0 Q-30,-46 0,-56 Q30,-46 26,0 Z" fill="#F2C94C"/>
+    <ellipse cx="0" cy="-30" rx="14" ry="10" fill="#F1C9A5"/>
+    <circle cx="0" cy="-76" r="21" fill="#F1C9A5"/>
+    <path d="M-20,-82 Q0,-100 20,-82 Q20,-90 0,-92 Q-20,-90 -20,-82 Z" fill="#A0653A"/>
+  </g></svg>
