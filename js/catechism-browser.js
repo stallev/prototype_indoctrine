@@ -1,6 +1,6 @@
 // Browser-порт хелперов из utils/catechism.ts — без Zod, без импорта JSON
 // на этапе модуля. Данные передаются через initCatechism(data) после fetch.
-// Контракт: docs/static-prototype-spec.md §7.2.
+// Контракт: docs/specs/static-prototype-spec.md §7.2.
 
 let topics = [];
 let questions = [];

@@ -1,14 +1,14 @@
 # Спецификация статического прототипа катехизиса
 
-Спецификация однофайлового HTML-прототипа: каждая «страница» показывает материал по одному вопросу катехизиса. Данные — из [`data/catechism.json`](../data/catechism.json); подходы к рендеру — из [`utils/catechism.ts`](../utils/catechism.ts).
+Спецификация однофайлового HTML-прототипа: каждая «страница» показывает материал по одному вопросу катехизиса. Данные — из [`data/catechism.json`](../../data/catechism.json); подходы к рендеру — из [`utils/catechism.ts`](../../utils/catechism.ts).
 
 **Статус:** реализовано и принято (см. §10).
 
 Связанные документы:
 
-- [`svg-prompts-ts-spec.md`](svg-prompts-ts-spec.md) — требования к массиву промптов для SVG
-- [`implementation-checklist.md`](implementation-checklist.md) — порядок реализации
-- [`specs/svg-illustration-spec.md`](../specs/svg-illustration-spec.md) — генерация иллюстраций
+- [`svg-prompts-ts-spec.md`](../contracts/svg-prompts-ts-spec.md) — требования к массиву промптов для SVG
+- [`implementation-checklist.md`](../implementation-checklist.md) — порядок реализации
+- [`specs/svg-illustration-spec.md`](../../specs/svg-illustration-spec.md) — генерация иллюстраций
 
 ---
 
@@ -264,7 +264,7 @@ const catechism = await res.json();
 
 ### 7.2. Модуль `js/catechism-browser.js`
 
-Портировать логику из [`utils/catechism.ts`](../utils/catechism.ts) **без** Zod и без импорта JSON на этапе модуля:
+Портировать логику из [`utils/catechism.ts`](../../utils/catechism.ts) **без** Zod и без импорта JSON на этапе модуля:
 
 | Функция / константа | Поведение |
 |---------------------|-----------|
@@ -309,7 +309,7 @@ const catechism = await res.json();
 
 ## 8. Иллюстрации в браузере
 
-Серверный [`resolveIllustration`](../images/illustrations.node.ts) в клиент **не** импортировать (`node:fs`).
+Серверный [`resolveIllustration`](../../images/illustrations.node.ts) в клиент **не** импортировать (`node:fs`).
 
 ### 8.1. URL файла
 
@@ -339,7 +339,7 @@ img.addEventListener('error', () => {
 });
 ```
 
-Эталон плейсхолдера: [`images/_placeholder.svg`](../images/_placeholder.svg) (`viewBox="0 0 1200 900"`, фон `#BFE3F0`).
+Эталон плейсхолдера: [`images/_placeholder.svg`](../../images/_placeholder.svg) (`viewBox="0 0 1200 900"`, фон `#BFE3F0`).
 
 Инлайн SVG на клиенте для прототипа **не** требуется; достаточно `<img>`. (В будущей сборке Next/Astro — инлайн через `resolveIllustration`.)
 
@@ -388,8 +388,8 @@ img.addEventListener('error', () => {
 
 | Этап | Документ / артефакт |
 |------|---------------------|
-| Правила SVG | [`specs/svg-illustration-spec.md`](../specs/svg-illustration-spec.md) |
-| Массив промптов | [`docs/svg-prompts-ts-spec.md`](svg-prompts-ts-spec.md) → будущий `prompts/illustration-prompts.ts` |
+| Правила SVG | [`specs/svg-illustration-spec.md`](../../specs/svg-illustration-spec.md) |
+| Массив промптов | [`docs/contracts/svg-prompts-ts-spec.md`](../contracts/svg-prompts-ts-spec.md) → будущий `prompts/illustration-prompts.ts` |
 | Файлы на диске | `public/illustrations/qNNN.svg` |
 | Путь в JSON | `questions[].illustration` (уже заполнен) |
 

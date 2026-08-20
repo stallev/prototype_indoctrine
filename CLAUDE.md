@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project status
 
-All phases (0–8) of `docs/implementation-checklist.md` are done and accepted: scaffold, HTML shell, routing/rendering, accessible mobile drawer, `prompts/illustration-prompts.ts` (114 entries), all 114 `public/illustrations/qNNN.svg` files (generated from a shared vector-primitive library for consistency, not hand-authored one-by-one — see git history on those paths for how), and the final acceptance pass (automated full-coverage route/data sweep in-browser, illustration-fallback regression test, doctrinal audit of every sensitive question per `specs/svg-illustration-spec.md` §7). There is no test suite — acceptance was verified via an in-browser scripted sweep, not an automated test file; if you add one, put it in a way that doesn't require a browser dependency the static prototype otherwise has none of. Check `docs/implementation-checklist.md` before assuming what's next; there is no committed roadmap past Phase 8.
+All phases (0–8) of `docs/implementation-checklist.md` are done and accepted: scaffold, HTML shell, routing/rendering, accessible mobile drawer, `prompts/illustration-prompts.ts` (114 entries), all 114 `public/illustrations/qNNN.svg` files (generated from a shared vector-primitive library for consistency, not hand-authored one-by-one — see git history on those paths for how), and the final acceptance pass (automated full-coverage route/data sweep in-browser, illustration-fallback regression test, doctrinal audit of every sensitive question per `specs/svg-illustration-spec.md` §7). There is no test suite — acceptance was verified via an in-browser scripted sweep, not an automated test file; if you add one, put it in a way that doesn't require a browser dependency the static prototype otherwise has none of.
+
+**Planned migration (documentation stage, not yet implemented):** this static prototype is planned to move to Next.js 16.3.0 App Router + TypeScript + Tailwind v4 + shadcn/ui, with content moving from `data/catechism.json` into `content/*.ts`. Documentation lives under `docs/specs/` (architecture: `nextjs-migration-spec.md`, `image-generator-tool-spec.md`), `docs/contracts/` (data/API shape contracts), `docs/ADRs/` (decision records), `docs/coding-conventions.md` (implementation conventions, supersedes `.cursor/rules` for this repo — see `docs/ADRs/adr-001-cursor-rules-delivery.md`), `docs/multi-agent-workflow.md` (the implementer/quality-checker/code-reviewer pipeline — user-authorized to run **fully autonomously** across all of Phase 9, with an automatic commit after each phase passes its phase-level review, but it never runs `git push`), and `docs/implementation/` (per-phase task files with status tracking that the pipeline agents edit). `GEMINI_API_KEY` is already set in the local `.env` (gitignored, see `.env.example`) for the planned image-generator tool — see `docs/contracts/image-generator-api-contract.md` §4 for the exact wiring (not the SDK's default env var name). Until these docs are approved and executed, the current static stack described below remains the actual state of the repo — do not assume Next.js exists yet.
 
 ## Avoid AI slop
 
@@ -14,7 +16,7 @@ This is a small, content-driven prototype (114 fixed questions) — not a produc
 - No premature abstraction: `js/catechism-browser.js` is a plain port of `utils/catechism.ts` — don't wrap it in generic "data layer" / "service" / "repository" classes it doesn't need. Match the existing helper-function style, not a framework-shaped rewrite.
 - No unused code paths: don't scaffold options, config flags, or extensibility hooks for formats/features the specs don't ask for (e.g. don't genericize past the fixed 1200×900 SVG canvas, the four JSON arrays, or the three routes).
 - No comment noise: don't restate what the code obviously does (see root style rules); only comment non-obvious constraints (the same bar the rest of this codebase already holds to — see e.g. the terse rationale comments in `utils/catechism.ts`).
-- No default-AI visual tells: no purple/indigo gradients, no glow effects, no generic icon-font soup — stick to the fixed Material token palette in `docs/static-prototype-spec.md` §5.1 and the fixed illustration palette in `specs/svg-illustration-spec.md` §3.
+- No default-AI visual tells: no purple/indigo gradients, no glow effects, no generic icon-font soup — stick to the fixed Material token palette in `docs/specs/static-prototype-spec.md` §5.1 and the fixed illustration palette in `specs/svg-illustration-spec.md` §3.
 - Keep scope to the current checklist phase — don't pull forward work from later phases (e.g. don't start generating SVGs while still on the routing phase) and don't leave a phase half-done with dead stubs.
 
 ## What this project is
@@ -30,8 +32,8 @@ A normalized dataset for Carine Mackenzie's children's catechism *«Моя пе�
 | `images/illustrations.node.ts` | Illustration resolution at build time (`node:fs`) — **server/build only**, never import from client code. |
 | `images/_placeholder.svg` | Canonical neutral placeholder (same viewBox/palette as generated code). |
 | `specs/svg-illustration-spec.md` | Full spec for generating the 114 SVG illustrations (palette, doctrinal constraints, prompt template, checklist). |
-| `docs/static-prototype-spec.md` | Architecture spec for the static HTML SPA prototype (not yet implemented). |
-| `docs/svg-prompts-ts-spec.md` | Contract for the future `prompts/illustration-prompts.ts` file. |
+| `docs/specs/static-prototype-spec.md` | Architecture spec for the static HTML SPA prototype (implemented, accepted). |
+| `docs/contracts/svg-prompts-ts-spec.md` | Contract for `prompts/illustration-prompts.ts`. |
 | `docs/implementation-checklist.md` | Ordered checklist/commit plan for building the prototype — check this first. |
 | `public/illustrations/` | Target location for `qNNN.svg`/`.png`/`.jpg`/`.webp` files (does not exist yet). |
 | `prompts/illustration-prompts.ts` | Not created yet — 114-entry prompt array for SVG generation. |
@@ -69,7 +71,7 @@ Generating new SVGs must follow `specs/svg-illustration-spec.md`, which is the h
 
 ## Planned architecture (not yet built)
 
-Per `docs/static-prototype-spec.md`: a single-file `index.html` SPA (no framework), Tailwind v4 + CSS variables for Material-Design-like styling, hash-based routing (`#/`, `#/topic/:id`, `#/q/:n`), `fetch()`-loaded JSON, no client-side Zod validation. Key constraint: `js/catechism-browser.js` will be a **plain-JS port** of `utils/catechism.ts`'s helpers (no Zod, no JSON import at module scope — data is injected via `initCatechism(data)`), because the Zod/import-JSON version is Node/bundler-oriented and unsuitable for a bare browser script.
+Per `docs/specs/static-prototype-spec.md`: a single-file `index.html` SPA (no framework), Tailwind v4 + CSS variables for Material-Design-like styling, hash-based routing (`#/`, `#/topic/:id`, `#/q/:n`), `fetch()`-loaded JSON, no client-side Zod validation. Key constraint: `js/catechism-browser.js` will be a **plain-JS port** of `utils/catechism.ts`'s helpers (no Zod, no JSON import at module scope — data is injected via `initCatechism(data)`), because the Zod/import-JSON version is Node/bundler-oriented and unsuitable for a bare browser script.
 
 Follow `docs/implementation-checklist.md` for build order — phases 1–5 (scaffold, shell, data/routing, mobile drawer, illustration fallback) don't depend on any SVGs existing; the UI is fully functional with placeholders. Phases 6–7 (prompt file, actual SVG generation) come after.
 
