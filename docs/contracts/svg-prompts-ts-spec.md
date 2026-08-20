@@ -6,9 +6,9 @@
 
 Опора:
 
-- Шаблон промпта и правила сцен — [`specs/svg-illustration-spec.md`](../specs/svg-illustration-spec.md) (§6–§9)
-- Данные карточек — [`data/catechism.json`](../data/catechism.json)
-- Хелперы стихов — [`utils/catechism.ts`](../utils/catechism.ts) (`versesForQuestion`, `getQuestionWithVerses`)
+- Шаблон промпта и правила сцен — [`specs/svg-illustration-spec.md`](../../specs/svg-illustration-spec.md) (§6–§9)
+- Данные карточек — [`data/catechism.json`](../../data/catechism.json)
+- Хелперы стихов — [`utils/catechism.ts`](../../utils/catechism.ts) (`versesForQuestion`, `getQuestionWithVerses`)
 
 ---
 
@@ -138,7 +138,7 @@ export const ILLUSTRATION_PROMPT_COUNT = 114;
 
 ### 5.2. Сборка `prompt`
 
-1. Взять шаблон из [`specs/svg-illustration-spec.md`](../specs/svg-illustration-spec.md) §8 «Промпт для AI-агента».
+1. Взять шаблон из [`specs/svg-illustration-spec.md`](../../specs/svg-illustration-spec.md) §8 «Промпт для AI-агента».
 2. Подставить:
    - `{{question_number}}`
    - `{{question_content}}`
@@ -196,7 +196,7 @@ flowchart LR
 3. **Сборка `prompt`** — функция `buildPrompt(entryWithoutPrompt)` или одноразовый скрипт; результат закоммитить в массив (самодостаточность).
 4. **Валидация** — `promptsMissingSceneBrief()` и `promptsMissingNumbers()` возвращают `[]`.
 5. **Генерация SVG** — агент берёт `getPromptByQuestionNumber(n).prompt`, пишет только валидный SVG в `public/illustrations/qNNN.svg`.
-6. **Приёмка** — чек-лист §9; прототип показывает картинку вместо placeholder ([`static-prototype-spec.md`](static-prototype-spec.md) §8).
+6. **Приёмка** — чек-лист §9; прототип показывает картинку вместо placeholder ([`static-prototype-spec.md`](../specs/static-prototype-spec.md) §8).
 
 Пакетная генерация: рекомендуется батчами (напр. по разделу / по 10 номеров) с ручной выборочной проверкой чувствительных вопросов (§7).
 
@@ -233,7 +233,7 @@ flowchart LR
  * Правила стиля, доктрины и шаблон промпта:
  *   specs/svg-illustration-spec.md
  * Контракт этого модуля:
- *   docs/svg-prompts-ts-spec.md
+ *   docs/contracts/svg-prompts-ts-spec.md
  *
  * Целевой вывод агента: public/illustrations/qNNN.svg
  * (поле questions[].illustration в JSON уже содержит путь).

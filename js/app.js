@@ -1,4 +1,4 @@
-// Роутинг, меню и рендер данных (docs/static-prototype-spec.md §6-9).
+// Роутинг, меню и рендер данных (docs/specs/static-prototype-spec.md §6-9).
 import {
   initCatechism,
   allTopics,

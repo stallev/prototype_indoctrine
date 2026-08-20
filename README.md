@@ -25,9 +25,11 @@
 
 | Документ | Содержание |
 |----------|------------|
-| [`docs/static-prototype-spec.md`](docs/static-prototype-spec.md) | Архитектура, файлы, роутинг, Material/Tailwind, мобильное меню, рендер, placeholder |
-| [`docs/svg-prompts-ts-spec.md`](docs/svg-prompts-ts-spec.md) | Требования к `prompts/illustration-prompts.ts` (114 промптов для SVG) |
-| [`docs/implementation-checklist.md`](docs/implementation-checklist.md) | Пошаговый чек-лист реализации кода и генерации иллюстраций |
+| [`docs/specs/static-prototype-spec.md`](docs/specs/static-prototype-spec.md) | Архитектура, файлы, роутинг, Material/Tailwind, мобильное меню, рендер, placeholder |
+| [`docs/contracts/svg-prompts-ts-spec.md`](docs/contracts/svg-prompts-ts-spec.md) | Требования к `prompts/illustration-prompts.ts` (114 промптов для SVG) |
+| [`docs/implementation-checklist.md`](docs/implementation-checklist.md) | Пошаговый чек-лист реализации кода и генерации иллюстраций (Фазы 0–8) |
+| [`docs/specs/nextjs-migration-spec.md`](docs/specs/nextjs-migration-spec.md) | Планируемая архитектура миграции на Next.js (документация, ещё не реализовано) |
+| [`docs/implementation/`](docs/implementation/) | Фазы миграции на Next.js — задачи со статусом выполнения |
 
 ## Источник и права
 

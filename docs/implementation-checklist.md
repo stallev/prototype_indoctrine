@@ -4,15 +4,20 @@
 
 Спеки:
 
-- [`static-prototype-spec.md`](static-prototype-spec.md) — UI, роутинг, меню, рендер
-- [`svg-prompts-ts-spec.md`](svg-prompts-ts-spec.md) — массив промптов
+- [`specs/static-prototype-spec.md`](specs/static-prototype-spec.md) — UI, роутинг, меню, рендер
+- [`contracts/svg-prompts-ts-spec.md`](contracts/svg-prompts-ts-spec.md) — массив промптов
 - [`specs/svg-illustration-spec.md`](../specs/svg-illustration-spec.md) — генерация SVG
+- [`specs/nextjs-migration-spec.md`](specs/nextjs-migration-spec.md) — Фаза 9: миграция на Next.js
+- [`specs/image-generator-tool-spec.md`](specs/image-generator-tool-spec.md) — Фаза 9: инструмент генерации изображений
+- [`coding-conventions.md`](coding-conventions.md) — конвенции реализации Фазы 9
+- [`multi-agent-workflow.md`](multi-agent-workflow.md) — процесс исполнения Фазы 9 (пайплайн implementer/quality-checker/code-reviewer)
+- [`implementation/`](implementation/) — живой трекер задач Фазы 9 (статус/попытки/заметки, редактируется агентами)
 
 ---
 
 ## Фаза 0. Подготовка
 
-- [x] Прочитать `docs/static-prototype-spec.md` и `docs/svg-prompts-ts-spec.md`
+- [x] Прочитать `docs/specs/static-prototype-spec.md` и `docs/contracts/svg-prompts-ts-spec.md`
 - [x] Убедиться, что `data/catechism.json` и `images/_placeholder.svg` на месте
 
 ---
@@ -72,7 +77,7 @@
 
 ## Фаза 6. Файл промптов SVG
 
-- [x] Создать `prompts/illustration-prompts.ts` по [`svg-prompts-ts-spec.md`](svg-prompts-ts-spec.md)
+- [x] Создать `prompts/illustration-prompts.ts` по [`svg-prompts-ts-spec.md`](contracts/svg-prompts-ts-spec.md)
 - [x] Экспорт типов, массива, `getPromptByQuestionNumber`, `promptsMissingSceneBrief`, `promptsMissingNumbers`
 - [x] Каркас 114 записей с метаданными из JSON
 - [x] Наполнить все `scene_brief` (чувствительные — по §7 svg-спеки)
@@ -106,6 +111,12 @@
 - [x] `prompts/illustration-prompts.ts` соответствует контракту — все экспорты на месте, нет импорта `node:fs`, заголовок ссылается на спеки, 114/114 валидны
 - [x] Покрытие SVG: все 114 файлов на диске, пути в `questions[].illustration` совпадают с `qNNN.svg` 1:1 (сверено скриптом)
 - [x] Нет нарушений доктринальных правил §2 в принятых иллюстрациях — библиотека примитивов структурно не содержит фигур Божества/наготы; проверены исходники всех ~46 чувствительных номеров (§7) + визуальная выборка по каждой категории
+
+---
+
+## Фаза 9. Миграция на Next.js
+
+Фаза 9 больше не ведётся в этом файле — задачи со статусом выполнения, попытками и заметками агентов теперь живут в [`docs/implementation/`](implementation/) (отдельные файлы `phase-9.1-content-migration.md` … `phase-9.5-acceptance.md`, редактируются агентами пайплайна `docs/multi-agent-workflow.md` по ходу выполнения — см. [`implementation/README.md`](implementation/README.md) за форматом). Этот файл (Фазы 0–8) остаётся архивом принятого статического прототипа и не редактируется автоматически.
 
 ---
 

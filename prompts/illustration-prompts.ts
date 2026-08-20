@@ -4,7 +4,7 @@
  * Правила стиля, доктрины и шаблон промпта:
  *   specs/svg-illustration-spec.md
  * Контракт этого модуля:
- *   docs/svg-prompts-ts-spec.md
+ *   docs/contracts/svg-prompts-ts-spec.md
  *
  * Целевой вывод агента: public/illustrations/qNNN.svg
  * (поле questions[].illustration в JSON уже содержит путь).
