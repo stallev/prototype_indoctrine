@@ -1,16 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Свет сквозь облака</title><defs><linearGradient id="sky13" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky13)"/><defs><radialGradient id="glow14"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="600" cy="380" r="320" fill="url(#glow14)"/><g transform="translate(300,260) scale(1.3)">
-    <ellipse cx="0" cy="0" rx="60" ry="26" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="-35" cy="6" rx="34" ry="20" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="38" cy="8" rx="30" ry="18" fill="#FFFFFF" opacity="0.9"/></g><g transform="translate(900,300) scale(1.1)">
-    <ellipse cx="0" cy="0" rx="60" ry="26" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="-35" cy="6" rx="34" ry="20" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="38" cy="8" rx="30" ry="18" fill="#FFFFFF" opacity="0.9"/></g><g transform="translate(600,200) scale(1.4)">
-    <ellipse cx="0" cy="0" rx="60" ry="26" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="-35" cy="6" rx="34" ry="20" fill="#FFFFFF" opacity="0.9"/>
-    <ellipse cx="38" cy="8" rx="30" ry="18" fill="#FFFFFF" opacity="0.9"/></g>
-  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Светлое небо с лучами, льющимися сквозь облака; фигур нет.</title><defs><linearGradient id="q7sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/></linearGradient><radialGradient id="q7glow2"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient><radialGradient id="q7glow3"><stop offset="0" stop-color="#F5FBFE"/><stop offset="1" stop-color="#F5FBFE" stop-opacity="0"/></radialGradient></defs><rect width="1200" height="900" fill="url(#q7sky1)"/><path d="M0,820 Q300,780 600,806 T1200,802 V900 H0 Z" fill="#9FCF6E"/><g transform="translate(258,165) scale(0.97)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(902,219) scale(0.9500000000000001)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(146,890) scale(1.1)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1033,888) scale(1.05)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><circle cx="400" cy="260" r="260" fill="url(#q7glow2)"/><circle cx="800" cy="340" r="220" fill="url(#q7glow3)"/><g transform="translate(300,400) scale(1.3)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(880,420) scale(1.1)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g></svg>

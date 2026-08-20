@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Скала на берегу моря</title><defs><linearGradient id="sky21" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky21)"/><rect y="640" width="1200" height="260" fill="#7FB4B0"/><path d="M420,760 Q480,560 600,600 Q700,620 660,760 Z" fill="#E9CE8E"/><g transform="translate(300,720) scale(1)">
-    <path d="M-120,0 Q-60,-24 0,0 T120,0 L120,40 Q60,64 0,40 T-120,40 Z" fill="#7FB4B0"/>
-    <path d="M-120,10 Q-60,-14 0,10 T120,10" fill="none" stroke="#BFE3F0" stroke-width="6" opacity="0.7"/></g><g transform="translate(900,730) scale(1)">
-    <path d="M-120,0 Q-60,-24 0,0 T120,0 L120,40 Q60,64 0,40 T-120,40 Z" fill="#7FB4B0"/>
-    <path d="M-120,10 Q-60,-14 0,10 T120,10" fill="none" stroke="#BFE3F0" stroke-width="6" opacity="0.7"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Скала на морском берегу, о которую мягко бьются волны, — образ неизменности.</title><defs><linearGradient id="q12sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/></linearGradient></defs><rect width="1200" height="900" fill="url(#q12sky1)"/><path d="M0,780 Q300,740 600,766 T1200,762 V900 H0 Z" fill="#E9CE8E"/><g transform="translate(283,150) scale(0.85)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(887,214) scale(0.8)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(51,890) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1098,888) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><path d="M0,760 Q150,746 300,760 T600,760 T900,760 T1200,760 V900 H0 Z" fill="#7FB4B0" opacity="0.75"/><path d="M0,820 Q150,806 300,820 T600,820 T900,820 T1200,820 V900 H0 Z" fill="#8FCFE6" opacity="0.6"/><path transform="translate(600,800) scale(1.6)" d="M-60,20 Q-70,-40 -20,-60 Q40,-80 60,-30 Q70,10 30,20 Z" fill="#A9C5A0"/></svg>

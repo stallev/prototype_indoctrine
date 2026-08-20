@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Белая одежда без пятна на камне</title><defs><linearGradient id="sky75" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky75)"/><defs><radialGradient id="glow76"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="600" cy="200" r="260" fill="url(#glow76)"/>
-  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/><ellipse cx="600" cy="800" rx="80" ry="24" fill="#E9CE8E"/><g transform="translate(600,760) scale(1.6)">
-    <path d="M-50,10 Q0,-14 50,10 L46,30 Q0,10 -46,30 Z" fill="#F5FBFE" stroke="#E9CE8E" stroke-width="3"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Белая одежда аккуратно сложена на камне, без пятна, — образ безгрешности.</title><defs><linearGradient id="q49sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/></linearGradient></defs><rect width="1200" height="900" fill="url(#q49sky1)"/><path d="M0,700 Q300,610 600,668.5 T1200,659.5 V900 H0 Z" fill="#E9CE8E"/><path d="M0,780 Q300,690 600,748.5 T1200,739.5 V900 H0 Z" fill="#5E9E5A"/><path d="M0,850 Q300,810 600,836 T1200,832 V900 H0 Z" fill="#A9C5A0"/><g transform="translate(324,151) scale(0.97)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(888,195) scale(0.9500000000000001)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(212,890) scale(1.1)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1059,888) scale(1.05)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><path transform="translate(600,800) scale(1.2)" d="M-60,20 Q-70,-40 -20,-60 Q40,-80 60,-30 Q70,10 30,20 Z" fill="#A9C5A0"/><rect x="530" y="700" width="140" height="50" rx="10" fill="#F5FBFE" stroke="#A9C5A0" stroke-width="3"/></svg>

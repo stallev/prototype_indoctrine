@@ -1,13 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Мальчик молится, глядя в небо</title><defs><linearGradient id="sky25" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky25)"/><defs><radialGradient id="glow26"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="600" cy="200" r="260" fill="url(#glow26)"/>
-  <path d="M0,680 Q300,580 600,630 T1200,610 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,760 Q350,660 700,730 T1200,700 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(600,760) scale(1.6)">
-    <path d="M-30,-60 Q0,-78 30,-60 L26,20 Q0,32 -26,20 Z" fill="#F2C94C"/>
-       <rect x="-24" y="16" width="18" height="46" rx="8" fill="#3D5A80"/>
-       <rect x="6" y="16" width="18" height="46" rx="8" fill="#3D5A80"/>
-    <path d="M-14,-50 L0,-78 L14,-50" fill="none" stroke="#F1C9A5" stroke-width="16" stroke-linecap="round"/>
-    <circle cx="0" cy="-88" r="26" fill="#F1C9A5"/>
-    <path d="M-26,-96 Q0,-124 26,-96 Q26,-108 0,-112 Q-26,-108 -26,-96 Z" fill="#A0653A"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Мальчик стоит с закрытыми глазами и сложенными в молитве руками, лицом к небу.</title><defs><linearGradient id="q15sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/></linearGradient><radialGradient id="q15glow2"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs><rect width="1200" height="900" fill="url(#q15sky1)"/><path d="M0,680 Q300,580 600,645 T1200,635 V900 H0 Z" fill="#9FCF6E"/><path d="M0,760 Q300,660 600,725 T1200,715 V900 H0 Z" fill="#5E9E5A"/><path d="M0,840 Q300,790 600,822.5 T1200,817.5 V900 H0 Z" fill="#A9C5A0"/><g transform="translate(202,169) scale(0.85)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(766,193) scale(0.9500000000000001)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(210,890) scale(1.1)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1057,888) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><circle cx="600" cy="200" r="240" fill="url(#q15glow2)"/><g transform="translate(600,800) scale(1.6)">
+    <ellipse cx="0" cy="4" rx="28" ry="8.96" fill="#5E9E5A" opacity="0.22"/>
+    <path d="M-26,0 Q-30,-46 0,-56 Q30,-46 26,0 Z" fill="#F2C94C"/>
+    <ellipse cx="0" cy="-30" rx="14" ry="10" fill="#F1C9A5"/>
+    <circle cx="0" cy="-76" r="21" fill="#F1C9A5"/>
+    <path d="M-20,-82 Q0,-100 20,-82 Q20,-90 0,-92 Q-20,-90 -20,-82 Z" fill="#A0653A"/>
+  </g></svg>

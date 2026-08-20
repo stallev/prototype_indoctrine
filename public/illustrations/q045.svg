@@ -1,10 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Ясли в хлеву под звездой</title><defs><linearGradient id="sky71" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky71)"/><circle cx="140" cy="90" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="260" cy="60" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="420" cy="120" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="600" cy="70" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="780" cy="110" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="940" cy="60" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="1080" cy="100" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="200" cy="180" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="980" cy="200" r="4" fill="#FFFFFF" opacity="0.85"/><circle cx="520" cy="160" r="4" fill="#FFFFFF" opacity="0.85"/>
-  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(600,180)">
-    <path d="M0,-41.6 L10.4,-10.4 L41.6,0 L10.4,10.4 L0,41.6 L-10.4,10.4 L-41.6,0 L-10.4,-10.4 Z" fill="#F2C94C"/></g><g transform="translate(600,760) scale(1.6)">
-    <path d="M-70,20 L-50,-20 L50,-20 L70,20 Z" fill="none" stroke="#8B5A2B" stroke-width="10" stroke-linejoin="round"/>
-    <path d="M-60,10 L60,10" stroke="#F2C94C" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
-    <ellipse cx="0" cy="0" rx="46" ry="16" fill="#F5FBFE"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Ясли с соломой в простом хлеву; над крышей в небе сияет яркая звезда.</title><defs><linearGradient id="q45sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3D5A80"/><stop offset="1" stop-color="#8FCFE6"/></linearGradient></defs><rect width="1200" height="900" fill="url(#q45sky1)"/><path d="M0,800 Q300,760 600,786 T1200,782 V900 H0 Z" fill="#5E9E5A"/><path transform="translate(202,189) scale(0.55)" d="M0,-20 L5,-6 L20,0 L5,6 L0,20 L-5,6 L-20,0 L-5,-6 Z" fill="#FCE39A"/><path transform="translate(956,183) scale(0.7)" d="M0,-20 L5,-6 L20,0 L5,6 L0,20 L-5,6 L-20,0 L-5,-6 Z" fill="#FCE39A"/><path transform="translate(600,200) scale(1.6)" d="M0,-20 L5,-6 L20,0 L5,6 L0,20 L-5,6 L-20,0 L-5,-6 Z" fill="#FCE39A"/><g transform="translate(600,800) scale(1.3)">
+    <ellipse cx="0" cy="4" rx="44" ry="14.08" fill="#5E9E5A" opacity="0.22"/>
+    <rect x="-30" y="-40" width="60" height="40" fill="#E9CE8E"/>
+    <path d="M-38,-40 L0,-70 L38,-40 Z" fill="#A0653A"/>
+  </g><g transform="translate(600,830) scale(1)">
+    <ellipse cx="0" cy="4" rx="50" ry="16" fill="#5E9E5A" opacity="0.22"/>
+    <path d="M-60,0 L-50,-30 L50,-30 L60,0 Z" fill="#8B5A2B"/>
+    <path d="M-46,-28 Q0,-46 46,-28 L40,-14 Q0,-28 -40,-14 Z" fill="#E9CE8E"/>
+    <rect x="-66" y="-4" width="12" height="30" fill="#A0653A"/>
+    <rect x="54" y="-4" width="12" height="30" fill="#A0653A"/>
+  </g></svg>

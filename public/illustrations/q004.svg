@@ -1,17 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Панорама творения в тёплом свете</title><defs><linearGradient id="sky7" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky7)"/><defs><radialGradient id="glow8"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="600" cy="200" r="260" fill="url(#glow8)"/>
-  <path d="M0,640 Q300,540 600,590 T1200,570 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,720 Q350,620 700,690 T1200,660 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(180,720) scale(1.2)">
-    <rect x="-10" y="-10" width="20" height="90" rx="8" fill="#8B5A2B"/>
-    <circle cx="0" cy="-70" r="70" fill="#5E9E5A"/>
-    <circle cx="-40" cy="-40" r="45" fill="#9FCF6E"/>
-    <circle cx="45" cy="-45" r="42" fill="#9FCF6E"/></g><g transform="translate(1020,700) scale(1)">
-    <rect x="-10" y="-10" width="20" height="90" rx="8" fill="#8B5A2B"/>
-    <circle cx="0" cy="-70" r="70" fill="#5E9E5A"/>
-    <circle cx="-40" cy="-40" r="45" fill="#9FCF6E"/>
-    <circle cx="45" cy="-45" r="42" fill="#9FCF6E"/></g><g transform="translate(450,200) scale(1.3)">
-    <path d="M-16,0 Q-8,-10 0,0 Q8,-10 16,0" fill="none" stroke="#8B5A2B" stroke-width="4" stroke-linecap="round"/></g><g transform="translate(700,240) scale(1.1)">
-    <path d="M-16,0 Q-8,-10 0,0 Q8,-10 16,0" fill="none" stroke="#8B5A2B" stroke-width="4" stroke-linecap="round"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Панорама творения — холмы, лес, птицы в полёте, залитые тёплым светом.</title><defs><linearGradient id="q4sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/></linearGradient><radialGradient id="q4glow2"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs><rect width="1200" height="900" fill="url(#q4sky1)"/><path d="M0,680 Q300,580 600,645 T1200,635 V900 H0 Z" fill="#9FCF6E"/><path d="M0,760 Q300,660 600,725 T1200,715 V900 H0 Z" fill="#5E9E5A"/><path d="M0,840 Q300,790 600,822.5 T1200,817.5 V900 H0 Z" fill="#A9C5A0"/><g transform="translate(339,146) scale(0.97)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(1023,150) scale(0.8)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(167,890) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1074,888) scale(1.05)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><circle cx="300" cy="180" r="200" fill="url(#q4glow2)"/><g transform="translate(200,800) scale(1.1)">
+    <ellipse cx="0" cy="4" rx="40" ry="12.8" fill="#5E9E5A" opacity="0.22"/>
+    <rect x="-8" y="-60" width="16" height="60" rx="6" fill="#8B5A2B"/>
+    <circle cx="0" cy="-92" r="46" fill="#5E9E5A"/>
+    <circle cx="-28" cy="-72" r="30" fill="#5E9E5A"/>
+    <circle cx="28" cy="-72" r="30" fill="#5E9E5A"/>
+  </g><g transform="translate(500,790) scale(0.9)">
+    <ellipse cx="0" cy="4" rx="40" ry="12.8" fill="#5E9E5A" opacity="0.22"/>
+    <rect x="-8" y="-60" width="16" height="60" rx="6" fill="#8B5A2B"/>
+    <circle cx="0" cy="-92" r="46" fill="#5E9E5A"/>
+    <circle cx="-28" cy="-72" r="30" fill="#5E9E5A"/>
+    <circle cx="28" cy="-72" r="30" fill="#5E9E5A"/>
+  </g><g transform="translate(900,220) scale(1.4)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><path d="M0,850 Q150,836 300,850 T600,850 T900,850 T1200,850 V900 H0 Z" fill="#7FB4B0" opacity="0.6"/></svg>

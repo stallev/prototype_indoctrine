@@ -1,25 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Адам и Ева в светлом саду</title><defs><linearGradient id="sky55" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky55)"/><defs><radialGradient id="glow56"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="600" cy="200" r="260" fill="url(#glow56)"/>
-  <path d="M0,680 Q300,580 600,630 T1200,610 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,760 Q350,660 700,730 T1200,700 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(280,700) scale(1.1)">
-    <rect x="-10" y="-10" width="20" height="90" rx="8" fill="#8B5A2B"/>
-    <circle cx="0" cy="-70" r="70" fill="#5E9E5A"/>
-    <circle cx="-40" cy="-40" r="45" fill="#9FCF6E"/>
-    <circle cx="45" cy="-45" r="42" fill="#9FCF6E"/></g><g transform="translate(940,690) scale(1)">
-    <rect x="-10" y="-10" width="20" height="90" rx="8" fill="#8B5A2B"/>
-    <circle cx="0" cy="-70" r="70" fill="#5E9E5A"/>
-    <circle cx="-40" cy="-40" r="45" fill="#9FCF6E"/>
-    <circle cx="45" cy="-45" r="42" fill="#9FCF6E"/></g><g transform="translate(500,780) scale(1.3)">
-    <path d="M-34,-100 Q0,-118 34,-100 L28,60 Q0,74 -28,60 Z" fill="#A9C5A0"/>
-    <rect x="-40" y="-30" width="14" height="10" fill="#A0653A"/>
-    <path d="M-30,-96 L-46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
-    <path d="M30,-96 L46,-20" stroke="#D9A878" stroke-width="16" stroke-linecap="round"/>
-    <circle cx="0" cy="-128" r="26" fill="#D9A878"/></g><g transform="translate(700,780) scale(1.3)">
-    <path d="M-36,-96 Q0,-114 36,-96 L30,70 Q0,86 -30,70 Z" fill="#7FB4B0"/>
-    <path d="M-28,-92 L-42,-24" stroke="#F1C9A5" stroke-width="15" stroke-linecap="round"/>
-    <path d="M28,-92 L42,-24" stroke="#F1C9A5" stroke-width="15" stroke-linecap="round"/>
-    <circle cx="0" cy="-124" r="25" fill="#F1C9A5"/>
-    <path d="M-30,-136 Q0,-160 30,-136 Q34,-110 24,-96 L20,-116 Q0,-128 -20,-116 L-24,-96 Q-34,-110 -30,-136 Z" fill="#F5FBFE"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Адам и Ева, скромно одетые, стоят вместе в светлом цветущем саду.</title><defs><linearGradient id="q31sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#FCE39A"/></linearGradient></defs><rect width="1200" height="900" fill="url(#q31sky1)"/><path d="M0,680 Q300,570 600,641.5 T1200,630.5 V900 H0 Z" fill="#9FCF6E"/><path d="M0,780 Q300,690 600,748.5 T1200,739.5 V900 H0 Z" fill="#5E9E5A"/><path d="M0,850 Q300,810 600,836 T1200,832 V900 H0 Z" fill="#A9C5A0"/><g transform="translate(330,177) scale(0.97)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(774,141) scale(0.9500000000000001)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(158,890) scale(1.1)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1105,888) scale(1.05)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(280,800) scale(1.1)">
+    <ellipse cx="0" cy="4" rx="40" ry="12.8" fill="#5E9E5A" opacity="0.22"/>
+    <rect x="-8" y="-60" width="16" height="60" rx="6" fill="#8B5A2B"/>
+    <circle cx="0" cy="-92" r="46" fill="#5E9E5A"/>
+    <circle cx="-28" cy="-72" r="30" fill="#5E9E5A"/>
+    <circle cx="28" cy="-72" r="30" fill="#5E9E5A"/>
+  </g><g transform="translate(950,800) scale(1)">
+    <circle cx="0" cy="-10" r="7" fill="#EB8A73"/><circle cx="9" cy="-3" r="7" fill="#EB8A73"/>
+    <circle cx="6" cy="8" r="7" fill="#EB8A73"/><circle cx="-6" cy="8" r="7" fill="#EB8A73"/>
+    <circle cx="-9" cy="-3" r="7" fill="#EB8A73"/><circle cx="0" cy="0" r="6" fill="#F2C94C"/>
+    <rect x="-2" y="12" width="4" height="20" fill="#5E9E5A"/>
+  </g><g transform="translate(520,800) scale(1.2)">
+    <ellipse cx="0" cy="4" rx="40" ry="12.8" fill="#5E9E5A" opacity="0.22"/>
+    <path d="M-34,10 Q-38,-70 0,-92 Q38,-70 34,10 Z" fill="#3D5A80"/>
+    <rect x="-34" y="-20" width="68" height="10" fill="#E9CE8E"/>
+    <path d="M-28,-84 L-40,-30" stroke="#D9A878" stroke-width="13" stroke-linecap="round"/>
+    <path d="M28,-84 L40,-30" stroke="#D9A878" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="0" cy="-118" r="24" fill="#D9A878"/><path d="M-24,-124 Q0,-146 24,-124 Q24,-134 0,-136 Q-24,-134 -24,-124 Z" fill="#8B5A2B"/>
+  </g><g transform="translate(700,800) scale(1.2)">
+    <ellipse cx="0" cy="4" rx="40" ry="12.8" fill="#5E9E5A" opacity="0.22"/>
+    <path d="M-34,10 Q-38,-70 0,-92 Q38,-70 34,10 Z" fill="#EB8A73"/>
+    <rect x="-34" y="-20" width="68" height="10" fill="#E9CE8E"/>
+    <path d="M-28,-84 L-40,-30" stroke="#D9A878" stroke-width="13" stroke-linecap="round"/>
+    <path d="M28,-84 L40,-30" stroke="#D9A878" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="0" cy="-118" r="24" fill="#D9A878"/><path d="M-30,-124 Q0,-158 30,-124 L26,-70 Q0,-84 -26,-70 Z" fill="#EB8A73"/>
+  </g></svg>

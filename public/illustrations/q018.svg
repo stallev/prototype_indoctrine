@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Три круга света на фоне неба</title><defs><linearGradient id="sky31" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky31)"/>
-  <path d="M0,800 Q300,700 600,750 T1200,730 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,880 Q350,780 700,850 T1200,820 V900 H0 Z" fill="#5E9E5A"/><circle cx="520" cy="320" r="90" fill="#FCE39A" opacity="0.6"/><circle cx="600" cy="300" r="90" fill="#FCE39A" opacity="0.6"/><circle cx="680" cy="320" r="90" fill="#FCE39A" opacity="0.6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Три одинаковых круга мягкого света, слегка накладывающихся друг на друга, на фоне неба.</title><defs><linearGradient id="q18sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/></linearGradient><radialGradient id="q18glow2"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient><radialGradient id="q18glow3"><stop offset="0" stop-color="#F5FBFE"/><stop offset="1" stop-color="#F5FBFE" stop-opacity="0"/></radialGradient><radialGradient id="q18glow4"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs><rect width="1200" height="900" fill="url(#q18sky1)"/><path d="M0,820 Q300,790 600,809.5 T1200,806.5 V900 H0 Z" fill="#A9C5A0"/><g transform="translate(121,118) scale(0.85)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(925,172) scale(0.8)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(189,890) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1016,888) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><circle cx="540" cy="380" r="150" fill="url(#q18glow2)"/><circle cx="600" cy="380" r="150" fill="url(#q18glow3)"/><circle cx="660" cy="380" r="150" fill="url(#q18glow4)"/></svg>

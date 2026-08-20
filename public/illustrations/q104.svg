@@ -1,10 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Библия с лучом света на страницах</title><defs><linearGradient id="sky163" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky163)"/><defs><radialGradient id="glow164"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="600" cy="200" r="260" fill="url(#glow164)"/>
-  <path d="M0,780 Q300,680 600,730 T1200,710 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,860 Q350,760 700,830 T1200,800 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(600,740) scale(1.9)">
-    <path d="M-70,-10 Q-35,-28 0,-10 L0,40 Q-35,24 -70,40 Z" fill="#F5FBFE" stroke="#E9CE8E" stroke-width="4"/>
-    <path d="M70,-10 Q35,-28 0,-10 L0,40 Q35,24 70,40 Z" fill="#F5FBFE" stroke="#E9CE8E" stroke-width="4"/>
-    <path d="M0,-10 L0,40" stroke="#E9CE8E" stroke-width="3"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Раскрытая Библия на столе с мягким лучом света на страницах.</title><defs><linearGradient id="q104sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/></linearGradient><radialGradient id="q104glow2"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs><rect width="1200" height="900" fill="url(#q104sky1)"/><path d="M0,680 Q300,580 600,645 T1200,635 V900 H0 Z" fill="#9FCF6E"/><path d="M0,760 Q300,660 600,725 T1200,715 V900 H0 Z" fill="#5E9E5A"/><path d="M0,840 Q300,790 600,822.5 T1200,817.5 V900 H0 Z" fill="#A9C5A0"/><g transform="translate(119,126) scale(1.0899999999999999)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(1003,140) scale(0.8)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(67,890) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(974,888) scale(1.2)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(600,800) scale(1)">
+    <rect x="-90" y="0" width="180" height="10" fill="#8B5A2B"/>
+    <rect x="-80" y="10" width="12" height="40" fill="#8B5A2B"/>
+    <rect x="68" y="10" width="12" height="40" fill="#8B5A2B"/>
+  </g><circle cx="600" cy="120" r="256" fill="url(#q104glow2)"/><path d="M520,700 L594,100 L606,100 L680,700 Z" fill="#FCE39A" opacity="0.5"/><g transform="translate(600,780) scale(1.1)">
+    <path d="M0,-40 L-70,-52 L-70,20 L0,34 Z" fill="#F5FBFE" stroke="#A9C5A0" stroke-width="2"/>
+    <path d="M0,-40 L70,-52 L70,20 L0,34 Z" fill="#F5FBFE" stroke="#A9C5A0" stroke-width="2"/>
+    <rect x="-4" y="-40" width="8" height="74" fill="#3D5A80"/>
+  </g></svg>

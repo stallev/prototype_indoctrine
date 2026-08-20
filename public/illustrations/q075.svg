@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Восходящее солнце — первый день недели</title><defs><linearGradient id="sky115" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky115)"/><defs><radialGradient id="glow116"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="600" cy="500" r="320" fill="url(#glow116)"/>
-  <path d="M0,760 Q300,660 600,710 T1200,690 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,840 Q350,740 700,810 T1200,780 V900 H0 Z" fill="#5E9E5A"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Восходящее солнце над холмами — образ нового, первого дня недели.</title><defs><linearGradient id="q75sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/></linearGradient></defs><rect width="1200" height="900" fill="url(#q75sky1)"/><path d="M0,700 Q300,610 600,668.5 T1200,659.5 V900 H0 Z" fill="#E9CE8E"/><path d="M0,780 Q300,690 600,748.5 T1200,739.5 V900 H0 Z" fill="#5E9E5A"/><path d="M0,850 Q300,810 600,836 T1200,832 V900 H0 Z" fill="#A9C5A0"/><g transform="translate(262,129) scale(0.85)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(866,223) scale(0.9500000000000001)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(150,890) scale(1.1)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1037,888) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><circle cx="600" cy="240" r="90" fill="#F2C94C"/></svg>

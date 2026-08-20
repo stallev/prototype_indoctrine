@@ -1,7 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Рассвет и росток над холмами</title><defs><linearGradient id="sky172" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky172)"/><defs><radialGradient id="glow173"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#FCE39A" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="600" cy="520" r="320" fill="url(#glow173)"/>
-  <path d="M0,820 Q300,720 600,770 T1200,750 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,900 Q350,800 700,870 T1200,840 V900 H0 Z" fill="#5E9E5A"/><path d="M600,780 Q590,730 600,700" fill="none" stroke="#5E9E5A" stroke-width="8" stroke-linecap="round"/><circle cx="600" cy="695" r="14" fill="#9FCF6E"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Рассвет над холмами; свежий росток пробивается из земли.</title><defs><linearGradient id="q110sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FCE39A"/><stop offset="1" stop-color="#F2C94C"/></linearGradient></defs><rect width="1200" height="900" fill="url(#q110sky1)"/><path d="M0,700 Q300,610 600,668.5 T1200,659.5 V900 H0 Z" fill="#E9CE8E"/><path d="M0,780 Q300,690 600,748.5 T1200,739.5 V900 H0 Z" fill="#5E9E5A"/><path d="M0,850 Q300,810 600,836 T1200,832 V900 H0 Z" fill="#A9C5A0"/><g transform="translate(197,164) scale(1.0899999999999999)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(761,188) scale(0.8)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(205,890) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1092,888) scale(1.2)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><circle cx="600" cy="220" r="80" fill="#F2C94C"/><g transform="translate(600,800) scale(1.4)">
+    <path d="M0,0 Q-4,-30 -20,-40" stroke="#5E9E5A" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M0,0 Q4,-34 20,-42" stroke="#5E9E5A" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M0,0 Q0,-40 0,-50" stroke="#5E9E5A" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="-20" cy="-42" rx="10" ry="6" fill="#9FCF6E"/>
+    <ellipse cx="20" cy="-44" rx="10" ry="6" fill="#9FCF6E"/>
+  </g></svg>

@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Чистая вода льётся тонкой струёй</title><defs><linearGradient id="sky155" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/>
-  </linearGradient></defs>
-  <rect width="1200" height="900" fill="url(#sky155)"/>
-  <path d="M0,740 Q300,640 600,690 T1200,670 V900 H0 Z" fill="#9FCF6E"/>
-  <path d="M0,820 Q350,720 700,790 T1200,760 V900 H0 Z" fill="#5E9E5A"/><g transform="translate(600,780) scale(1.6)">
-    <path d="M-120,0 Q-60,-24 0,0 T120,0 L120,40 Q60,64 0,40 T-120,40 Z" fill="#7FB4B0"/>
-    <path d="M-120,10 Q-60,-14 0,10 T120,10" fill="none" stroke="#BFE3F0" stroke-width="6" opacity="0.7"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet" role="img"><title>Река или сосуд с чистой водой, льющейся тонкой струёй, в мягком свете.</title><defs><linearGradient id="q98sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE3F0"/><stop offset="1" stop-color="#8FCFE6"/></linearGradient><radialGradient id="q98glow2"><stop offset="0" stop-color="#F5FBFE"/><stop offset="1" stop-color="#F5FBFE" stop-opacity="0"/></radialGradient></defs><rect width="1200" height="900" fill="url(#q98sky1)"/><path d="M0,780 Q300,740 600,766 T1200,762 V900 H0 Z" fill="#E9CE8E"/><g transform="translate(281,158) scale(1.0899999999999999)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(965,182) scale(0.8)" opacity="0.95"><ellipse cx="-30" cy="0" rx="34" ry="20" fill="#FFFFFF"/><ellipse cx="10" cy="-8" rx="42" ry="26" fill="#FFFFFF"/><ellipse cx="46" cy="2" rx="30" ry="18" fill="#FFFFFF"/></g><g transform="translate(109,890) scale(0.9)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><g transform="translate(1056,888) scale(1.2)">
+    <path d="M-10,4 Q-14,-16 -6,-26" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0,4 Q0,-22 4,-30" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10,4 Q14,-14 8,-24" stroke="#5E9E5A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g><path d="M0,800 Q150,786 300,800 T600,800 T900,800 T1200,800 V900 H0 Z" fill="#7FB4B0" opacity="0.85"/><circle cx="600" cy="300" r="200" fill="url(#q98glow2)"/></svg>
