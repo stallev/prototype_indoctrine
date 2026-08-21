@@ -62,8 +62,8 @@
 ## 5. Безопасность
 
 - SVG-иллюстрации остаются полудоверенным (AI-сгенерированным) входом — порт `sanitizeSvg` из [`images/illustrations.node.ts`](../images/illustrations.node.ts) переносится без ослабления (вырезка `<script>`, `on*`, `javascript:`, `<foreignObject>`).
-- Секреты (`GEMINI_API_KEY`, уже в `.env`) — только в переменных окружения сервера, читаются исключительно в Route Handler (`app/api/image-generator/route.ts`), никогда не попадают в клиентский бандл и не логируются. Не то имя, которое `@ai-sdk/google` ищет по умолчанию — провайдер создаётся явно с `apiKey: process.env.GEMINI_API_KEY` (см. `docs/contracts/image-generator-api-contract.md` §4).
-- Единственный API-роут с внешним побочным эффектом (вызов Google API) — валидировать вход (длина/наличие промпта) перед вызовом; не проксировать произвольные заголовки/тело запроса без проверки.
+- Секреты (`GROK_API_KEY`, уже в `.env`) — только в переменных окружения сервера, читаются исключительно в `lib/image-generator-generate.ts` (вызывается из Route Handler), никогда не попадают в клиентский бандл и не логируются. Не то имя, которое `@ai-sdk/xai` ищет по умолчанию (`XAI_API_KEY`) — провайдер создаётся явно с `apiKey` (см. `docs/contracts/image-generator-api-contract.md` §4).
+- Единственный API-роут с внешним побочным эффектом (вызов xAI) — валидировать вход (длина/наличие промпта, соотношение сторон) перед вызовом; не проксировать произвольные заголовки/тело запроса без проверки.
 - **CSRF на Route Handler** — `app/api/image-generator/route.ts` не получает автоматической проверки Origin (в отличие от Server Actions); проверять заголовок `Origin` явно перед обработкой `POST`. Полная версия — [`conventions/data-routing-security.md`](conventions/data-routing-security.md) §6.
 - Экранирование текста из `content/*.ts` при рендере (по умолчанию в JSX это делает React; не использовать `dangerouslySetInnerHTML` нигде, кроме санитизированного SVG). Полная дисциплина XSS/асинхронного кода — `conventions/data-routing-security.md` §4–5.
 

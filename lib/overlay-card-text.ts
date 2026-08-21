@@ -3,7 +3,31 @@
  * Модели (Gemini/Grok) ненадёжно рисуют кириллицу — текст рисуем в Canvas сами.
  */
 
-const DEFAULT_COLOR = '#FF8C00';
+export const DEFAULT_OVERLAY_TEXT_COLOR = '#FF8C00';
+
+export const OVERLAY_TEXT_COLORS = [
+  { value: '#FF8C00', label: 'Оранжевый' },
+  { value: '#FFFFFF', label: 'Белый' },
+  { value: '#1C1917', label: 'Чёрный' },
+  { value: '#FEFCE8', label: 'Кремовый' },
+  { value: '#3D5A80', label: 'Синий' },
+  { value: '#B91C1C', label: 'Красный' },
+  { value: '#166534', label: 'Зелёный' },
+  { value: '#CA8A04', label: 'Жёлтый' },
+] as const;
+
+export type OverlayTextColor = (typeof OVERLAY_TEXT_COLORS)[number]['value'];
+
+export const OVERLAY_TEXT_COLOR_STORAGE_KEY = 'image-generator-overlay-text-color';
+
+const overlayColorValues = OVERLAY_TEXT_COLORS.map((c) => c.value) as [
+  OverlayTextColor,
+  ...OverlayTextColor[],
+];
+
+export function isOverlayTextColor(value: unknown): value is OverlayTextColor {
+  return typeof value === 'string' && (overlayColorValues as string[]).includes(value);
+}
 
 function wrapText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
   const words = text.split(/\s+/).filter(Boolean);
@@ -62,7 +86,7 @@ export async function overlayCardTextOnImage(
 
   ctx.drawImage(img, 0, 0);
 
-  const color = options.color ?? DEFAULT_COLOR;
+  const color = options.color ?? DEFAULT_OVERLAY_TEXT_COLOR;
   const maxWidth = canvas.width * 0.86;
   let fontSize = Math.round(canvas.width * 0.048);
   const minFont = Math.round(canvas.width * 0.028);

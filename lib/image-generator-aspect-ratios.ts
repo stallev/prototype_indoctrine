@@ -1,24 +1,30 @@
 // Общий allowlist соотношений сторон для UI и POST /api/image-generator.
-// В generateImage уходит значение из toProviderAspectRatio(): Gemini 2.5 Flash
-// Image принимает только документированный набор (1:1, 2:3, 3:2, 3:4, 4:3,
-// 4:5, 5:4, 9:16, 16:9, 21:9). Печатный A6 альбом 148:105 (~1.41) в списке
-// нет — маппится на ближайшее поддерживаемое 4:3 (~1.33).
+// В generateImage уходит значение из toProviderAspectRatio(): Grok Imagine
+// принимает фиксированный набор (size не поддерживается). Печатный A6 альбом
+// 148:105 (~1.41) в списке нет — маппится на ближайшее 4:3 (~1.33).
 
-/** Соотношения, которые принимает Gemini Image / @ai-sdk/google. */
-export const GEMINI_SUPPORTED_ASPECT_RATIOS = [
+/** Соотношения Grok Imagine / @ai-sdk/xai. */
+export const GROK_SUPPORTED_ASPECT_RATIOS = [
   '1:1',
-  '2:3',
-  '3:2',
-  '3:4',
-  '4:3',
-  '4:5',
-  '5:4',
-  '9:16',
   '16:9',
-  '21:9',
+  '9:16',
+  '4:3',
+  '3:4',
+  '3:2',
+  '2:3',
+  '2:1',
+  '1:2',
+  '19.5:9',
+  '9:19.5',
+  '20:9',
+  '9:20',
+  'auto',
 ] as const;
 
-export type GeminiAspectRatio = (typeof GEMINI_SUPPORTED_ASPECT_RATIOS)[number];
+export type GrokAspectRatio = (typeof GROK_SUPPORTED_ASPECT_RATIOS)[number];
+
+/** То, что реально уходит в generateImage (без `auto` — UI его не выбирает). */
+export type ProviderAspectRatio = Exclude<GrokAspectRatio, 'auto'>;
 
 export const IMAGE_ASPECT_RATIOS = [
   { value: '148:105', label: '148:105 (A6 альбом)' },
@@ -54,12 +60,14 @@ export function isImageAspectRatio(value: unknown): value is ImageAspectRatio {
 
 /**
  * UI-значение → то, что реально уходит в generateImage({ aspectRatio }).
- * 148:105 не поддерживается провайдером → 4:3 (ближайшее из allowlist Gemini).
+ * Неподдерживаемые продуктовые соотношения маппятся на ближайшие из allowlist Grok.
  */
-export function toProviderAspectRatio(value: ImageAspectRatio): GeminiAspectRatio {
-  if (value === '148:105') return '4:3';
-  if ((GEMINI_SUPPORTED_ASPECT_RATIOS as readonly string[]).includes(value)) {
-    return value as GeminiAspectRatio;
+export function toProviderAspectRatio(value: ImageAspectRatio): ProviderAspectRatio {
+  if (value === '148:105' || value === '5:4') return '4:3';
+  if (value === '4:5') return '3:4';
+  if (value === '21:9') return '20:9';
+  if ((GROK_SUPPORTED_ASPECT_RATIOS as readonly string[]).includes(value)) {
+    return value as ProviderAspectRatio;
   }
   return '4:3';
 }

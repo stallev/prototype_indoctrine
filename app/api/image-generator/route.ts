@@ -1,14 +1,15 @@
-// Route Handler (не Server Action) для вызова внешнего Google API — см.
+// Route Handler (не Server Action) для вызова внешнего image API — см.
 // docs/conventions/data-routing-security.md §1. Node runtime: Vercel AI SDK
 // использует Node API, не совместим с Edge.
 //
 // Origin не проверяется автоматически для Route Handler (в отличие от
 // Server Actions), поэтому проверка ниже обязательна — см. §6 того же файла.
 //
-// GEMINI_API_KEY читается только здесь, никогда не логируется и не попадает
-// в ответ клиенту — см. docs/contracts/image-generator-api-contract.md §4.
-// Это не то имя переменной, которое @ai-sdk/google ищет по умолчанию
-// (GOOGLE_GENERATIVE_AI_API_KEY), поэтому провайдер создаётся явно с ключом.
+// GROK_API_KEY читается только в lib/image-generator-generate.ts, никогда не
+// логируется и не попадает в ответ клиенту — см.
+// docs/contracts/image-generator-api-contract.md §4. Это не то имя, которое
+// @ai-sdk/xai ищет по умолчанию (XAI_API_KEY), поэтому провайдер создаётся
+// явно с ключом.
 //
 // SECURITY_IMAGE_GENERATOR_KEY: `ImageGeneratorAccessGate` блокирует UI
 // страницы, но сама по себе не защищает этот роут — запрос с правильным
@@ -16,28 +17,18 @@
 // (тот же ключ, что уже введён на странице) обязателен здесь тоже —
 // image-generator-tool-spec.md §6.
 
-import { createGoogleGenerativeAI } from '@ai-sdk/google';
-import { generateImage } from 'ai';
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
 
-import {
-  IMAGE_ASPECT_RATIO_VALUES,
-  toProviderAspectRatio,
-} from '@/lib/image-generator-aspect-ratios';
+import { IMAGE_ASPECT_RATIO_VALUES } from '@/lib/image-generator-aspect-ratios';
 import { getImageGeneratorAccessKey, secretsMatch } from '@/lib/image-generator-auth';
-import { estimateImageGenerationCostUsd } from '@/lib/image-generator-pricing';
+import {
+  generateImageForModel,
+  MissingProviderKeyError,
+} from '@/lib/image-generator-generate';
 
 export const runtime = 'nodejs';
 
-// Модель выбрана по открытому вопросу image-generator-tool-spec.md §7:
-// Gemini 2.5 Flash Image, вызов через generateImage() (ai v7) +
-// google.image() (@ai-sdk/google v4) — стабильный (не experimental_*) API
-// для генерации изображений в установленных версиях пакетов.
-const IMAGE_MODEL_ID = 'gemini-2.5-flash-image';
-
-// Ограничение длины промпта — не зафиксировано провайдером, защита от
-// чрезмерно больших запросов (image-generator-api-contract.md §1).
 const PROMPT_MAX_LENGTH = 4000;
 
 const requestSchema = z.object({
@@ -68,8 +59,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
   const requiredKey = getImageGeneratorAccessKey();
   if (!requiredKey) {
-    // Конфигурация сервера: без ключа доступ к платному API не должен
-    // открываться сам по себе — fail-closed, не fail-open.
     return errorResponse('Сервис генерации изображений временно недоступен.', 500);
   }
   const providedKey = request.headers.get('x-image-generator-key');
@@ -90,34 +79,16 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   }
   const { prompt, aspectRatio } = parsed.data;
 
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) {
-    // Ошибка конфигурации сервера — не должна быть достижима в норме
-    // (ключ уже есть в .env). Не раскрывать детали клиенту.
-    return errorResponse('Сервис генерации изображений временно недоступен.', 500);
-  }
-
-  const google = createGoogleGenerativeAI({ apiKey });
-
   try {
-    // aspectRatio — параметр SDK/провайдера; текст промпта на пиксели
-    // кадра не влияет. UI может выбрать 148:105 (A6) — провайдеру уходит
-    // ближайшее поддерживаемое через toProviderAspectRatio().
-    const result = await generateImage({
-      model: google.image(IMAGE_MODEL_ID),
+    const { image, estimatedCostUsd } = await generateImageForModel({
       prompt,
-      aspectRatio: toProviderAspectRatio(aspectRatio),
+      aspectRatio,
     });
-    const { base64, mediaType } = result.image;
-    const estimatedCostUsd = estimateImageGenerationCostUsd(prompt);
-    return NextResponse.json(
-      { image: `data:${mediaType};base64,${base64}`, estimatedCostUsd },
-      { status: 200 },
-    );
-  } catch {
-    // Ошибки провайдера (лимиты, недоступность, отклонённый промпт) не
-    // пробрасываются клиенту как есть — только понятное сообщение, без
-    // стектрейса/деталей провайдера и без значения ключа.
+    return NextResponse.json({ image, estimatedCostUsd }, { status: 200 });
+  } catch (error) {
+    if (error instanceof MissingProviderKeyError) {
+      return errorResponse('Сервис генерации изображений временно недоступен.', 500);
+    }
     return errorResponse('Не удалось сгенерировать изображение. Попробуйте ещё раз.', 502);
   }
 }

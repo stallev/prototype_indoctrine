@@ -11,8 +11,15 @@ import {
   isImageAspectRatio,
   type ImageAspectRatio,
 } from '@/lib/image-generator-aspect-ratios';
-import { GEMINI_FLASH_IMAGE_OUTPUT_USD } from '@/lib/image-generator-pricing';
-import { overlayCardTextOnImage } from '@/lib/overlay-card-text';
+import { GROK_IMAGINE_IMAGE_USD } from '@/lib/image-generator-pricing';
+import {
+  DEFAULT_OVERLAY_TEXT_COLOR,
+  OVERLAY_TEXT_COLORS,
+  OVERLAY_TEXT_COLOR_STORAGE_KEY,
+  isOverlayTextColor,
+  overlayCardTextOnImage,
+  type OverlayTextColor,
+} from '@/lib/overlay-card-text';
 import { messages } from '@/lib/messages';
 import { GROK_CARD_PROMPTS, getGrokCardPrompt } from '@/prompts/grok-card-prompts-data';
 
@@ -62,12 +69,33 @@ function persistAspectRatio(value: ImageAspectRatio): void {
   }
 }
 
+function readStoredOverlayTextColor(): OverlayTextColor {
+  try {
+    const raw = localStorage.getItem(OVERLAY_TEXT_COLOR_STORAGE_KEY);
+    if (isOverlayTextColor(raw)) return raw;
+  } catch {
+    // ignore — fallback ниже
+  }
+  return DEFAULT_OVERLAY_TEXT_COLOR;
+}
+
+function persistOverlayTextColor(value: OverlayTextColor): void {
+  try {
+    localStorage.setItem(OVERLAY_TEXT_COLOR_STORAGE_KEY, value);
+  } catch {
+    // Квота / приватный режим — выбор всё равно работает в сессии.
+  }
+}
+
 /** Форма промпта + результат — рендерится только после разблокировки `ImageGeneratorAccessGate`. */
 export const ImageGeneratorForm = () => {
   const [prompt, setPrompt] = useState('');
   // Дефолт 148:105; после mount подтягиваем сохранённый выбор из localStorage
   // (избегаем SSR/hydration mismatch при чтении storage в инициализаторе).
   const [aspectRatio, setAspectRatio] = useState<ImageAspectRatio>(DEFAULT_IMAGE_ASPECT_RATIO);
+  const [overlayTextColor, setOverlayTextColor] = useState<OverlayTextColor>(
+    DEFAULT_OVERLAY_TEXT_COLOR,
+  );
   /** Номер вопроса катехизиса или '' (ручной промпт). */
   const [selectedQuestion, setSelectedQuestion] = useState('');
   /**
@@ -86,10 +114,15 @@ export const ImageGeneratorForm = () => {
   const objectUrlRef = useRef<string | null>(null);
 
   useEffect(() => {
-    const stored = readStoredAspectRatio();
-    setAspectRatio(stored);
-    // Если ключа ещё не было — зафиксировать дефолт 148:105 как выбранный.
-    persistAspectRatio(stored);
+    const storedRatio = readStoredAspectRatio();
+    const storedColor = readStoredOverlayTextColor();
+    // localStorage недоступен на SSR — читаем после mount, иначе hydration mismatch.
+    /* eslint-disable react-hooks/set-state-in-effect -- синхронизация с localStorage после гидрации */
+    setAspectRatio(storedRatio);
+    persistAspectRatio(storedRatio);
+    setOverlayTextColor(storedColor);
+    persistOverlayTextColor(storedColor);
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
   useEffect(() => {
@@ -105,6 +138,12 @@ export const ImageGeneratorForm = () => {
     if (!isImageAspectRatio(value)) return;
     setAspectRatio(value);
     persistAspectRatio(value);
+  };
+
+  const handleOverlayTextColorChange = (value: string) => {
+    if (!isOverlayTextColor(value)) return;
+    setOverlayTextColor(value);
+    persistOverlayTextColor(value);
   };
 
   const handleQuestionPromptChange = (value: string) => {
@@ -173,7 +212,9 @@ export const ImageGeneratorForm = () => {
       let finalUrl = rawUrl;
       try {
         if (overlayText && addQuestionText) {
-          const withText = await overlayCardTextOnImage(rawUrl, overlayText);
+          const withText = await overlayCardTextOnImage(rawUrl, overlayText, {
+            color: overlayTextColor,
+          });
           URL.revokeObjectURL(rawUrl);
           finalUrl = URL.createObjectURL(withText);
         }
@@ -194,7 +235,7 @@ export const ImageGeneratorForm = () => {
         estimatedCostUsd:
           typeof data.estimatedCostUsd === 'number'
             ? data.estimatedCostUsd
-            : GEMINI_FLASH_IMAGE_OUTPUT_USD,
+            : GROK_IMAGINE_IMAGE_USD,
       });
     } catch (error) {
       if (error instanceof DOMException && error.name === 'AbortError') return;
@@ -241,6 +282,39 @@ export const ImageGeneratorForm = () => {
             />
             {messages.imageGenerator.overlayQuestionTextLabel}
           </label>
+          {addQuestionText ? (
+            <fieldset className="flex flex-col gap-2">
+              <legend className="text-sm font-medium text-md-on-surface">
+                {messages.imageGenerator.overlayTextColorLabel}
+              </legend>
+              <div className="flex flex-wrap gap-2">
+                {OVERLAY_TEXT_COLORS.map((option) => {
+                  const selected = overlayTextColor === option.value;
+                  return (
+                    <label key={option.value} className="cursor-pointer">
+                      <input
+                        type="radio"
+                        name="overlayTextColor"
+                        value={option.value}
+                        checked={selected}
+                        onChange={(event) => handleOverlayTextColorChange(event.target.value)}
+                        className="peer sr-only"
+                      />
+                      <span
+                        title={option.label}
+                        aria-hidden="true"
+                        className={`block size-8 rounded-full border border-md-outline/40 peer-focus-visible:ring-2 peer-focus-visible:ring-md-primary ${
+                          selected ? 'ring-2 ring-md-primary ring-offset-2 ring-offset-md-surface' : ''
+                        }`}
+                        style={{ backgroundColor: option.value }}
+                      />
+                      <span className="sr-only">{option.label}</span>
+                    </label>
+                  );
+                })}
+              </div>
+            </fieldset>
+          ) : null}
           {overlayText && addQuestionText ? (
             <p className="text-xs text-md-outline">{messages.imageGenerator.overlayTextHint}</p>
           ) : null}
@@ -316,7 +390,9 @@ export const ImageGeneratorForm = () => {
           <p className="text-sm text-md-on-surface">
             {messages.imageGenerator.estimatedCost(state.estimatedCostUsd.toFixed(4))}
           </p>
-          <p className="max-w-prose text-xs text-md-outline">{messages.imageGenerator.estimatedCostNote}</p>
+          <p className="max-w-prose text-xs text-md-outline">
+            {messages.imageGenerator.estimatedCostNote}
+          </p>
           <Button asChild>
             <a href={state.image} download={messages.imageGenerator.downloadFileName}>
               {messages.imageGenerator.download}

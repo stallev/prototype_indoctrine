@@ -23,8 +23,9 @@ export const messages = {
     questionPromptLabel: 'Промпт по вопросу катехизиса',
     questionPromptPlaceholder: 'Выберите вопрос — сцена подставится ниже, текст наложится после генерации',
     overlayQuestionTextLabel: 'Добавить текст вопроса на фото',
+    overlayTextColorLabel: 'Цвет текста',
     overlayTextHint:
-      'Кириллица рисуется поверх картинки (Arial, оранжевый) — модель текст не генерирует, поэтому без опечаток.',
+      'Кириллица рисуется поверх картинки (Arial) — модель текст не генерирует, поэтому без опечаток.',
     aspectRatioLabel: 'Соотношение сторон',
     submit: 'Сгенерировать',
     pending: 'Генерация…',
@@ -35,6 +36,6 @@ export const messages = {
     genericError: 'Не удалось сгенерировать изображение. Попробуйте ещё раз.',
     estimatedCost: (usd: string) => `Примерная себестоимость этой генерации: ~$${usd} USD`,
     estimatedCostNote:
-      'Ориентир по тарифу Google Paid (gemini-2.5-flash-image): ~$0.039 за картинку + входные токены промпта. Не фактический счёт.',
+      'Ориентир по тарифу xAI Grok Imagine: $0.02 за картинку (flat). Не фактический счёт.',
   },
 } as const;
