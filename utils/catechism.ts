@@ -1,5 +1,15 @@
 // Схема, типы и загрузчик данных катехизиса.
 //
+// Read-only reference (не рантайм Next.js-приложения): напрямую используется
+// двумя build-time/server-only потребителями — scripts/migrate-json-to-ts.ts
+// (регенерация content/*.ts) и images/illustrations.node.ts (build-only
+// утилита резолва иллюстраций; сама не задействована в рантайме ни старого,
+// ни нового стека — источник для порта lib/illustrations.ts, Фаза 9.2).
+// Старый статический прототип (js/app.js) сам этот TS-модуль не импортирует —
+// он читает data/catechism.json напрямую через fetch() и использует
+// отдельный JS-порт хелперов (js/catechism-browser.js). Решение оставить
+// архивным — см. docs/specs/nextjs-migration-spec.md §10, п.2.
+//
 // Источник данных — catechism.json (единый source of truth).
 // Библейские цитаты — Синодальный перевод (как в исходном PDF).
 //

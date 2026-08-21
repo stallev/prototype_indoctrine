@@ -1,6 +1,6 @@
 # Фаза 9.1 — Контент как TypeScript
 
-**Статус фазы:** todo
+**Статус фазы:** done
 
 Связанные документы: [`README.md`](README.md) (формат задач, кто редактирует) · [`../contracts/content-data-contract.md`](../contracts/content-data-contract.md) (контракт, который эти задачи реализуют) · [`../specs/nextjs-migration-spec.md`](../specs/nextjs-migration-spec.md) §3–4 · [`../../utils/catechism.ts`](../../utils/catechism.ts) (исходная логика для порта)
 
@@ -8,27 +8,50 @@
 
 ### 9.1.1 — Создать `scripts/migrate-json-to-ts.ts`
 
-- **Статус:** todo
-- **Попытки:** 0
+- **Статус:** done
+- **Попытки:** 1
 - **Definition of Done:** скрипт запускается (`node`/`tsx`), читает `data/catechism.json`, валидирует через `CatechismSchema` из `utils/catechism.ts` (та же `superRefine`-проверка ссылочной целостности), явно падает с ненулевым кодом на битых/несуществующих данных.
 - **Описание:** Разовый Node-скрипт, не часть рантайма приложения. Импортирует `CatechismSchema` из `utils/catechism.ts` (не переписывает схему заново). При успешной валидации переходит к задаче 9.1.2 (генерация файлов) в рамках того же запуска либо как следующий шаг скрипта — на усмотрение реализации, главное, чтобы валидация была первым и обязательным шагом перед записью `content/*.ts`.
 - **Конвенции:** [`../conventions/data-routing-security.md`](../conventions/data-routing-security.md) §4 (промисы/асинхронный код — обработка ошибок валидации и записи файлов).
-- **Заметки агентов:** —
+- **Заметки агентов:** implementer (попытка 1): создан `scripts/migrate-json-to-ts.ts` — асинхронный `main()`, динамически (`await import(...)`) загружает `../utils/catechism.ts`, что переиспользует `CatechismSchema.parse()` этого модуля (не переписана заново); ошибка чтения/парсинга/`superRefine`-валидации всплывает как rejection импорта, ловится в `.catch()` у `main()`, форматируется (`z.ZodError` → построчный список `issues` с `path`/`message`, иначе `err.message`) и завершает процесс `process.exit(1)`. Добавлены зависимости: `zod` (dependencies — нужна для `utils/catechism.ts`), `tsx`/`typescript`/`@types/node` (devDependencies) — их не было в `package.json`; добавлен npm-скрипт `migrate:content` (`tsx scripts/migrate-json-to-ts.ts`). Задача 9.1.2 (генерация `content/*.ts`) сознательно не реализована — вне DoD этой задачи, эту работу возьмёт следующая задача.
+  Проверено: `npx tsx scripts/migrate-json-to-ts.ts` на валидном `data/catechism.json` → stdout `topics: 16 / questions: 114 / verses: 102 / question_verses: 110`, exit code 0. Регрессионные проверки (временные, файл возвращён в исходное состояние после проверки): (1) переименован `data/catechism.json` (имитация отсутствия файла) → `Cannot find module '../data/catechism.json'`, exit code 1; (2) испорчен `topic_id` первого вопроса на несуществующий (99999) → `Валидация data/catechism.json провалена: - [(root)] Вопрос 1 ссылается на несуществующий topic_id 99999`, exit code 1. `git status`/`git diff data/catechism.json` после проверок — файл не изменён.
+  quality-checker: PASS по всем пунктам DoD, независимо воспроизвёл все три сценария (валидные данные, отсутствующий файл, битая ссылочная целостность), подтвердил отсутствие посторонних изменений вне заявленных файлов. code-reviewer: без блокеров, DoD выполнен полностью, конвенция §4 соблюдена; два необязательных Suggestions (инлайнить `loadValidatedCatechism`, пересмотреть необходимость `typescript`/`@types/node` в devDependencies) — не блокируют, оставлены на усмотрение будущих задач.
 
 ### 9.1.2 — Сгенерировать `content/topics.ts`, `questions.ts`, `verses.ts`, `question-verses.ts`
 
-- **Статус:** todo
-- **Попытки:** 0
+- **Статус:** done
+- **Попытки:** 1
 - **Definition of Done:** файлы созданы, каждый экспортирует `as const`-массив; count-parity подтверждена выводом скрипта — 16 тем, 114 вопросов, 102 стиха, 110 связей (см. `content-data-contract.md` §3). Несовпадение счётчиков — исполнение задачи проваливается, файлы не считаются готовыми.
 - **Описание:** Генерация — сериализация уже провалидированных (9.1.1) данных из `data/catechism.json` в TS-литералы `scripts/migrate-json-to-ts.ts`, не ручной перенос. Форма записей — точно по типам `content-data-contract.md` §2. Скрипт должен вывести отчёт (какие файлы созданы, счётчики) в stdout — `quality-checker` сверяет этот вывод.
 - **Конвенции:** [`../conventions/components.md`](../conventions/components.md) §2 (именование: `SCREAMING_SNAKE_CASE` для констант, множественное число для массивов-коллекций).
-- **Заметки агентов:** —
+- **Заметки агентов:** implementer (попытка 1): расширен `scripts/migrate-json-to-ts.ts` (не переписан) — после успешной `CatechismSchema`-валидации (9.1.1) добавлена явная проверка счётчиков (`EXPECTED_COUNTS` = 16/114/102/110 из `content-data-contract.md` §3) с `throw` при расхождении (падает через тот же `.catch()` → `process.exit(1)`), затем сериализация через `renderContentModule()` (`JSON.stringify(items, null, 2)` — валидный TS/JS литерал, т.к. `data/catechism.json` уже использует ровно те имена полей, что требует контракт §2, включая `question_verses[].question_id`, который семантически ссылается на `Question.question_number`, а не на `Question.id` — переименований не потребовалось) в 4 файла `content/topics.ts` (`TOPICS`), `content/questions.ts` (`QUESTIONS`), `content/verses.ts` (`VERSES`), `content/question-verses.ts` (`QUESTION_VERSES`), каждый — один `export const NAME = [...] as const;`. Скрипт выводит в stdout список сгенерированных путей с счётчиками каждого массива.
+  Проверено: `npx tsx scripts/migrate-json-to-ts.ts` → exit code 0, stdout:
+  ```
+  data/catechism.json валиден (CatechismSchema.parse прошёл без ошибок):
+    topics: 16
+    questions: 114
+    verses: 102
+    question_verses: 110
+
+  Сгенерированы файлы:
+    content\topics.ts (TOPICS: 16)
+    content\questions.ts (QUESTIONS: 114)
+    content\verses.ts (VERSES: 102)
+    content\question-verses.ts (QUESTION_VERSES: 110)
+  ```
+  Дополнительно: `npx tsc --noEmit --strict --target es2022 --module esnext --moduleResolution bundler content/topics.ts content/questions.ts content/verses.ts content/question-verses.ts` — 0 ошибок (репозиторный `tsconfig.json` ещё не создан, Next.js-скаффолд — задача другой фазы, поэтому типы проверены точечно на сгенерированных файлах). Вручную сверены первые записи каждого файла с `data/catechism.json` (поля/значения совпадают, кириллица не искажена).
+  quality-checker: PASS по всем 7 пунктам — независимо проверил инварианты §3 (11 вопросов без стихов, 7 стихов с `text: null`, ссылочная целостность), воспроизвёл fail-fast на несовпадении счётчиков (лишняя тема → exit 1 до записи файлов, хеши `content/*.ts` не изменились). code-reviewer: без блокеров, форма записей и именование соответствуют контракту и конвенциям; одно Suggestion — синхронизировать поле `Попытки` (учтено при закрытии задачи).
 
 ### 9.1.3 — Создать `content/index.ts`
 
-- **Статус:** todo
-- **Попытки:** 0
+- **Статус:** done
+- **Попытки:** 2
 - **Definition of Done:** экспортирует `questionsForTopic`, `versesForQuestion`, `getQuestionWithVerses`, `illustrationStem`, `illustrationPath`, `illustrationPublicUrl`, `getTopic`, `allTopics` с сигнатурами из `content-data-contract.md` §4; `npm run build` проходит.
 - **Описание:** Прямой порт одноимённых функций [`utils/catechism.ts`](../../utils/catechism.ts) на источник `content/*.ts` вместо Zod-parsed JSON — поведение и сигнатуры не меняются, меняется только источник массивов (`import { topics } from './topics'` и т.п. вместо `catechism.topics`). Индекс `verseById` (Map) — как в оригинале.
 - **Конвенции:** [`../conventions/components.md`](../conventions/components.md) §6 (DRY — не оборачивать в generic data-layer/service класс, прямой порт функций) · [`../conventions/data-routing-security.md`](../conventions/data-routing-security.md) §2 (данные — не DAL, синхронное чтение констант, `'server-only'` не требуется здесь).
-- **Заметки агентов:** —
+- **Заметки агентов:** implementer (попытка 1): создан `content/index.ts` — прямой порт `versesForQuestion`, `questionsForTopic`, `illustrationStem`, `illustrationPath`, `illustrationPublicUrl`, `getQuestionWithVerses` из `utils/catechism.ts` (сигнатуры и тела функций не изменены по существу), источник данных заменён на `import { TOPICS } from './topics'` / `QUESTIONS` из `./questions` / `VERSES` из `./verses` / `QUESTION_VERSES` из `./question-verses` (константы `as const`, а не `catechism.topics` и т.п. из Zod-parsed JSON). `verseById` — тот же `Map`, что и в оригинале. `getTopic`/`allTopics` — новые функции (в `utils/catechism.ts` их не было, контракт требует их только для `content/index.ts`), реализованы в том же прямом стиле (`TOPICS.find(...)`, `[...TOPICS]`). Типы `Topic`/`Question`/`Verse`/`QuestionVerse` выведены через `(typeof CONST)[number]`, а не объявлены отдельно (см. `content-data-contract.md` §2 примечание) — не Zod, т.к. валидация уже прошла на этапе генерации (задача 9.1.1/9.1.2). Добавлен локальный `IllustrationExtension` union (`'svg' | 'png' | 'jpg' | 'jpeg' | 'webp'`) для параметра `ext` — контракт указывает `ext?` без конкретики типа, тип сужен для соответствия сигнатуре `illustrationPath` из `utils/catechism.ts`. `allTopics()` возвращает `[...TOPICS]` (копия), а не `TOPICS` напрямую — иначе `tsc` не даёт присвоить `readonly`-tuple (`as const`-массив) мутабельному типу возврата `Topic[]`, требуемому контрактом §4; `questionsForTopic`/`versesForQuestion` этой проблемы не имеют, т.к. `.filter()`/`.map()` на `ReadonlyArray<T>` уже возвращают мутабельный `T[]` по типам lib.es5.
+  Проверено: `npx tsc --noEmit --strict --target es2022 --module esnext --moduleResolution bundler content/index.ts content/topics.ts content/questions.ts content/verses.ts content/question-verses.ts` — 0 ошибок (репозиторный `tsconfig.json` ещё не создан — появится в фазе 9.2, поэтому типы проверены точечно, как в задачах 9.1.1/9.1.2). `npm run build` (alias `build:css`, Next.js-скаффолда пока нет) — проходит без ошибок. Дополнительно прогнан временный runtime-скрипт через `npx tsx` (создан и удалён после проверки, не входит в коммит) — вызваны все 8 экспортов: `allTopics().length === 16`, `getTopic(1)` возвращает тему «Бог», `getTopic(999) === undefined`, `questionsForTopic(1).length === 18`, `versesForQuestion(1)` → `['Бытие 1:27']`, `illustrationStem(1) === 'q001'`, `illustrationStem(114) === 'q114'`, `illustrationPath(1) === 'illustrations/q001.svg'`, `illustrationPath(1, 'png') === 'illustrations/q001.png'`, `illustrationPublicUrl('illustrations/q001.svg') === '/illustrations/q001.svg'`, `getQuestionWithVerses(1).verses.length === 1`, `getQuestionWithVerses(9999) === undefined`. `git status` подтверждает, что единственный новый файл — `content/index.ts` (остальные изменения в рабочем дереве — из ранее принятых задач 9.1.1/9.1.2, не тронуты этой задачей).
+  quality-checker (попытка 1): FAIL по пункту "область изменений" — `styles/app.css` оказался изменён (добавлены 5 неиспользуемых Tailwind-утилит `.visible`/`.grid`/`.inline`/`.shadow`/`.transition-all`, подхваченных сканом Tailwind v4 по всему проекту при верификационном `npm run build`), не задекларирован ни в одной из заметок 9.1.1–9.1.3, а формулировка implementer'а об этом ("единственный новый файл — `content/index.ts`") оказалась неточной. Ядро задачи (`content/index.ts`, все 8 экспортов, поведение, typecheck, build) — PASS по всем остальным пунктам. Требуется: откатить `styles/app.css` (build-artifact, не относится к DoD 9.1.3) и убедиться, что рабочее дерево после проверок не содержит посторонних diff'ов.
+  implementer (попытка 2): откатил `styles/app.css` (`git checkout -- styles/app.css`), `content/index.ts` не менял (содержательных замечаний к нему не было). Повторный `npm run build` детерминированно воспроизвёл тот же побочный эффект — откатил повторно; итоговый `git status --porcelain` не содержит `styles/app.css`.
+  quality-checker (попытка 2): PASS — подтвердил отсутствие `styles/app.css` в diff (в т.ч. после собственного прогона `npm run build`, откатив его же), `content/index.ts` не изменялся и содержит все 8 экспортов, typecheck/build чисты. code-reviewer: без блокеров и предложений — сигнатуры и поведение точно соответствуют контракту §4, отклонение `allTopics()` → `[...TOPICS]` обоснованно (readonly-tuple vs мутабельный тип возврата), конвенции (DRY, именование, "Avoid AI slop") соблюдены, посторонних правок не осталось.
+  implementer (попытка 2): изменений в `content/index.ts` не потребовалось — реализация попытки 1 уже прошла ревью по существу, единственная проблема была посторонний build-artifact. Откатил `styles/app.css` командой `git checkout -- styles/app.css`. Повторно прогнал `npm run build` для верификации — Tailwind CLI (без явного `content`-конфига в `tailwind.config`) снова пересканировал весь проект и вновь подхватил слова "grid"/"shadow"/"visible"/"inline"/"transition-all" из прозы `docs/*.md`/`scripts/*.cjs`, повторно добавив те же 5 неиспользуемых CSS-утилит в `styles/app.css` — воспроизведено детерминированно, это побочный эффект самой команды `npm run build`, а не результат правки `content/index.ts`. Откатил `styles/app.css` повторно тем же способом. Финальный `git status --porcelain`: только `docs/implementation/phase-9.1-content-migration.md` (M), `package-lock.json` (M), `package.json` (M) — из ранее принятых задач 9.1.1/9.1.2, не тронуты этой задачей — плюс новые `content/` (?? — включает `content/index.ts`) и `scripts/migrate-json-to-ts.ts` (?? — из 9.1.1). `styles/app.css` в diff отсутствует.
