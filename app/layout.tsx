@@ -17,6 +17,9 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: 'Моя первая книга вопросов и ответов',
   description: 'Катехизис Кэрин Маккензи — 114 вопросов и ответов.',
+  // Прототип закрыт от индексации (по запросу пользователя, 2026-08-21) —
+  // дублирует app/robots.ts на уровне meta-тега каждой страницы.
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({

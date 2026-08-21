@@ -15,8 +15,16 @@ export const messages = {
   },
   imageGenerator: {
     heading: 'Генератор изображений',
+    accessKeyLabel: 'Ключ доступа',
+    unlock: 'Войти',
+    accessKeyError: 'Неверный ключ доступа.',
     promptLabel: 'Текстовый запрос',
     promptPlaceholder: 'Опишите изображение, которое нужно сгенерировать',
+    questionPromptLabel: 'Промпт по вопросу катехизиса',
+    questionPromptPlaceholder: 'Выберите вопрос — сцена подставится ниже, текст наложится после генерации',
+    overlayTextHint:
+      'Кириллица рисуется поверх картинки (Arial, оранжевый) — модель текст не генерирует, поэтому без опечаток.',
+    aspectRatioLabel: 'Соотношение сторон',
     submit: 'Сгенерировать',
     pending: 'Генерация…',
     download: 'Скачать',
@@ -24,5 +32,8 @@ export const messages = {
     previewAlt: 'Сгенерированное изображение',
     emptyPromptError: 'Введите текст запроса.',
     genericError: 'Не удалось сгенерировать изображение. Попробуйте ещё раз.',
+    estimatedCost: (usd: string) => `Примерная себестоимость этой генерации: ~$${usd} USD`,
+    estimatedCostNote:
+      'Ориентир по тарифу Google Paid (gemini-2.5-flash-image): ~$0.039 за картинку + входные токены промпта. Не фактический счёт.',
   },
 } as const;

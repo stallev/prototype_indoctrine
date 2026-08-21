@@ -9,11 +9,24 @@
 // в ответ клиенту — см. docs/contracts/image-generator-api-contract.md §4.
 // Это не то имя переменной, которое @ai-sdk/google ищет по умолчанию
 // (GOOGLE_GENERATIVE_AI_API_KEY), поэтому провайдер создаётся явно с ключом.
+//
+// SECURITY_IMAGE_GENERATOR_KEY: `ImageGeneratorAccessGate` блокирует UI
+// страницы, но сама по себе не защищает этот роут — запрос с правильным
+// Origin можно отправить и в обход UI. Заголовок `x-image-generator-key`
+// (тот же ключ, что уже введён на странице) обязателен здесь тоже —
+// image-generator-tool-spec.md §6.
 
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { generateImage } from 'ai';
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
+
+import {
+  IMAGE_ASPECT_RATIO_VALUES,
+  toProviderAspectRatio,
+} from '@/lib/image-generator-aspect-ratios';
+import { getImageGeneratorAccessKey, secretsMatch } from '@/lib/image-generator-auth';
+import { estimateImageGenerationCostUsd } from '@/lib/image-generator-pricing';
 
 export const runtime = 'nodejs';
 
@@ -25,7 +38,7 @@ const IMAGE_MODEL_ID = 'gemini-2.5-flash-image';
 
 // Ограничение длины промпта — не зафиксировано провайдером, защита от
 // чрезмерно больших запросов (image-generator-api-contract.md §1).
-const PROMPT_MAX_LENGTH = 1000;
+const PROMPT_MAX_LENGTH = 4000;
 
 const requestSchema = z.object({
   prompt: z
@@ -33,6 +46,9 @@ const requestSchema = z.object({
     .trim()
     .min(1, 'Введите текст запроса.')
     .max(PROMPT_MAX_LENGTH, `Запрос слишком длинный (максимум ${PROMPT_MAX_LENGTH} символов).`),
+  aspectRatio: z.enum(IMAGE_ASPECT_RATIO_VALUES, {
+    error: 'Выберите допустимое соотношение сторон.',
+  }),
 });
 
 function errorResponse(message: string, status: number): NextResponse {
@@ -50,6 +66,17 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     return errorResponse('Запрос отклонён: недопустимый источник.', 403);
   }
 
+  const requiredKey = getImageGeneratorAccessKey();
+  if (!requiredKey) {
+    // Конфигурация сервера: без ключа доступ к платному API не должен
+    // открываться сам по себе — fail-closed, не fail-open.
+    return errorResponse('Сервис генерации изображений временно недоступен.', 500);
+  }
+  const providedKey = request.headers.get('x-image-generator-key');
+  if (!providedKey || !secretsMatch(providedKey, requiredKey)) {
+    return errorResponse('Доступ запрещён. Обновите страницу и войдите заново.', 401);
+  }
+
   let json: unknown;
   try {
     json = await request.json();
@@ -61,7 +88,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   if (!parsed.success) {
     return errorResponse(parsed.error.issues[0]?.message ?? 'Некорректный запрос.', 400);
   }
-  const { prompt } = parsed.data;
+  const { prompt, aspectRatio } = parsed.data;
 
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
@@ -73,12 +100,20 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   const google = createGoogleGenerativeAI({ apiKey });
 
   try {
+    // aspectRatio — параметр SDK/провайдера; текст промпта на пиксели
+    // кадра не влияет. UI может выбрать 148:105 (A6) — провайдеру уходит
+    // ближайшее поддерживаемое через toProviderAspectRatio().
     const result = await generateImage({
       model: google.image(IMAGE_MODEL_ID),
       prompt,
+      aspectRatio: toProviderAspectRatio(aspectRatio),
     });
     const { base64, mediaType } = result.image;
-    return NextResponse.json({ image: `data:${mediaType};base64,${base64}` }, { status: 200 });
+    const estimatedCostUsd = estimateImageGenerationCostUsd(prompt);
+    return NextResponse.json(
+      { image: `data:${mediaType};base64,${base64}`, estimatedCostUsd },
+      { status: 200 },
+    );
   } catch {
     // Ошибки провайдера (лимиты, недоступность, отклонённый промпт) не
     // пробрасываются клиенту как есть — только понятное сообщение, без

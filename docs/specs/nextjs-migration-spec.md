@@ -45,7 +45,7 @@ prototype_indoctrine/
 │   ├── topic/[topicId]/page.tsx       # список вопросов раздела
 │   ├── q/[number]/page.tsx            # карточка вопроса
 │   ├── tools/
-│   │   └── image-generator/page.tsx   # UI инструмента генерации изображений (не часть навигации катехизиса)
+│   │   └── image-generator/page.tsx   # UI инструмента генерации изображений
 │   └── api/
 │       └── image-generator/route.ts   # Route Handler: вызов Google API, ключ только на сервере
 ├── content/
@@ -70,7 +70,7 @@ prototype_indoctrine/
 └── utils/catechism.ts                 # архивируется как источник истины/откат (см. §4)
 ```
 
-`app/tools/image-generator/` намеренно не связан ссылками с навигацией по темам/вопросам — это отдельный инструмент (см. `image-generator-tool-spec.md`).
+`app/tools/image-generator/` — отдельный инструмент, не читает `content/*` (см. `image-generator-tool-spec.md`), но доступен из drawer-навигации через `components/nav-tools-link.tsx` (решение изменено 2026-08-21 по запросу пользователя).
 
 ---
 

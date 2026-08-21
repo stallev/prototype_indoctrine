@@ -7,15 +7,21 @@ interface IllustrationProps {
   questionContent: string;
 }
 
+// Рамка 4:3 — та же пропорция viewBox="0 0 1200 900", что и у старого
+// прототипа (.illustration-frame в styles/input.css), здесь как утилита
+// Tailwind (aspect-[4/3]), т.к. этот класс определён только в CSS старого
+// стека, а не в app/globals.css. На md+ дополнительно ограничена высота
+// 350px (по запросу пользователя, 2026-08-21) — `max-h` только "подрезает"
+// высоту, вычисленную из aspect-ratio, ширина (`w-full`) не меняется, поэтому
+// `object-contain` в каждой из трёх веток вписывает исходную 4:3-картинку
+// без искажения/обрезки (letterbox), а не растягивает/кадрирует её.
+const FRAME_CLASS = 'aspect-[4/3] w-full md:max-h-[350px]';
+
 /**
  * Иллюстрация вопроса. Три состояния из lib/illustrations.ts:
  *   - svg / placeholder → инлайн-разметка (уже санитизирована/сгенерирована
- *     resolveIllustration), масштабируется на весь контейнер 4:3.
+ *     resolveIllustration), масштабируется на весь контейнер.
  *   - raster (png/jpg/webp) → next/image по публичному URL из public/.
- * Рамка 4:3 — та же пропорция viewBox="0 0 1200 900", что и у старого
- * прототипа (.illustration-frame в styles/input.css), здесь как утилита
- * Tailwind (aspect-[4/3]), т.к. этот класс определён только в CSS старого
- * стека, а не в app/globals.css.
  */
 export const Illustration = ({ questionNumber, questionContent }: IllustrationProps) => {
   const alt = `Иллюстрация к вопросу ${questionNumber}: ${questionContent}`;
@@ -28,7 +34,7 @@ export const Illustration = ({ questionNumber, questionContent }: IllustrationPr
         alt={alt}
         width={1200}
         height={900}
-        className="aspect-[4/3] w-full object-contain"
+        className={`${FRAME_CLASS} object-contain`}
       />
     );
   }
@@ -36,7 +42,7 @@ export const Illustration = ({ questionNumber, questionContent }: IllustrationPr
   if (resolved.kind === 'svg') {
     return (
       <div
-        className="aspect-[4/3] w-full [&>svg]:h-full [&>svg]:w-full [&>svg]:object-contain"
+        className={`${FRAME_CLASS} [&>svg]:h-full [&>svg]:w-full [&>svg]:object-contain`}
         role="img"
         aria-label={alt}
         // lib/illustrations.ts's sanitizeSvg() output — the one legitimate
@@ -49,7 +55,7 @@ export const Illustration = ({ questionNumber, questionContent }: IllustrationPr
 
   return (
     <div
-      className="aspect-[4/3] w-full [&>svg]:h-full [&>svg]:w-full [&>svg]:object-contain"
+      className={`${FRAME_CLASS} [&>svg]:h-full [&>svg]:w-full [&>svg]:object-contain`}
       role="img"
       aria-label={alt}
       // placeholderSvg() output, same legitimate inline-SVG path as above.

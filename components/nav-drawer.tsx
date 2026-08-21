@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react';
 
 import { Sheet, SheetContent, SheetTitle } from '@/components/ui/sheet';
 import { NavDrawerList, type TopicWithQuestions } from '@/components/nav-drawer-list';
+import { NavToolsLink } from '@/components/nav-tools-link';
 import { messages } from '@/lib/messages';
 
 interface NavDrawerProps {
@@ -72,6 +73,7 @@ export const NavDrawer = ({ topics, children }: NavDrawerProps) => {
       >
         <div className="flex h-14 items-center px-4 text-base font-medium">{messages.nav.drawerTitle}</div>
         <NavDrawerList topics={topics} />
+        <NavToolsLink />
       </nav>
 
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -95,6 +97,7 @@ export const NavDrawer = ({ topics, children }: NavDrawerProps) => {
               </button>
             </div>
             <NavDrawerList topics={topics} onNavigate={() => setIsOpen(false)} />
+            <NavToolsLink onNavigate={() => setIsOpen(false)} />
           </nav>
         </SheetContent>
       </Sheet>
