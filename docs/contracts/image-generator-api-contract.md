@@ -18,7 +18,7 @@
 POST /api/image-generator
 Content-Type: application/json
 
-{ "prompt": string }   // непустая строка, ограничение длины (точный лимит — на усмотрение реализации, зафиксировать в коде и здесь при реализации)
+{ "prompt": string }   // непустая строка (после trim), максимум 1000 символов — валидируется в app/api/image-generator/route.ts через zod до вызова провайдера
 ```
 
 ## 2. Успешный ответ
@@ -27,8 +27,10 @@ Content-Type: application/json
 200 OK
 Content-Type: application/json
 
-{ "image": string }    // data URL (base64) сгенерированного изображения — точный формат (data URL vs бинарный поток) фиксируется при реализации в зависимости от формата ответа @ai-sdk/google
+{ "image": string }    // data URL: `data:${mediaType};base64,${base64}`, собран из GeneratedFile (ai v7 generateImage()) — mediaType приходит от провайдера (обычно image/png)
 ```
+
+Зафиксировано при реализации 9.4.1: модель — `gemini-2.5-flash-image` (Gemini 2.5 Flash Image) через `google.image(modelId)` (`@ai-sdk/google` v4, метод `.image()` создаёт `ImageModelV4`), вызов — стабильный (не `experimental_generateImage`) `generateImage({ model, prompt })` из пакета `ai` v7. Обе версии пакетов на момент реализации уже поддерживают этот путь как основной, non-experimental API — `generateText` с `responseModalities` не потребовался.
 
 ## 3. Ответ с ошибкой
 

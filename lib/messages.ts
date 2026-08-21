@@ -13,4 +13,16 @@ export const messages = {
     title: 'Что-то пошло не так',
     retry: 'Повторить',
   },
+  imageGenerator: {
+    heading: 'Генератор изображений',
+    promptLabel: 'Текстовый запрос',
+    promptPlaceholder: 'Опишите изображение, которое нужно сгенерировать',
+    submit: 'Сгенерировать',
+    pending: 'Генерация…',
+    download: 'Скачать',
+    downloadFileName: 'generated-image.png',
+    previewAlt: 'Сгенерированное изображение',
+    emptyPromptError: 'Введите текст запроса.',
+    genericError: 'Не удалось сгенерировать изображение. Попробуйте ещё раз.',
+  },
 } as const;
