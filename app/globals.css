@@ -117,3 +117,18 @@ body {
     @apply font-sans;
   }
 }
+
+/* Motion не обязательна для понимания интерфейса (accessibility-and-motion.md
+   §3/§6) — глобально укорачивает/отключает анимации и переходы (drawer
+   slide-in, чеврон аккордеона и т.п.) для пользователей с этой ОС-настройкой,
+   без удаления самого функционала. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
