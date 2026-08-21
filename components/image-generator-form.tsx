@@ -75,6 +75,7 @@ export const ImageGeneratorForm = () => {
    * Заполняется при выборе вопроса; модели кириллицу не доверяем.
    */
   const [overlayText, setOverlayText] = useState<string | null>(null);
+  const [addQuestionText, setAddQuestionText] = useState(true);
   const [state, setState] = useState<GenerationState>({ status: 'idle' });
 
   // Незавершённый запрос отменяется при повторной отправке формы и при уходе
@@ -171,7 +172,7 @@ export const ImageGeneratorForm = () => {
       const rawUrl = URL.createObjectURL(rawBlob);
       let finalUrl = rawUrl;
       try {
-        if (overlayText) {
+        if (overlayText && addQuestionText) {
           const withText = await overlayCardTextOnImage(rawUrl, overlayText);
           URL.revokeObjectURL(rawUrl);
           finalUrl = URL.createObjectURL(withText);
@@ -226,7 +227,21 @@ export const ImageGeneratorForm = () => {
               </option>
             ))}
           </select>
-          {overlayText ? (
+          <label
+            htmlFor="image-overlay-question-text"
+            className="flex items-center gap-2 text-sm text-md-on-surface"
+          >
+            <input
+              id="image-overlay-question-text"
+              name="addQuestionText"
+              type="checkbox"
+              checked={addQuestionText}
+              onChange={(event) => setAddQuestionText(event.target.checked)}
+              className="size-4 accent-md-primary"
+            />
+            {messages.imageGenerator.overlayQuestionTextLabel}
+          </label>
+          {overlayText && addQuestionText ? (
             <p className="text-xs text-md-outline">{messages.imageGenerator.overlayTextHint}</p>
           ) : null}
         </div>

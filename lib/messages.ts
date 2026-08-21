@@ -22,6 +22,7 @@ export const messages = {
     promptPlaceholder: 'Опишите изображение, которое нужно сгенерировать',
     questionPromptLabel: 'Промпт по вопросу катехизиса',
     questionPromptPlaceholder: 'Выберите вопрос — сцена подставится ниже, текст наложится после генерации',
+    overlayQuestionTextLabel: 'Добавить текст вопроса на фото',
     overlayTextHint:
       'Кириллица рисуется поверх картинки (Arial, оранжевый) — модель текст не генерирует, поэтому без опечаток.',
     aspectRatioLabel: 'Соотношение сторон',
