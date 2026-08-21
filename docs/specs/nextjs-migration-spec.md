@@ -161,4 +161,9 @@ shadcn/ui используется только как источник прим
 ## 10. Открытые вопросы
 
 1. Конкретная модель Google (Gemini 2.5 Flash Image / Imagen) для инструмента генерации — фиксируется в `image-generator-tool-spec.md`, не блокирует эту спеку.
-2. Момент удаления архивных `data/catechism.json`/`utils/catechism.ts` — по итогам финальной приёмки нового стека (отдельный пункт `implementation-checklist.md` Фаза 9, не решается сейчас).
+2. **Решено (2026-08-21, по итогам приёмки Фазы 9.5, задача 9.5.3):** `data/catechism.json`/`utils/catechism.ts` **остаются в репозитории как read-only reference**, не удаляются. Причины (проверены фактически, не предположение):
+   - Старый статический прототип (`js/app.js`, функция `init()`) делает `fetch('data/catechism.json')` в рантайме и остаётся принятой рабочей частью репозитория (`npm run serve` его раздаёт, см. `CLAUDE.md`) — удаление файла сломало бы его немедленно.
+   - `scripts/migrate-json-to-ts.ts` — единственный путь регенерации `content/*.ts` — импортирует `utils/catechism.ts`, который сам читает и валидирует `data/catechism.json` (`CatechismSchema.parse`); без обоих файлов `content/*.ts` нельзя пересобрать из источника при будущих изменениях данных без восстановления из git-истории.
+   - Дополнительно `data/catechism.json` (но не `utils/catechism.ts`) читается напрямую вспомогательными скриптами (`scripts/gen-grok-prompts-skeleton.cjs`, `scripts/build-gallery.cjs` — оба делают `fs.readFileSync`/`JSON.parse` по пути `data/catechism.json`, ни один не импортирует `utils/catechism.ts`), и оба файла упоминаются как актуальные в `docs/coding-conventions.md`, `docs/contracts/content-data-contract.md`, `docs/contracts/svg-prompts-ts-spec.md`, `docs/implementation-checklist.md`, `docs/specs/static-prototype-spec.md`, `README.md`.
+
+   Пересмотр возможен отдельным решением, если оба фактора (старый статический прототип, необходимость регенерации `content/*.ts`) перестанут быть актуальны (например, при удалении `js/app.js`/`index.html` или замене скрипта миграции).
