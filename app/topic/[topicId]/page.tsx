@@ -1,8 +1,10 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { TOPICS } from '@/content/topics';
 import { getTopic, questionsForTopic } from '@/content';
 import { TopicQuestionList } from '@/components/topic-question-list';
+import { topicPageMetadata } from '@/lib/page-metadata';
 
 interface TopicPageProps {
   params: Promise<{ topicId: string }>;
@@ -11,6 +13,11 @@ interface TopicPageProps {
 /** 16 статических параметров — выведено из content/topics.ts. */
 export function generateStaticParams() {
   return TOPICS.map((topic) => ({ topicId: String(topic.topic_id) }));
+}
+
+export async function generateMetadata({ params }: TopicPageProps): Promise<Metadata> {
+  const { topicId } = await params;
+  return topicPageMetadata(Number(topicId)) ?? {};
 }
 
 export default async function TopicPage({ params }: TopicPageProps) {

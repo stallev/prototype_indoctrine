@@ -3,9 +3,14 @@
 // остаётся Server Component, клиентские "листья" — ImageGeneratorAccessGate
 // (проверка доступа) и вложенная в неё ImageGeneratorForm (сама генерация).
 
+import type { Metadata } from 'next';
+
 import { ImageGeneratorAccessGate } from '@/components/image-generator-access-gate';
 import { ImageGeneratorForm } from '@/components/image-generator-form';
 import { messages } from '@/lib/messages';
+import { imageGeneratorPageMetadata } from '@/lib/page-metadata';
+
+export const metadata: Metadata = imageGeneratorPageMetadata();
 
 export default function ImageGeneratorPage() {
   return (

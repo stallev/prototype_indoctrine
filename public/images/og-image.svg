@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Катехизис — детский катехизис с вопросами, ответами и библейскими стихами">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#BFE3F0"/>
+      <stop offset="1" stop-color="#8FCFE6"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#FCE39A"/>
+      <stop offset="1" stop-color="#FCE39A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <circle cx="600" cy="230" r="220" fill="url(#glow)"/>
+  <path d="M0,430 Q300,360 600,400 T1200,380 V630 H0 Z" fill="#9FCF6E"/>
+  <path d="M0,480 Q350,420 700,460 T1200,440 V630 H0 Z" fill="#5E9E5A"/>
+  <g transform="translate(430,470)">
+    <path d="M-90,-10 Q-45,-28 0,-10 L0,40 Q-45,24 -90,40 Z" fill="#FFFFFF" stroke="#E9CE8E" stroke-width="4"/>
+    <path d="M90,-10 Q45,-28 0,-10 L0,40 Q45,24 90,40 Z" fill="#FFFFFF" stroke="#E9CE8E" stroke-width="4"/>
+  </g>
+  <g transform="translate(760,430)">
+    <rect x="-12" y="-90" width="24" height="150" rx="6" fill="#A0653A"/>
+    <rect x="-42" y="-40" width="84" height="22" rx="6" fill="#A0653A"/>
+  </g>
+</svg>

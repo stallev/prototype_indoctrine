@@ -6,12 +6,23 @@ export const messages = {
     prev: 'Предыдущий',
     next: 'Следующий',
     toTopic: 'К разделу',
+    home: 'К первому вопросу',
     drawerTitle: 'Содержание',
     tableOfContents: 'Оглавление',
   },
   error: {
     title: 'Что-то пошло не так',
     retry: 'Повторить',
+    notFoundTitle: 'Страница не найдена',
+    notFoundDescription: 'Такой страницы нет.',
+  },
+  seo: {
+    siteName: 'Моя первая книга вопросов и ответов',
+    siteDescription: 'Катехизис Кэрин Маккензи — 114 вопросов и ответов.',
+    imageGeneratorDescription: 'Инструмент генерации изображений (Grok Imagine). Нужен ключ доступа.',
+    ogImageAlt: 'Катехизис — детский катехизис с вопросами, ответами и библейскими стихами',
+    topicDescription: (topicName: string, countLabel: string) =>
+      `Раздел «${topicName}»: ${countLabel}.`,
   },
   imageGenerator: {
     heading: 'Генератор изображений',

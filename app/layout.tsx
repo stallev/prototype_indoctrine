@@ -4,6 +4,8 @@ import './globals.css';
 
 import { allTopics, questionsForTopic } from '@/content';
 import { NavDrawer } from '@/components/nav-drawer';
+import { messages } from '@/lib/messages';
+import { siteMetadataBase } from '@/lib/page-metadata';
 
 // Same typeface as the accepted static prototype (styles/input.css
 // `--font-sans: "Roboto", ...`) — loaded via next/font so it's actually
@@ -15,11 +17,29 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: 'Моя первая книга вопросов и ответов',
-  description: 'Катехизис Кэрин Маккензи — 114 вопросов и ответов.',
+  metadataBase: siteMetadataBase(),
+  title: {
+    default: messages.seo.siteName,
+    template: `%s — ${messages.seo.siteName}`,
+  },
+  description: messages.seo.siteDescription,
   // Прототип закрыт от индексации (по запросу пользователя, 2026-08-21) —
   // дублирует app/robots.ts на уровне meta-тега каждой страницы.
   robots: { index: false, follow: false },
+  icons: { icon: '/images/favicon.svg' },
+  openGraph: {
+    type: 'website',
+    locale: 'ru_RU',
+    siteName: messages.seo.siteName,
+    images: [
+      {
+        url: '/images/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: messages.seo.ogImageAlt,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
