@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
@@ -6,6 +7,7 @@ import { getQuestionWithVerses, getTopic } from '@/content';
 import { QuestionCard } from '@/components/question-card';
 import { QuestionNavLink } from '@/components/question-nav-link';
 import { messages } from '@/lib/messages';
+import { questionPageMetadata } from '@/lib/page-metadata';
 
 const QUESTION_COUNT = QUESTIONS.length;
 
@@ -16,6 +18,11 @@ interface QuestionPageProps {
 /** 114 статических параметров (1…114) — выведено из content/questions.ts. */
 export function generateStaticParams() {
   return QUESTIONS.map((question) => ({ number: String(question.question_number) }));
+}
+
+export async function generateMetadata({ params }: QuestionPageProps): Promise<Metadata> {
+  const { number } = await params;
+  return questionPageMetadata(Number(number)) ?? {};
 }
 
 export default async function QuestionPage({ params }: QuestionPageProps) {
