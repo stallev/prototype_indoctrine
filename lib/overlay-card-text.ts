@@ -3,6 +3,8 @@
  * Модели (Gemini/Grok) ненадёжно рисуют кириллицу — текст рисуем в Canvas сами.
  */
 
+import { wrapText } from '@/lib/canvas-text';
+
 export const DEFAULT_OVERLAY_TEXT_COLOR = '#FF8C00';
 
 export const OVERLAY_TEXT_COLORS = [
@@ -27,25 +29,6 @@ const overlayColorValues = OVERLAY_TEXT_COLORS.map((c) => c.value) as [
 
 export function isOverlayTextColor(value: unknown): value is OverlayTextColor {
   return typeof value === 'string' && (overlayColorValues as string[]).includes(value);
-}
-
-function wrapText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
-  const words = text.split(/\s+/).filter(Boolean);
-  if (words.length === 0) return [];
-  const lines: string[] = [];
-  let current = words[0]!;
-  for (let i = 1; i < words.length; i++) {
-    const word = words[i]!;
-    const trial = `${current} ${word}`;
-    if (ctx.measureText(trial).width <= maxWidth) {
-      current = trial;
-    } else {
-      lines.push(current);
-      current = word;
-    }
-  }
-  lines.push(current);
-  return lines;
 }
 
 function loadImage(src: string): Promise<HTMLImageElement> {
