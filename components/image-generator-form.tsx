@@ -4,10 +4,17 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { Loader2 } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
+import { ImageGeneratorCardBackPreview } from '@/components/image-generator-card-back-preview';
+import { ImageGeneratorResultPreviews } from '@/components/image-generator-result-previews';
+import {
+  questionCardFileName,
+  type CardBackContent,
+} from '@/lib/card-back';
 import {
   DEFAULT_IMAGE_ASPECT_RATIO,
   IMAGE_ASPECT_RATIOS,
   IMAGE_ASPECT_RATIO_STORAGE_KEY,
+  canvasSizeForAspectRatio,
   isImageAspectRatio,
   type ImageAspectRatio,
 } from '@/lib/image-generator-aspect-ratios';
@@ -87,8 +94,21 @@ function persistOverlayTextColor(value: OverlayTextColor): void {
   }
 }
 
+function readImageSize(src: string): Promise<{ width: number; height: number }> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
+    img.onerror = () => reject(new Error('Не удалось прочитать размер изображения.'));
+    img.src = src;
+  });
+}
+
+interface ImageGeneratorFormProps {
+  backCards: Record<string, CardBackContent>;
+}
+
 /** Форма промпта + результат — рендерится только после разблокировки `ImageGeneratorAccessGate`. */
-export const ImageGeneratorForm = () => {
+export const ImageGeneratorForm = ({ backCards }: ImageGeneratorFormProps) => {
   const [prompt, setPrompt] = useState('');
   // Дефолт 148:105; после mount подтягиваем сохранённый выбор из localStorage
   // (избегаем SSR/hydration mismatch при чтении storage в инициализаторе).
@@ -104,6 +124,8 @@ export const ImageGeneratorForm = () => {
    */
   const [overlayText, setOverlayText] = useState<string | null>(null);
   const [addQuestionText, setAddQuestionText] = useState(true);
+  const [createCardBack, setCreateCardBack] = useState(false);
+  const [frontSize, setFrontSize] = useState<{ width: number; height: number } | null>(null);
   const [state, setState] = useState<GenerationState>({ status: 'idle' });
 
   // Незавершённый запрос отменяется при повторной отправке формы и при уходе
@@ -133,6 +155,16 @@ export const ImageGeneratorForm = () => {
       }
     };
   }, []);
+
+  const selectedQuestionNumber = selectedQuestion === '' ? null : Number(selectedQuestion);
+  const hasQuestion =
+    selectedQuestionNumber !== null && Number.isFinite(selectedQuestionNumber);
+  const backContent = hasQuestion ? (backCards[String(selectedQuestionNumber)] ?? null) : null;
+  const canonicalSize = canvasSizeForAspectRatio(aspectRatio);
+  const backWidth =
+    state.status === 'success' && frontSize ? frontSize.width : canonicalSize.width;
+  const backHeight =
+    state.status === 'success' && frontSize ? frontSize.height : canonicalSize.height;
 
   const handleAspectRatioChange = (value: string) => {
     if (!isImageAspectRatio(value)) return;
@@ -229,6 +261,12 @@ export const ImageGeneratorForm = () => {
       }
       objectUrlRef.current = finalUrl;
 
+      try {
+        setFrontSize(await readImageSize(finalUrl));
+      } catch {
+        setFrontSize(null);
+      }
+
       setState({
         status: 'success',
         image: finalUrl,
@@ -246,6 +284,20 @@ export const ImageGeneratorForm = () => {
   const isPending = state.status === 'pending';
   const hasError = state.status === 'error';
   const errorMessageId = 'image-prompt-error';
+  const frontUrl = state.status === 'success' ? state.image : null;
+  const frontCostUsd = state.status === 'success' ? state.estimatedCostUsd : null;
+  const frontDownloadName =
+    hasQuestion && selectedQuestionNumber !== null
+      ? questionCardFileName(selectedQuestionNumber, 'front')
+      : messages.imageGenerator.downloadFileName;
+  const showCardBack = createCardBack && backContent !== null;
+  const frontDownloadLabel = showCardBack
+    ? messages.imageGenerator.downloadFront
+    : messages.imageGenerator.download;
+  const backDownloadName =
+    selectedQuestionNumber !== null
+      ? questionCardFileName(selectedQuestionNumber, 'back')
+      : 'card-back.png';
 
   return (
     <>
@@ -318,6 +370,29 @@ export const ImageGeneratorForm = () => {
           {overlayText && addQuestionText ? (
             <p className="text-xs text-md-outline">{messages.imageGenerator.overlayTextHint}</p>
           ) : null}
+          <label
+            htmlFor="image-create-card-back"
+            className={`flex items-center gap-2 text-sm ${
+              hasQuestion ? 'text-md-on-surface' : 'text-md-outline'
+            }`}
+          >
+            <input
+              id="image-create-card-back"
+              name="createCardBack"
+              type="checkbox"
+              checked={createCardBack}
+              disabled={!hasQuestion}
+              aria-describedby={!hasQuestion ? 'image-create-card-back-hint' : undefined}
+              onChange={(event) => setCreateCardBack(event.target.checked)}
+              className="size-4 accent-md-primary disabled:opacity-50"
+            />
+            {messages.imageGenerator.createCardBackLabel}
+          </label>
+          {!hasQuestion ? (
+            <p id="image-create-card-back-hint" className="text-xs text-md-outline">
+              {messages.imageGenerator.createCardBackHint}
+            </p>
+          ) : null}
         </div>
 
         <div className="flex flex-col gap-2">
@@ -377,29 +452,21 @@ export const ImageGeneratorForm = () => {
         </Button>
       </form>
 
-      {state.status === 'success' && (
-        <div className="mt-6 flex flex-col items-start gap-3">
-          {/* Blob-объект существует только в этой вкладке — next/image
-              (удалённый оптимизатор) для него не подходит, обычный <img>. */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={state.image}
-            alt={messages.imageGenerator.previewAlt}
-            className="max-w-full rounded-md border border-md-outline/20"
+      <ImageGeneratorResultPreviews
+        frontUrl={frontUrl}
+        frontCostUsd={frontCostUsd}
+        frontDownloadName={frontDownloadName}
+        frontDownloadLabel={frontDownloadLabel}
+      >
+        {showCardBack && backContent ? (
+          <ImageGeneratorCardBackPreview
+            content={backContent}
+            width={backWidth}
+            height={backHeight}
+            downloadName={backDownloadName}
           />
-          <p className="text-sm text-md-on-surface">
-            {messages.imageGenerator.estimatedCost(state.estimatedCostUsd.toFixed(4))}
-          </p>
-          <p className="max-w-prose text-xs text-md-outline">
-            {messages.imageGenerator.estimatedCostNote}
-          </p>
-          <Button asChild>
-            <a href={state.image} download={messages.imageGenerator.downloadFileName}>
-              {messages.imageGenerator.download}
-            </a>
-          </Button>
-        </div>
-      )}
+        ) : null}
+      </ImageGeneratorResultPreviews>
     </>
   );
 };

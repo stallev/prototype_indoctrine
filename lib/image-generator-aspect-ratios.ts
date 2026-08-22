@@ -71,3 +71,36 @@ export function toProviderAspectRatio(value: ImageAspectRatio): ProviderAspectRa
   }
   return '4:3';
 }
+
+/** Длинная сторона канонического печатного холста (A6 @ 300 dpi ≈ 1748 px). */
+const CANVAS_LONG_SIDE_PX = 1748;
+
+/** A6 альбом 148×105 мм @ 300 dpi. */
+const A6_LANDSCAPE_PX = { width: 1748, height: 1240 } as const;
+
+/**
+ * Размер холста оборота, когда лицевой картинки ещё нет.
+ * Для `148:105` — A6 @ 300 dpi; иначе та же длинная сторона 1748.
+ */
+export function canvasSizeForAspectRatio(ratio: ImageAspectRatio): {
+  width: number;
+  height: number;
+} {
+  if (ratio === '148:105') {
+    return { width: A6_LANDSCAPE_PX.width, height: A6_LANDSCAPE_PX.height };
+  }
+  const [widthPart, heightPart] = ratio.split(':').map(Number);
+  if (!widthPart || !heightPart) {
+    return { width: A6_LANDSCAPE_PX.width, height: A6_LANDSCAPE_PX.height };
+  }
+  if (widthPart >= heightPart) {
+    return {
+      width: CANVAS_LONG_SIDE_PX,
+      height: Math.round((CANVAS_LONG_SIDE_PX * heightPart) / widthPart),
+    };
+  }
+  return {
+    width: Math.round((CANVAS_LONG_SIDE_PX * widthPart) / heightPart),
+    height: CANVAS_LONG_SIDE_PX,
+  };
+}
